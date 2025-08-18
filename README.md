@@ -4,34 +4,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karibu Nyumbani – Airbnb Studios & 1BRs on Ngong Road</title>
-  <meta name="description" content="Book stylish Airbnb studios & 1BRs along Ngong Road, near Junction Mall & Ngong Racecourse. Perfect for events, horse riding, shopping, and city getaways.">
+  <title>Karibu Nyumbani – Airbnb Studios & 1BRs on Ngong Road, Nairobi</title>
+
+  <!-- ✅ SEO Meta Tags -->
+  <meta name="description" content="Book Karibu Nyumbani – modern studios & 1BR Airbnbs on Ngong Road, Nairobi. Steps from Junction Mall & Ngong Racecourse. Perfect short-term rental for events, shopping & horse riding. Book direct on WhatsApp!">
+  <meta name="keywords" content="Airbnb Ngong Road, Airbnb Nairobi, Airbnb near Junction Mall, Airbnb near Ngong Racecourse, short-term rental Nairobi, furnished apartments Nairobi, holiday apartments Nairobi, studio Airbnb Nairobi, 1 bedroom Airbnb Nairobi, affordable Airbnb Nairobi, event Airbnb Nairobi">
+
+  <!-- ✅ Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Karibu Nyumbani Airbnb",
+    "image": "https://yourdomain.com/studio.jpg",
+    "description": "Stylish studios & 1BR Airbnbs along Ngong Road, near Junction Mall & Ngong Racecourse in Nairobi. Perfect for shopping, events, horse riding, and city stays.",
+    "url": "https://yourdomain.com",
+    "telephone": "+254757942317",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ngong Road",
+      "addressLocality": "Nairobi",
+      "addressCountry": "KE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -1.3005,
+      "longitude": 36.7610
+    },
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "WiFi", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Secure Parking", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Fully Equipped Kitchen", "value": true }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/",
+      "https://www.instagram.com/",
+      "https://wa.me/254757942317"
+    ]
+  }
+  </script>
+
+  <!-- ✅ Styles -->
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #f9f9f6;  /* light background */
-      color: #333333;             /* softer than black */
+      background-color: #f9f9f6;
+      color: #333333;
       margin: 0;
       padding: 0;
       line-height: 1.6;
     }
 
     header {
-      background: #2d6a4f; /* deep green */
+      background: #2d6a4f;
       color: #ffffff;
       text-align: center;
       padding: 60px 20px;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      margin: 10px 0 20px;
-      font-size: 1.2rem;
-    }
+    header h1 { margin: 0; font-size: 2.5rem; }
+    header p { margin: 10px 0 20px; font-size: 1.2rem; }
     .cta {
-      background: #f4a261; /* warm gold */
+      background: #f4a261;
       color: #fff;
       padding: 14px 28px;
       border-radius: 8px;
@@ -81,22 +114,19 @@
       transition:all 0.2s ease-in-out;
       text-decoration:none;
     }
-    .fab:hover{
-      background:#20bd5a;
-      transform:scale(1.05);
-    }
+    .fab:hover{ background:#20bd5a; transform:scale(1.05); }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Karibu Nyumbani</h1>
-    <p>Stylish Studios & 1BRs along Ngong Road – Near Junction Mall & Racecourse</p>
+    <h1>Karibu Nyumbani – Airbnb on Ngong Road, Nairobi</h1>
+    <p>Stylish Studios & 1BRs near Junction Mall & Ngong Racecourse</p>
     <a href="https://wa.me/254757942317?text=Hi!%20I'd%20like%20to%20book%20Karibu%20Nyumbani%20from%20[check-in]%20to%20[check-out]." class="cta" target="_blank">Book on WhatsApp</a>
   </header>
 
   <section>
-    <h2>Why Stay With Us?</h2>
+    <h2>Why Stay at Our Ngong Road Airbnb?</h2>
     <div class="grid">
       <div class="card">✔ Prime location near <strong>Junction Mall</strong></div>
       <div class="card">✔ 5 minutes from <strong>Ngong Racecourse</strong> (events & horse riding)</div>
@@ -107,7 +137,9 @@
 
   <section>
     <h2>Gallery</h2>
-    <p>[Add your pictures here – bedroom, kitchen, living space, balcony, nearby racecourse]</p>
+    <p>[Upload and add your pictures here – bedroom, kitchen, living space, balcony, nearby racecourse]</p>
+    <!-- Example with SEO alt text -->
+    <!-- <img src="studio.jpg" alt="Furnished Airbnb studio on Ngong Road near Junction Mall"> -->
   </section>
 
   <section>
@@ -121,9 +153,10 @@
   </section>
 
   <section>
-    <h2>Location</h2>
+    <h2>Location – Junction Mall & Ngong Racecourse</h2>
     <p>We’re right on Ngong Road, <strong>2 mins from Junction Mall</strong> and <strong>5 mins from Ngong Racecourse</strong>. Perfect for shopping, events, and city stays.</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <!-- Replace with your Google Maps Embed link -->
+    <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </section>
 
   <footer>
