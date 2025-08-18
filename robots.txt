@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oyangetheresa-spec.github.io/karibu-nyumbani/sitemap.xml
