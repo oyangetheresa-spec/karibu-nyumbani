@@ -3,82 +3,203 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Furnished studio and 1BR apartments on Ngong Road, Nairobi. Modern amenities, flexible stays, and affordable rates starting from KES 2,300. Book now on WhatsApp.">
   <title>Ngong Road Apartments | Karibu Nyumbani</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Modern and affordable 1BR and studio apartments for short and long stays at Ngong Road, Nairobi. Book via WhatsApp today.">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      line-height: 1.6;
+      background: #fdfdfd;
+      color: #333;
+    }
+    header.hero {
+      position: relative;
+      background: url('images/ngong-hero.jpg') no-repeat center center/cover;
+      height: 60vh;
+      display: flex; justify-content: center; align-items: center;
+      color: #fff;
+    }
+    header.hero .overlay {
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      text-align: center;
+      border-radius: 12px;
+    }
+    header.hero h1 {
+      font-size: 2.5rem;
+      margin: 0 0 10px;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 10px;
+      background: #28a745;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    .cta-btn:hover {
+      background: #218838;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    /* Gallery Grid */
+    .gallery-grid .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    /* Pricing */
+    .pricing-section table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .pricing-section th, .pricing-section td {
+      border: 1px solid #ddd;
+      padding: 12px;
+    }
+    .pricing-section th {
+      background: #f4f4f4;
+      text-align: left;
+      width: 30%;
+    }
+    .pricing-section strong {
+      color: #28a745;
+    }
+    /* Reviews */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    blockquote {
+      background: #fafafa;
+      border-left: 5px solid #28a745;
+      padding: 15px;
+      font-style: italic;
+      border-radius: 8px;
+    }
+    blockquote span {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #555;
+    }
+    /* Map */
+    #map iframe {
+      border: 0;
+      border-radius: 10px;
+      width: 100%;
+      height: 300px;
+    }
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .footer-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
-  <!-- Hero Banner -->
-  <header class="hero" style="background: url('images/ngong-hero.jpg') center/cover no-repeat; color: white; text-align: center; padding: 100px 20px;">
-    <h1>Ngong Road Apartments</h1>
-    <p>Stylish Studios & 1BRs in Nairobi’s Prime Location</p>
-    <a href="#booking" class="cta-btn">Check Availability</a>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="overlay">
+      <h1>Ngong Road Apartments</h1>
+      <p>Modern & Affordable Stays in Nairobi</p>
+      <a href="#pricing" class="cta-btn">Check Rates</a>
+    </div>
   </header>
 
-  <!-- Gallery -->
-  <section id="gallery" style="padding: 40px 20px; text-align: center;">
-    <h2>Gallery</h2>
-    <img src="images/ngong1.jpg" alt="Ngong Road Living Room" width="300">
-    <img src="images/ngong2.jpg" alt="Ngong Road Bedroom" width="300">
-    <img src="images/ngong3.jpg" alt="Ngong Road Kitchen" width="300">
+  <!-- GALLERY -->
+  <section id="gallery" class="gallery-grid">
+    <h2>Explore the Space</h2>
+    <div class="grid">
+      <img src="images/ngong1.jpg" alt="Living Room">
+      <img src="images/ngong2.jpg" alt="Bedroom">
+      <img src="images/ngong3.jpg" alt="Kitchen">
+      <img src="images/ngong4.jpg" alt="Bathroom">
+      <img src="images/ngong5.jpg" alt="Balcony View">
+      <img src="images/ngong6.jpg" alt="Apartment Exterior">
+    </div>
   </section>
 
-  <!-- Pricing -->
-  <section id="pricing" style="padding: 40px 20px;">
+  <!-- PRICING -->
+  <section id="pricing" class="pricing-section">
     <h2>Pricing</h2>
-    <table border="1" cellspacing="0" cellpadding="10">
+    <table>
       <tr>
         <th>1BR Apartment</th>
         <td>
-          <ul>
-            <li><strong>Monthly:</strong> KES 75,000</li>
-            <li><strong>Per Night:</strong> KES 3,500</li>
-            <li><strong>1 Week Stay:</strong> KES 3,300 / night</li>
-            <li><strong>2+ Weeks Stay:</strong> KES 3,000 / night</li>
-          </ul>
+          <strong>KES 75,000</strong> / Month<br>
+          <strong>KES 3,500</strong> / Night<br>
+          <strong>KES 3,300</strong> / Night (1 Week)<br>
+          <strong>KES 3,000</strong> / Night (2+ Weeks)
         </td>
       </tr>
       <tr>
         <th>Studio Apartment</th>
         <td>
-          <ul>
-            <li><strong>Per Night:</strong> KES 2,500</li>
-            <li><strong>1+ Week Stay:</strong> KES 2,300 / night</li>
-            <li><strong>Monthly:</strong> KES 63,000 (utilities separate)</li>
-          </ul>
+          <strong>KES 63,000</strong> / Month (utilities separate)<br>
+          <strong>KES 2,500</strong> / Night<br>
+          <strong>KES 2,300</strong> / Night (1+ Week)
         </td>
       </tr>
     </table>
-    <p><strong>Note:</strong> For long-term studio stays, guests pay water & electricity separately.</p>
+    <p style="text-align:center;">
+      <a href="https://wa.me/254757942317" class="cta-btn">Book on WhatsApp</a>
+    </p>
   </section>
 
-  <!-- Booking Form -->
-  <section id="booking" style="padding: 40px 20px; text-align: center;">
-    <h2>Book Your Stay</h2>
-    <form action="https://wa.me/254757942317" method="get" target="_blank">
-      <label>
-        Check-in:
-        <input type="date" name="checkin" required>
-      </label>
-      <label>
-        Check-out:
-        <input type="date" name="checkout" required>
-      </label>
-      <label>
-        Apartment Type:
-        <select name="apartment" required>
-          <option value="1BR">1BR</option>
-          <option value="Studio">Studio</option>
-        </select>
-      </label>
-      <button type="submit" class="cta-btn">Book on WhatsApp</button>
-    </form>
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <h2>What Our Guests Say</h2>
+    <div class="reviews-grid">
+      <blockquote>“Perfect location, clean and cozy. Will book again!” <span>– Jane, UK</span></blockquote>
+      <blockquote>“Great value for money, loved the fast Wi-Fi.” <span>– Brian, Kenya</span></blockquote>
+    </div>
   </section>
 
-  <!-- Footer -->
-  <footer style="background: #333; color: white; padding: 20px; text-align: center;">
-    <p>Contact us: <a href="https://wa.me/254757942317" style="color: #4CAF50;">WhatsApp +254 757 942 317</a></p>
-    <p>&copy; 2025 Karibu Nyumbani. All rights reserved.</p>
+  <!-- MAP -->
+  <section id="map">
+    <h2>Find Us</h2>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.857408492693!2d36.782!3d-1.300!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10f5b3f3c8f9%3A0x401e7a2b8f73c40!2sNgong%20Road%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1692100000000"
+      allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Karibu Nyumbani. All Rights Reserved.</p>
+    <a href="https://wa.me/254757942317" class="footer-btn">Chat on WhatsApp</a>
   </footer>
+
 </body>
 </html>
