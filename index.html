@@ -3,181 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karibu Nyumbani | Airbnb Stays in Nairobi</title>
-  <meta name="description" content="Book stylish and affordable apartments in Nairobi. Choose between Ngong Road and Garden Estate stays. Short and long-term stays available with direct WhatsApp booking.">
+  <meta name="description" content="Karibu Nyumbani – Modern Airbnb Apartments in Nairobi. Explore stylish homes in Ngong Road and Garden Estate with affordable rates and flexible stays.">
+  <title>Karibu Nyumbani | Airbnb Homes Nairobi</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background: #fdfdfd;
-      color: #333;
-    }
-    header.hero {
-      background: url('images/index-hero.jpg') no-repeat center center/cover;
-      height: 80vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #fff;
-      position: relative;
-    }
-    header.hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.5);
-    }
-    header.hero .content {
-      position: relative;
-      z-index: 2;
-    }
-    header.hero h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-    header.hero p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-    .cta-btn {
-      display: inline-block;
-      padding: 12px 24px;
-      background: #25D366;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.3s;
-    }
-    .cta-btn:hover {
-      background: #1da851;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    section h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 2rem;
-    }
-    /* Properties */
-    .properties-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-    .property-card {
-      background: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .property-card:hover {
-      transform: translateY(-5px);
-    }
-    .property-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .property-card .info {
-      padding: 20px;
-    }
-    .property-card h3 {
-      margin-top: 0;
-      font-size: 1.4rem;
-    }
-    .property-card p {
-      font-size: 0.95rem;
-      margin: 10px 0 15px;
-    }
-    .property-card a {
-      display: inline-block;
-      background: #007bff;
-      color: #fff;
-      text-decoration: none;
-      padding: 8px 16px;
-      border-radius: 6px;
-    }
-    .property-card a:hover {
-      background: #0056b3;
-    }
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f8f9fa; color:#333; }
+    header { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.jpg') center/cover no-repeat; color:white; text-align:center; padding:100px 20px; }
+    header h1 { font-size:3rem; margin-bottom:10px; }
+    header p { font-size:1.3rem; }
+
+    .section { padding:50px 20px; max-width:1200px; margin:auto; }
+    h2 { text-align:center; margin-bottom:30px; }
+
+    /* Property Cards */
+    .properties { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:20px; }
+    .card { background:white; border-radius:10px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,0.1); transition:0.3s; }
+    .card:hover { transform:translateY(-5px); }
+    .card img { width:100%; height:200px; object-fit:cover; }
+    .card-content { padding:20px; text-align:center; }
+    .card-content h3 { margin:10px 0; }
+    .card-content p { font-size:0.95rem; color:#555; }
+    .btn { display:inline-block; margin-top:15px; padding:12px 20px; background:#4CAF50; color:white; text-decoration:none; border-radius:25px; }
+    .btn:hover { background:#43a047; }
+
     /* About */
-    #about {
-      text-align: center;
-    }
-    #about p {
-      max-width: 700px;
-      margin: 0 auto 20px;
-    }
-    /* Footer */
-    footer {
-      background: #333;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-    .footer-btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 16px;
-      background: #25D366;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- HERO -->
-  <header class="hero">
-    <div class="content">
-      <h1>Karibu Nyumbani</h1>
-      <p>Your Home Away From Home in Nairobi</p>
-      <a href="#properties" class="cta-btn">Explore Stays</a>
-    </div>
-  </header>
-
-  <!-- PROPERTIES -->
-  <section id="properties">
-    <h2>Our Properties</h2>
-    <div class="properties-grid">
-      <div class="property-card">
-        <img src="images/ngong-thumb.jpg" alt="Ngong Road Apartment">
-        <div class="info">
-          <h3>Ngong Road Apartments</h3>
-          <p>Modern studios & 1BR apartments in Nairobi’s vibrant Ngong Road area.</p>
-          <a href="ngong-road.html">View Details</a>
-        </div>
-      </div>
-      <div class="property-card">
-        <img src="images/garden-thumb.jpg" alt="Garden Estate Apartment">
-        <div class="info">
-          <h3>Garden Estate Apartments</h3>
-          <p>Stylish 1BR apartments in the leafy and serene Garden Estate suburb.</p>
-          <a href="garden-estate.html">View Details</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>At <strong>Karibu Nyumbani</strong>, we provide warm, stylish, and affordable apartments for travelers and long-term guests in Nairobi. Whether you prefer the bustling Ngong Road or the quiet Garden Estate, our homes are designed for comfort and convenience.</p>
-    <a href="https://wa.me/254757942317" class="cta-btn">Chat With Us on WhatsApp</a>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Karibu Nyumbani. All Rights Reserved.</p>
-    <a href="https://wa.me/254757942317" class="footer-btn">Book on WhatsApp</a>
-  </footer>
-
-</body>
-</html>
+    .about { text-align:center; max-width:900px; margin:auto; font-size:1.1rem; line-height:1.6
