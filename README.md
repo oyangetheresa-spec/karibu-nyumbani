@@ -1,14 +1,33 @@
 # Karibu Nyumbani – Airbnb Website
 
-This is a simple static website showcasing furnished Airbnb rentals in Nairobi (Ngong Road & Garden Estate).
+Welcome to **Karibu Nyumbani**, a simple website showcasing our furnished Airbnb rentals in Nairobi, Kenya.  
 
-## Properties
-- 1BR & Studios at Ngong Road
-- 1BR at Garden Estate
+We currently offer modern and affordable stays at **Ngong Road** and **Garden Estate**.  
 
-## Features
-- Photo galleries
-- Transparent pricing tables
-- Direct WhatsApp booking with date picker
+🌐 **Live site:** [Karibu Nyumbani](https://oyangetheresa-spec.github.io/karibu-nyumbani/)
 
-Visit the live site 👉 [Karibu Nyumbani](https://oyangetheresa-spec.github.io/karibu-nyumbani/)
+---
+
+## 🏠 Properties
+- **Ngong Road**
+  - 1 Bedroom Apartment
+  - Studio Apartment
+- **Garden Estate**
+  - 1 Bedroom Apartment
+
+---
+
+## 💡 Features
+- Beautiful photo galleries  
+- Transparent pricing tables with daily, weekly & monthly rates  
+- Date-picker calendar for check-in/out  
+- Direct WhatsApp booking & enquiries  
+
+---
+
+## 📸 Preview
+![Homepage Screenshot](assets/hero.jpg)
+
+---
+
+## 🚀
