@@ -3,42 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ngong Road Apartments | Karibu Nyumbani by TJ</title>
-  <meta name="description" content="Affordable Studio & 1BR Airbnb Apartments on Ngong Road, Nairobi. From KES 2,500 per night. Long stay and monthly discounts available.">
+  <meta name="description" content="Furnished studio and 1BR apartments on Ngong Road, Nairobi. Modern amenities, flexible stays, and affordable rates starting from KES 2,300. Book now on WhatsApp.">
+  <title>Ngong Road Apartments | Karibu Nyumbani</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    body {font-family: Arial, sans-serif; margin:0; background:#fafafa;}
-    header {background:url('assets/ngong-hero.jpg') center/cover no-repeat; color:#fff; padding:80px 20px; text-align:center;}
-    header h1 {font-size:2.5rem; margin:0;}
-    nav {background:#333; padding:10px; text-align:center;}
-    nav a {color:#fff; margin:0 15px; text-decoration:none; font-weight:bold;}
-    section {padding:40px 20px;}
-    table {width:100%; border-collapse:collapse; margin-top:20px;}
-    table, th, td {border:1px solid #ddd;}
-    th, td {padding:12px; text-align:left;}
-    th {background:#f4f4f4;}
-    ul {list-style:none; padding:0; margin:0;}
-    .cta-btn {display:inline-block; background:#4CAF50; color:#fff; padding:10px 20px; border-radius:25px; text-decoration:none; margin-top:20px;}
-    .cta-btn:hover {background:#388E3C;}
-    footer {background:#333; color:#fff; text-align:center; padding:20px;}
-  </style>
 </head>
 <body>
-
-  <header>
+  <!-- Hero Banner -->
+  <header class="hero" style="background: url('images/ngong-hero.jpg') center/cover no-repeat; color: white; text-align: center; padding: 100px 20px;">
     <h1>Ngong Road Apartments</h1>
-    <p>Modern Studios & 1BR Apartments</p>
+    <p>Stylish Studios & 1BRs in Nairobi’s Prime Location</p>
+    <a href="#booking" class="cta-btn">Check Availability</a>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="ngong-road.html">Ngong Road</a>
-    <a href="garden-estate.html">Garden Estate</a>
-  </nav>
+  <!-- Gallery -->
+  <section id="gallery" style="padding: 40px 20px; text-align: center;">
+    <h2>Gallery</h2>
+    <img src="images/ngong1.jpg" alt="Ngong Road Living Room" width="300">
+    <img src="images/ngong2.jpg" alt="Ngong Road Bedroom" width="300">
+    <img src="images/ngong3.jpg" alt="Ngong Road Kitchen" width="300">
+  </section>
 
-  <section id="pricing">
+  <!-- Pricing -->
+  <section id="pricing" style="padding: 40px 20px;">
     <h2>Pricing</h2>
-    <table>
+    <table border="1" cellspacing="0" cellpadding="10">
       <tr>
         <th>1BR Apartment</th>
         <td>
@@ -61,14 +49,36 @@
         </td>
       </tr>
     </table>
-    <p><strong>Note:</strong> For long-term studio stays, water & electricity are billed separately.</p>
-    <a href="https://wa.me/254757942317" class="cta-btn">Book on WhatsApp</a>
+    <p><strong>Note:</strong> For long-term studio stays, guests pay water & electricity separately.</p>
   </section>
 
-  <footer>
-    <p>📞 WhatsApp: <a href="https://wa.me/254757942317" style="color:#4CAF50;">+254 757 942 317</a></p>
-    <p>&copy; 2025 Karibu Nyumbani by TJ</p>
-  </footer>
+  <!-- Booking Form -->
+  <section id="booking" style="padding: 40px 20px; text-align: center;">
+    <h2>Book Your Stay</h2>
+    <form action="https://wa.me/254757942317" method="get" target="_blank">
+      <label>
+        Check-in:
+        <input type="date" name="checkin" required>
+      </label>
+      <label>
+        Check-out:
+        <input type="date" name="checkout" required>
+      </label>
+      <label>
+        Apartment Type:
+        <select name="apartment" required>
+          <option value="1BR">1BR</option>
+          <option value="Studio">Studio</option>
+        </select>
+      </label>
+      <button type="submit" class="cta-btn">Book on WhatsApp</button>
+    </form>
+  </section>
 
+  <!-- Footer -->
+  <footer style="background: #333; color: white; padding: 20px; text-align: center;">
+    <p>Contact us: <a href="https://wa.me/254757942317" style="color: #4CAF50;">WhatsApp +254 757 942 317</a></p>
+    <p>&copy; 2025 Karibu Nyumbani. All rights reserved.</p>
+  </footer>
 </body>
 </html>
