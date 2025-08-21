@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Karibu Nyumbani by TJ - Stylish Airbnb apartments in Nairobi. Garden Estate & Ngong Road locations, plus Airbnb management services for property owners.">
-  <title>Karibu Nyumbani by TJ</title>
+  <meta name="description" content="Karibu Nyumbani by TJ - Affordable Airbnb apartments in Nairobi. Book your short or long stay in Garden Estate or Ngong Road. We also manage Airbnbs for property owners.">
+  <title>Karibu Nyumbani by TJ - Nairobi Airbnbs</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
       background: #f7f7f7;
       color: #333;
     }
@@ -29,30 +28,32 @@
     }
     nav a {
       color: #fff;
-      margin: 0 10px;
+      margin: 0 0.8rem;
       text-decoration: none;
-      font-weight: bold;
+      font-size: 1rem;
     }
     section {
       padding: 2rem;
-      max-width: 1100px;
-      margin: auto;
     }
     h2 {
       text-align: center;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
       color: #2c3e50;
     }
     .properties-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1.5rem;
+      max-width: 1100px;
+      margin: auto;
     }
     .property-card {
       background: #fff;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       overflow: hidden;
+      text-align: center;
       transition: transform 0.3s;
     }
     .property-card:hover {
@@ -64,32 +65,33 @@
       object-fit: cover;
     }
     .property-card h3 {
-      margin: 0.8rem;
+      margin: 1rem 0 0.5rem;
       color: #2c3e50;
     }
     .property-card p {
-      margin: 0 0.8rem 1rem;
+      padding: 0 1rem;
+      font-size: 1rem;
+      margin-bottom: 1rem;
     }
     .btn {
-      display: block;
-      text-align: center;
-      background: #e67e22;
+      display: inline-block;
+      margin: 1rem 0 1.5rem;
+      background: #25d366;
       color: #fff;
-      padding: 0.7rem;
-      margin: 0.8rem;
+      padding: 0.7rem 1.2rem;
       text-decoration: none;
       border-radius: 5px;
       transition: background 0.3s;
     }
     .btn:hover {
-      background: #d35400;
+      background: #1da851;
     }
     footer {
-      text-align: center;
-      padding: 1.5rem;
       background: #2c3e50;
       color: #fff;
-      margin-top: 2rem;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
@@ -100,7 +102,8 @@
       <a href="index.html">Home</a>
       <a href="garden-estate.html">Garden Estate</a>
       <a href="ngong-road.html">Ngong Road</a>
-      <a href="management.html">Services</a>
+      <a href="management.html">Management</a>
+      <a href="thank-you.html">Thank You</a>
     </nav>
   </header>
 
@@ -110,7 +113,7 @@
 
       <!-- Garden Estate -->
       <div class="property-card">
-        <img src="https://via.placeholder.com/400x250?text=Garden+Estate" alt="Garden Estate Airbnb">
+        <img src="https://via.placeholder.com/400x250?text=Garden+Estate+1BR" alt="Garden Estate Airbnb">
         <h3>Garden Estate</h3>
         <p>Modern 1BR in Garden Estate, perfect for both short and long stays.</p>
         <a href="garden-estate.html" class="btn">View Details</a>
@@ -118,7 +121,7 @@
 
       <!-- Ngong Road -->
       <div class="property-card">
-        <img src="https://via.placeholder.com/400x250?text=Ngong+Road" alt="Ngong Road Airbnb">
+        <img src="https://via.placeholder.com/400x250?text=Ngong+Road+Studios+%26+1BR" alt="Ngong Road Airbnb">
         <h3>Ngong Road</h3>
         <p>Stylish studios and 1BR apartments with flexible pricing options.</p>
         <a href="ngong-road.html" class="btn">View Details</a>
@@ -132,6 +135,19 @@
         <a href="management.html" class="btn">Learn More</a>
       </div>
 
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div style="text-align:center;">
+      <p>Have questions or want to book directly? Reach us on WhatsApp.</p>
+      <a href="https://wa.me/254757942317?text=Hello%20Karibu%20Nyumbani%2C%20I%27m%20interested%20in%20booking%20an%20Airbnb." 
+         class="btn" 
+         target="_blank" 
+         onclick="window.location.href='thank-you.html';">
+         📲 Contact Us on WhatsApp
+      </a>
     </div>
   </section>
 
