@@ -1,138 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Furnished 1BR Airbnb – Garden Estate, Nairobi | Karibu Nyumbani</title>
-  <meta name="description" content="Book a furnished 1BR apartment in Garden Estate, Nairobi. Perfect for short or long stays. Affordable rates from KES 2,700/night for extended stays.">
-  <meta name="keywords" content="Airbnb Nairobi, Garden Estate apartment, furnished 1BR Nairobi, affordable stays Nairobi">
-  <meta property="og:title" content="Furnished 1BR Airbnb – Garden Estate, Nairobi">
-  <meta property="og:description" content="Stay in a modern 1BR apartment in Garden Estate. Rates from KES 3,500/night, discounts for weekly & monthly stays.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://oyangetheresa-spec.github.io/karibu-nyumbani/garden-estate.html">
-  <meta property="og:image" content="assets/garden-hero.jpg">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    body {font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; color:#333;}
-    header {background:#333; color:#fff; padding:1rem; text-align:center;}
-    nav a {color:#fff; margin:0 10px; text-decoration:none; font-weight:bold;}
-    .hero {background:url('assets/garden-hero.jpg') no-repeat center center/cover; color:#fff; height:50vh; display:flex; align-items:center; justify-content:center; text-align:center;}
-    .hero h1 {background:rgba(0,0,0,0.6); padding:1rem 2rem; border-radius:10px;}
-    section {padding:2rem; max-width:1100px; margin:auto;}
-    h2 {color:#444; margin-bottom:1rem;}
-    .gallery {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:1rem;}
-    .gallery img {width:100%; border-radius:10px;}
-    table {width:100%; border-collapse:collapse; margin:1rem 0;}
-    table, th, td {border:1px solid #ddd;}
-    th, td {padding:10px; text-align:center;}
-    th {background:#f4f4f4;}
-    .cta {text-align:center; margin-top:2rem;}
-    .cta button {background:#25d366; color:#fff; border:none; padding:1rem 2rem; font-size:1.2rem; border-radius:8px; cursor:pointer;}
-    .cta button:hover {background:#20b954;}
-    .floating-whatsapp {position:fixed; bottom:20px; right:20px; background:#25d366; color:#fff; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-size:2rem; text-decoration:none; box-shadow:0 2px 6px rgba(0,0,0,0.3);}
-    footer {background:#333; color:#fff; text-align:center; padding:1rem; margin-top:2rem;}
-    .form-group {margin-bottom:1rem;}
-    input {padding:0.5rem; width:100%; max-width:300px; border:1px solid #ccc; border-radius:5px;}
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>Karibu Nyumbani</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="ngong-road.html">Ngong Road</a>
-      <a href="garden-estate.html">Garden Estate</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h1>Furnished 1BR Airbnb – Garden Estate, Nairobi</h1>
-  </section>
-
-  <section>
-    <h2>Photo Gallery</h2>
-    <div class="gallery">
-      <img src="assets/garden1.jpg" alt="Garden Estate Living Room">
-      <img src="assets/garden2.jpg" alt="Garden Estate Bedroom">
-      <img src="assets/garden3.jpg" alt="Garden Estate Kitchen">
-      <img src="assets/garden4.jpg" alt="Garden Estate Bathroom">
-    </div>
-  </section>
-
-  <section>
-    <h2>Pricing</h2>
-    <table>
-      <tr>
-        <th>Stay Duration</th>
-        <th>Price (KES)</th>
-      </tr>
-      <tr>
-        <td>1 Night</td>
-        <td>3,500</td>
-      </tr>
-      <tr>
-        <td>Weekly Stay</td>
-        <td>3,000 per night</td>
-      </tr>
-      <tr>
-        <td>2+ Weeks Stay</td>
-        <td>2,700 per night</td>
-      </tr>
-      <tr>
-        <td>Monthly Stay</td>
-        <td>75,000</td>
-      </tr>
-    </table>
-  </section>
-
-  <section>
-    <h2>Amenities</h2>
-    <ul>
-      <li>Free WiFi</li>
-      <li>Secure Parking</li>
-      <li>24/7 Security</li>
-      <li>Fully Furnished</li>
-      <li>Close to malls & transport</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Book Your Stay</h2>
-    <form id="bookingForm" onsubmit="sendWhatsApp(); return false;">
-      <div class="form-group">
-        <label for="checkin">Check-in Date:</label><br>
-        <input type="date" id="checkin" required>
-      </div>
-      <div class="form-group">
-        <label for="checkout">Check-out Date:</label><br>
-        <input type="date" id="checkout" required>
-      </div>
-      <div class="cta">
-        <button type="submit">Enquire via WhatsApp</button>
-      </div>
-    </form>
-  </section>
-
-  <a class="floating-whatsapp" href="https://wa.me/254757942317" target="_blank">💬</a>
-
-  <footer>
-    <p>&copy; 2025 Karibu Nyumbani | Garden Estate Airbnb</p>
-  </footer>
-
-  <script>
-    function sendWhatsApp() {
-      const checkin = document.getElementById('checkin').value;
-      const checkout = document.getElementById('checkout').value;
-      if (!checkin || !checkout) {
-        alert("Please select check-in and check-out dates");
-        return;
-      }
-      const message = `Hello, I’d like to book the Garden Estate 1BR from ${checkin} to ${checkout}. Is it available?`;
-      const url = `https://wa.me/254757942317?text=${encodeURIComponent(message)}`;
-      window.open(url, '_blank');
-    }
-  </script>
-
-</body>
-</html>
+<section id="pricing">
+  <h2>Pricing</h2>
+  <table>
+    <tr>
+      <th>1BR Apartment</th>
+      <td>
+        <ul style="list-style: none; padding:0; margin:0;">
+          <li><strong>Monthly:</strong> KES 75,000</li>
+          <li><strong>Per Night:</strong> KES 3,500</li>
+          <li><strong>1 Week Stay:</strong> KES 3,300 / night</li>
+          <li><strong>2+ Weeks Stay:</strong> KES 3,000 / night</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</section>
