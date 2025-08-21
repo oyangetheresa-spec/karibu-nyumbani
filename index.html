@@ -3,79 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karibu Nyumbani – Nairobi Airbnb Stays</title>
+  <title>Karibu Nyumbani by TJ | Airbnb Nairobi</title>
+  <meta name="description" content="Book affordable 1BR and Studio apartments in Nairobi. Options at Ngong Road and Garden Estate. From KES 3,500/night. Perfect for short and long stays.">
   <link rel="stylesheet" href="styles.css">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fafafa; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #fafafa;
+    }
     header {
       background: url('assets/hero.jpg') center/cover no-repeat;
-      color: white; text-align: center; padding: 100px 20px;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
     }
-    header h1 { font-size: 3em; margin: 0; text-shadow: 2px 2px 4px #000; }
-    header p { font-size: 1.3em; margin: 15px 0; text-shadow: 1px 1px 3px #000; }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    nav {
+      background: #333;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    #properties {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+    }
+    .property-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+    .property-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .property-card h3 {
+      margin: 10px 0 5px;
+    }
+    .property-card p {
+      margin: 0;
+      color: #555;
+    }
+    .price-badge {
+      display: inline-block;
+      background: #ff5722;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
     .cta-btn {
-      background: #ff7043; padding: 12px 25px; border-radius: 25px;
-      color: white; text-decoration: none; font-weight: bold;
-      transition: background 0.3s;
+      display: inline-block;
+      background: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
     }
-    .cta-btn:hover { background: #e64a19; }
-
-    section { padding: 60px 20px; text-align: center; }
-    .properties { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
-    .card {
-      background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      overflow: hidden; width: 300px; transition: transform 0.3s;
+    .cta-btn:hover {
+      background: #388E3C;
     }
-    .card:hover { transform: translateY(-8px); }
-    .card img { width: 100%; height: 200px; object-fit: cover; }
-    .card h3 { margin: 15px 0 5px; }
-    .card p { color: #555; }
-    .card a { display: inline-block; margin: 15px 0; padding: 10px 20px;
-      background: #00796b; color: white; border-radius: 20px; text-decoration: none; }
-    .card a:hover { background: #004d40; }
-
     footer {
-      background: #263238; color: white; text-align: center; padding: 20px;
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
-    footer a { color: #ff7043; text-decoration: none; font-weight: bold; }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Karibu Nyumbani</h1>
-  <p>Your home away from home in Nairobi</p>
-  <a href="#properties" class="cta-btn">Explore Properties</a>
-</header>
+  <header>
+    <h1>Karibu Nyumbani by TJ</h1>
+    <p>Your affordable Airbnb stays in Nairobi</p>
+  </header>
 
-<section id="properties">
-  <h2>Our Stays</h2>
-  <div class="properties">
-    <div class="card">
-      <img src="assets/ngong-hero.jpg" alt="Ngong Road Apartments">
-      <h3>Ngong Road</h3>
-      <p>Modern 1BR & Studios with flexible rates.</p>
-      <a href="ngong-road.html">View Details</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="ngong-road.html">Ngong Road</a>
+    <a href="garden-estate.html">Garden Estate</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="properties">
+    <!-- Ngong Road -->
+    <div class="property-card">
+      <img src="assets/ngong-hero.jpg" alt="Ngong Road Apartment">
+      <h3>Ngong Road Apartments</h3>
+      <p>Modern 1BR & Studio Apartments</p>
+      <span class="price-badge">From KES 3,500 / night</span>
+      <a href="ngong-road.html" class="cta-btn">View Details</a>
     </div>
-    <div class="card">
-      <img src="assets/garden-hero.jpg" alt="Garden Estate Apartments">
-      <h3>Garden Estate</h3>
-      <p>Cozy 1BR apartments in a serene environment.</p>
-      <a href="garden-estate.html">View Details</a>
+
+    <!-- Garden Estate -->
+    <div class="property-card">
+      <img src="assets/garden-hero.jpg" alt="Garden Estate Apartment">
+      <h3>Garden Estate Apartments</h3>
+      <p>Spacious 1BR Apartments</p>
+      <span class="price-badge">From KES 3,500 / night</span>
+      <a href="garden-estate.html" class="cta-btn">View Details</a>
     </div>
-  </div>
-</section>
+  </section>
 
-<section style="background:#fbe9e7;">
-  <h2>Book with Ease</h2>
-  <p>Check availability and chat with us directly on WhatsApp. Fast, simple, and secure.</p>
-  <a href="https://wa.me/254757942317" class="cta-btn">Book on WhatsApp</a>
-</section>
-
-<footer>
-  <p>&copy; 2025 Karibu Nyumbani. All Rights Reserved.</p>
-  <p>Contact us on <a href="https://wa.me/254757942317">WhatsApp</a></p>
-</footer>
+  <footer id="contact">
+    <p>📞 WhatsApp: <a href="https://wa.me/254757942317" style="color:#4CAF50;">+254 757 942 317</a></p>
+    <p>&copy; 2025 Karibu Nyumbani by TJ. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
