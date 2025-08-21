@@ -3,164 +3,187 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- SEO Meta -->
-  <title>Airbnb Studios & 1BRs on Ngong Road | Karibu Nyumbani</title>
-  <meta name="description" content="Karibu Nyumbani — modern studios & 1BR Airbnb units on Ngong Road, Nairobi, near Junction Mall & Racecourse. Book direct on WhatsApp.">
-  <meta name="keywords" content="Airbnb Nairobi, Ngong Road Airbnb, Junction Mall stay, Racecourse Airbnb, short term rentals Nairobi">
+  <title>Karibu Nyumbani Apartments | Ngong Road & Garden Estate</title>
+  <meta name="description" content="Affordable furnished apartments along Ngong Road & Garden Estate, Nairobi. Studio & 1BR units with WiFi, parking, security. Book directly via WhatsApp!">
 
-  <!-- Open Graph for Social Media -->
-  <meta property="og:title" content="Karibu Nyumbani - Airbnb Nairobi">
-  <meta property="og:description" content="Book modern 1BRs & studios on Ngong Road near Junction Mall & Racecourse.">
-  <meta property="og:image" content="images/studio.jpg">
-  <meta property="og:type" content="website">
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Karibu Nyumbani Apartments – Ngong Road & Garden Estate">
+  <meta property="og:description" content="Furnished Studios & 1BRs with Wi-Fi, Parking & Security from Ksh 2,100/night">
+  <meta property="og:image" content="https://oyangetheresa-spec.github.io/karibu-nyumbani/studio.jpg">
   <meta property="og:url" content="https://oyangetheresa-spec.github.io/karibu-nyumbani/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Karibu Nyumbani Apartments – Ngong Road & Garden Estate">
+  <meta name="twitter:description" content="Furnished Studios & 1BRs with Wi-Fi, Parking & Security from Ksh 2,100/night">
+  <meta name="twitter:image" content="https://oyangetheresa-spec.github.io/karibu-nyumbani/studio.jpg">
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    /* Hero Section */
-    .hero {
-      background: url('images/balcony-view.jpg') center/cover no-repeat;
-      height: 80vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      position: relative;
-    }
-    .hero-overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-    .hero h1 {
-      font-size: 2.8rem;
-      margin: 0;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
-
-    /* Sections */
-    .section {
-      padding: 50px 20px;
-      text-align: center;
-    }
-    .section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #2a7b5f;
-    }
-
-    /* Gallery */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-
-    /* Video */
-    .video-container {
-      max-width: 800px;
-      margin: auto;
-    }
-    .video-container video {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    /* CTA Button */
-    .cta {
-      display: inline-block;
-      padding: 15px 25px;
-      background: #25D366;
-      color: white;
-      text-decoration: none;
-      font-size: 1.2rem;
-      font-weight: bold;
-      border-radius: 50px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      transition: background 0.3s;
-    }
-    .cta:hover {
-      background: #1DA851;
-    }
-
-    /* Mobile */
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2rem; }
-      .hero p { font-size: 1rem; }
-    }
+    body {font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6;}
+    header, section {padding:20px;}
+    header {background:#2c3e50; color:#fff; text-align:center;}
+    nav a {margin:0 10px; color:#fff; text-decoration:none;}
+    .gallery img {max-width:100%; border-radius:8px; cursor:pointer;}
+    .pricing-table {border-collapse:collapse; width:100%; margin:20px 0;}
+    .pricing-table th, .pricing-table td {border:1px solid #ddd; padding:10px; text-align:center;}
+    .cta {background:#27ae60; color:#fff; padding:10px 15px; border-radius:5px; text-decoration:none;}
+    footer {background:#2c3e50; color:#fff; text-align:center; padding:10px;}
+    .lightbox {display:none; position:fixed; z-index:999; padding-top:60px; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.9);}
+    .lightbox img {margin:auto; display:block; max-width:90%; max-height:80%;}
+    .lightbox:target {display:block;}
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Karibu Nyumbani Apartments",
+    "image": "https://oyangetheresa-spec.github.io/karibu-nyumbani/studio.jpg",
+    "url": "https://oyangetheresa-spec.github.io/karibu-nyumbani/",
+    "telephone": "+254757942317",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nairobi",
+      "addressCountry": "KE"
+    },
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "name": "Ngong Road Studio",
+        "price": "2500",
+        "priceCurrency": "KES",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Ngong Road 1BR",
+        "price": "3500",
+        "priceCurrency": "KES",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Garden Estate 1BR",
+        "price": "3500",
+        "priceCurrency": "KES",
+        "availability": "https://schema.org/InStock"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+  <header>
+    <h1>Karibu Nyumbani Apartments</h1>
+    <p>Furnished Studios & 1BR Apartments in Nairobi</p>
+    <nav>
+      <a href="#properties">Properties</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#rules">House Rules</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#booking">Book Now</a>
+    </nav>
+  </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Karibu Nyumbani</h1>
-      <p>Modern Airbnb Studios & 1BRs on Ngong Road near Junction Mall & Racecourse</p>
-      <a href="https://wa.me/254757942317" class="cta">Book on WhatsApp</a>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section class="section">
-    <h2>Welcome to Your Stay</h2>
-    <p>Enjoy stylish 1BR and studio apartments along Ngong Road, Nairobi — perfect for both short and long stays. 
-    Located near Junction Mall and Racecourse where exciting events and horse riding happen.</p>
-  </section>
-
-  <!-- Gallery -->
-  <section class="section">
-    <h2>Gallery</h2>
+  <section id="properties">
+    <h2>Our Properties</h2>
+    <h3>Ngong Road Apartments</h3>
     <div class="gallery">
-      <img src="images/studio.jpg" alt="Studio Apartment" loading="lazy">
-      <img src="images/1br.jpg" alt="1 Bedroom Apartment" loading="lazy">
-      <img src="images/balcony-view.jpg" alt="Balcony View" loading="lazy">
+      <a href="#img1"><img src="studio.jpg" alt="Studio Apartment"></a>
+      <a href="#img2"><img src="1BR.jpg" alt="1 Bedroom Apartment"></a>
+    </div>
+    <h3>Garden Estate Apartment</h3>
+    <div class="gallery">
+      <a href="#img3"><img src="garden1BR.jpg" alt="Garden Estate 1BR"></a>
     </div>
   </section>
 
-  <!-- Video -->
-  <section class="section">
-    <h2>Video Tour</h2>
-    <div class="video-container">
-      <video controls poster="images/studio.jpg">
-        <source src="videos/tour.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
+  <section id="amenities">
+    <h2>Amenities</h2>
+    <ul>
+      <li>Fast Wi-Fi</li>
+      <li>Free Parking</li>
+      <li>24/7 Security</li>
+      <li>Entertainment & Games</li>
+      <li>Comfortable Furnishings</li>
+    </ul>
   </section>
 
-  <!-- CTA -->
-  <section class="section">
-    <h2>Ready to Book?</h2>
-    <a href="https://wa.me/254757942317" class="cta">Chat on WhatsApp</a>
+  <section id="rules">
+    <h2>House Rules</h2>
+    <ul>
+      <li>Guests must present valid identification upon arrival.</li>
+      <li>Payment required before check-in. First-time guests may view before paying.</li>
+      <li>Destruction of property will result in penalties.</li>
+      <li>No smoking indoors.</li>
+    </ul>
   </section>
 
+  <section id="checkin">
+    <h2>Check-in & Check-out</h2>
+    <p>Check-in: 11:00 AM | Check-out: 11:00 AM (30-minute grace period)</p>
+  </section>
+
+  <section id="cancellation">
+    <h2>Cancellation & Refund Policy</h2>
+    <p>Guests can cancel up to <strong>24 hours before check-in</strong> for a full refund. If canceled less than 24 hours before check-in, the first night is non-refundable.</p>
+  </section>
+
+  <section id="pricing">
+    <h2>Rates & Pricing</h2>
+    <h3>Ngong Road Apartments</h3>
+    <table class="pricing-table">
+      <tr><th>Unit</th><th>Standard Rate</th><th>1 Week Stay</th><th>2+ Weeks Stay</th></tr>
+      <tr><td>1BR</td><td>Ksh 3,500/night</td><td>Ksh 3,000/night</td><td>Ksh 2,700/night</td></tr>
+      <tr><td>Studio</td><td>Ksh 2,500/night</td><td>Ksh 2,300/night</td><td>Ksh 2,100/night</td></tr>
+    </table>
+
+    <h3>Garden Estate Apartment</h3>
+    <p>1BR – Ksh 3,500/night</p>
+  </section>
+
+  <section id="booking">
+    <h2>Book Your Stay</h2>
+    <form id="bookingForm">
+      <label for="name">Your Name:</label><br>
+      <input type="text" id="name" required><br>
+      <label for="unit">Select Unit:</label><br>
+      <select id="unit">
+        <option>Ngong Road Studio</option>
+        <option>Ngong Road 1BR</option>
+        <option>Garden Estate 1BR</option>
+      </select><br>
+      <label for="dates">Preferred Dates:</label><br>
+      <input type="text" id="dates" placeholder="e.g. March 10 - March 15"><br>
+      <button type="submit" class="cta">Send Booking Request</button>
+    </form>
+  </section>
+
+  <section id="location">
+    <h2>Find Us</h2>
+    <iframe src="https://www.google.com/maps?q=Ngong%20Road%20Nairobi&output=embed" width="100%" height="300" style="border:0;" allowfullscreen></iframe>
+  </section>
+
+  <footer>
+    <p>© 2025 Karibu Nyumbani Apartments | Nairobi, Kenya</p>
+    <p><a class="cta" href="https://wa.me/254757942317" target="_blank">Chat with us on WhatsApp</a></p>
+  </footer>
+
+  <div id="img1" class="lightbox"><img src="studio.jpg" alt="Studio Apartment"></div>
+  <div id="img2" class="lightbox"><img src="1BR.jpg" alt="1 Bedroom Apartment"></div>
+  <div id="img3" class="lightbox"><img src="garden1BR.jpg" alt="Garden Estate Apartment"></div>
+
+  <script>
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const unit = document.getElementById('unit').value;
+      const dates = document.getElementById('dates').value;
+      const phone = "254757942317";
+      const message = `Hello, my name is ${name}. I would like to book ${unit} for ${dates}.`;
+      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+    });
+  </script>
 </body>
 </html>
