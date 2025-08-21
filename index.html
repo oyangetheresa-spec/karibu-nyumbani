@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Karibu Nyumbani by TJ | Airbnb Nairobi</title>
-  <meta name="description" content="Book affordable 1BR and Studio apartments in Nairobi. Options at Ngong Road and Garden Estate. From KES 3,500/night. Perfect for short and long stays.">
+  <meta name="description" content="Book affordable Airbnb stays in Nairobi. Fully furnished 1BR & Studio apartments along Ngong Road and Garden Estate. From KES 3,500/night.">
   <link rel="stylesheet" href="styles.css">
   <style>
     body {
@@ -13,23 +13,35 @@
       padding: 0;
       line-height: 1.6;
       background: #fafafa;
+      color: #333;
     }
     header {
       background: url('assets/hero.jpg') center/cover no-repeat;
       color: white;
       text-align: center;
-      padding: 80px 20px;
+      padding: 120px 20px;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 2;
     }
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin: 0;
     }
     header p {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
     nav {
       background: #333;
-      padding: 10px;
+      padding: 12px;
       text-align: center;
     }
     nav a {
@@ -37,12 +49,18 @@
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ff5722;
     }
     #properties {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
-      padding: 40px 20px;
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
     }
     .property-card {
       background: white;
@@ -50,42 +68,57 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       overflow: hidden;
       text-align: center;
-      padding-bottom: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+    .property-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
     }
     .property-card img {
       width: 100%;
-      height: 200px;
+      height: 220px;
       object-fit: cover;
     }
     .property-card h3 {
-      margin: 10px 0 5px;
+      margin: 12px 0 5px;
     }
     .property-card p {
       margin: 0;
       color: #555;
     }
     .price-badge {
-      display: inline-block;
+      position: absolute;
+      top: 15px; left: 15px;
       background: #ff5722;
       color: #fff;
       padding: 6px 12px;
       border-radius: 20px;
       font-size: 14px;
       font-weight: bold;
-      margin: 10px 0;
     }
     .cta-btn {
       display: inline-block;
       background: #4CAF50;
       color: white;
       padding: 10px 20px;
-      margin-top: 10px;
+      margin: 15px 0;
       border-radius: 25px;
       text-decoration: none;
       font-weight: bold;
+      transition: background 0.3s;
     }
     .cta-btn:hover {
       background: #388E3C;
+    }
+    .booking-teaser {
+      text-align: center;
+      padding: 60px 20px;
+      background: #fff;
+    }
+    .booking-teaser h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
     }
     footer {
       background: #333;
@@ -93,6 +126,10 @@
       text-align: center;
       padding: 20px;
       margin-top: 40px;
+    }
+    footer a {
+      color: #4CAF50;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -113,27 +150,27 @@
   <section id="properties">
     <!-- Ngong Road -->
     <div class="property-card">
+      <span class="price-badge">From KES 3,500 / night</span>
       <img src="assets/ngong-hero.jpg" alt="Ngong Road Apartment">
       <h3>Ngong Road Apartments</h3>
       <p>Modern 1BR & Studio Apartments</p>
-      <span class="price-badge">From KES 3,500 / night</span>
-      <a href="ngong-road.html" class="cta-btn">View Details</a>
+      <a href="ngong-road.html" class="cta-btn">Check Availability</a>
     </div>
 
     <!-- Garden Estate -->
     <div class="property-card">
+      <span class="price-badge">From KES 3,500 / night</span>
       <img src="assets/garden-hero.jpg" alt="Garden Estate Apartment">
       <h3>Garden Estate Apartments</h3>
       <p>Spacious 1BR Apartments</p>
-      <span class="price-badge">From KES 3,500 / night</span>
-      <a href="garden-estate.html" class="cta-btn">View Details</a>
+      <a href="garden-estate.html" class="cta-btn">Check Availability</a>
     </div>
   </section>
 
-  <footer id="contact">
-    <p>📞 WhatsApp: <a href="https://wa.me/254757942317" style="color:#4CAF50;">+254 757 942 317</a></p>
-    <p>&copy; 2025 Karibu Nyumbani by TJ. All rights reserved.</p>
-  </footer>
+  <section class="booking-teaser">
+    <h2>Book Direct on WhatsApp</h2>
+    <p>Quick booking, clear pricing, and instant confirmation.</p>
+    <a href="https://wa.me/254757942317" class="cta-btn">Book Now</a>
+  </section>
 
-</body>
-</html>
+  <footer id="contac
