@@ -3,187 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karibu Nyumbani Apartments | Ngong Road & Garden Estate</title>
-  <meta name="description" content="Affordable furnished apartments along Ngong Road & Garden Estate, Nairobi. Studio & 1BR units with WiFi, parking, security. Book directly via WhatsApp!">
-
-  <!-- Open Graph Tags -->
-  <meta property="og:title" content="Karibu Nyumbani Apartments – Ngong Road & Garden Estate">
-  <meta property="og:description" content="Furnished Studios & 1BRs with Wi-Fi, Parking & Security from Ksh 2,100/night">
-  <meta property="og:image" content="https://oyangetheresa-spec.github.io/karibu-nyumbani/studio.jpg">
-  <meta property="og:url" content="https://oyangetheresa-spec.github.io/karibu-nyumbani/">
+  <title>Karibu Nyumbani | Furnished Airbnbs in Nairobi</title>
+  <meta name="description" content="Book furnished Airbnbs in Nairobi. Options available in Ngong Road & Garden Estate. Affordable short-term and long-term stays with modern amenities.">
+  <meta name="keywords" content="Airbnb Nairobi, furnished apartments, Ngong Road Airbnb, Garden Estate Airbnb, Nairobi rentals">
+  <meta property="og:title" content="Karibu Nyumbani | Furnished Airbnbs in Nairobi">
+  <meta property="og:description" content="Discover modern furnished Airbnbs in Nairobi. Locations include Ngong Road and Garden Estate. Perfect for short & long stays.">
   <meta property="og:type" content="website">
-
-  <!-- Twitter Card Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Karibu Nyumbani Apartments – Ngong Road & Garden Estate">
-  <meta name="twitter:description" content="Furnished Studios & 1BRs with Wi-Fi, Parking & Security from Ksh 2,100/night">
-  <meta name="twitter:image" content="https://oyangetheresa-spec.github.io/karibu-nyumbani/studio.jpg">
-
+  <meta property="og:url" content="https://oyangetheresa-spec.github.io/karibu-nyumbani/">
+  <meta property="og:image" content="assets/hero.jpg">
+  <link rel="stylesheet" href="styles.css">
   <style>
-    body {font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6;}
-    header, section {padding:20px;}
-    header {background:#2c3e50; color:#fff; text-align:center;}
-    nav a {margin:0 10px; color:#fff; text-decoration:none;}
-    .gallery img {max-width:100%; border-radius:8px; cursor:pointer;}
-    .pricing-table {border-collapse:collapse; width:100%; margin:20px 0;}
-    .pricing-table th, .pricing-table td {border:1px solid #ddd; padding:10px; text-align:center;}
-    .cta {background:#27ae60; color:#fff; padding:10px 15px; border-radius:5px; text-decoration:none;}
-    footer {background:#2c3e50; color:#fff; text-align:center; padding:10px;}
-    .lightbox {display:none; position:fixed; z-index:999; padding-top:60px; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.9);}
-    .lightbox img {margin:auto; display:block; max-width:90%; max-height:80%;}
-    .lightbox:target {display:block;}
+    body {font-family: Arial, sans-serif; margin:0; padding:0; color:#333; line-height:1.6;}
+    header {background:#333; color:#fff; padding:1rem; text-align:center;}
+    nav a {color:#fff; margin:0 10px; text-decoration:none; font-weight:bold;}
+    .hero {background:url('assets/hero.jpg') no-repeat center center/cover; height:60vh; display:flex; align-items:center; justify-content:center; color:#fff; text-align:center;}
+    .hero h1 {background:rgba(0,0,0,0.6); padding:1rem 2rem; border-radius:10px;}
+    section {padding:2rem; max-width:1200px; margin:auto;}
+    h2 {text-align:center; margin-bottom:2rem; color:#444;}
+    .properties {display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:2rem;}
+    .card {position:relative; border-radius:15px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.2);}
+    .card img {width:100%; height:250px; object-fit:cover;}
+    .card-content {position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.5); color:#fff; padding:1rem;}
+    .card h3 {margin:0; font-size:1.5rem;}
+    .card p {margin:0.5rem 0;}
+    .card a {display:inline-block; margin-top:0.5rem; background:#25d366; color:#fff; padding:0.5rem 1rem; border-radius:5px; text-decoration:none;}
+    .card a:hover {background:#20b954;}
+    footer {background:#333; color:#fff; text-align:center; padding:1rem; margin-top:2rem;}
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
-    "name": "Karibu Nyumbani Apartments",
-    "image": "https://oyangetheresa-spec.github.io/karibu-nyumbani/studio.jpg",
-    "url": "https://oyangetheresa-spec.github.io/karibu-nyumbani/",
-    "telephone": "+254757942317",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Nairobi",
-      "addressCountry": "KE"
-    },
-    "makesOffer": [
-      {
-        "@type": "Offer",
-        "name": "Ngong Road Studio",
-        "price": "2500",
-        "priceCurrency": "KES",
-        "availability": "https://schema.org/InStock"
-      },
-      {
-        "@type": "Offer",
-        "name": "Ngong Road 1BR",
-        "price": "3500",
-        "priceCurrency": "KES",
-        "availability": "https://schema.org/InStock"
-      },
-      {
-        "@type": "Offer",
-        "name": "Garden Estate 1BR",
-        "price": "3500",
-        "priceCurrency": "KES",
-        "availability": "https://schema.org/InStock"
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
+
   <header>
-    <h1>Karibu Nyumbani Apartments</h1>
-    <p>Furnished Studios & 1BR Apartments in Nairobi</p>
+    <h1>Karibu Nyumbani</h1>
     <nav>
-      <a href="#properties">Properties</a>
-      <a href="#amenities">Amenities</a>
-      <a href="#rules">House Rules</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#booking">Book Now</a>
+      <a href="index.html">Home</a>
+      <a href="ngong-road.html">Ngong Road</a>
+      <a href="garden-estate.html">Garden Estate</a>
     </nav>
   </header>
 
-  <section id="properties">
+  <section class="hero">
+    <h1>Furnished Airbnbs in Nairobi</h1>
+  </section>
+
+  <section>
     <h2>Our Properties</h2>
-    <h3>Ngong Road Apartments</h3>
-    <div class="gallery">
-      <a href="#img1"><img src="studio.jpg" alt="Studio Apartment"></a>
-      <a href="#img2"><img src="1BR.jpg" alt="1 Bedroom Apartment"></a>
+    <div class="properties">
+      
+      <!-- Ngong Road Card -->
+      <div class="card">
+        <img src="assets/ngong-hero.jpg" alt="Ngong Road Airbnb">
+        <div class="card-content">
+          <h3>Ngong Road Apartments</h3>
+          <p>Studios & 1BR | From KES 2,300/night</p>
+          <a href="ngong-road.html">View Details</a>
+        </div>
+      </div>
+
+      <!-- Garden Estate Card -->
+      <div class="card">
+        <img src="assets/garden-hero.jpg" alt="Garden Estate Airbnb">
+        <div class="card-content">
+          <h3>Garden Estate Apartment</h3>
+          <p>1BR | From KES 2,700/night</p>
+          <a href="garden-estate.html">View Details</a>
+        </div>
+      </div>
+
     </div>
-    <h3>Garden Estate Apartment</h3>
-    <div class="gallery">
-      <a href="#img3"><img src="garden1BR.jpg" alt="Garden Estate 1BR"></a>
-    </div>
-  </section>
-
-  <section id="amenities">
-    <h2>Amenities</h2>
-    <ul>
-      <li>Fast Wi-Fi</li>
-      <li>Free Parking</li>
-      <li>24/7 Security</li>
-      <li>Entertainment & Games</li>
-      <li>Comfortable Furnishings</li>
-    </ul>
-  </section>
-
-  <section id="rules">
-    <h2>House Rules</h2>
-    <ul>
-      <li>Guests must present valid identification upon arrival.</li>
-      <li>Payment required before check-in. First-time guests may view before paying.</li>
-      <li>Destruction of property will result in penalties.</li>
-      <li>No smoking indoors.</li>
-    </ul>
-  </section>
-
-  <section id="checkin">
-    <h2>Check-in & Check-out</h2>
-    <p>Check-in: 11:00 AM | Check-out: 11:00 AM (30-minute grace period)</p>
-  </section>
-
-  <section id="cancellation">
-    <h2>Cancellation & Refund Policy</h2>
-    <p>Guests can cancel up to <strong>24 hours before check-in</strong> for a full refund. If canceled less than 24 hours before check-in, the first night is non-refundable.</p>
-  </section>
-
-  <section id="pricing">
-    <h2>Rates & Pricing</h2>
-    <h3>Ngong Road Apartments</h3>
-    <table class="pricing-table">
-      <tr><th>Unit</th><th>Standard Rate</th><th>1 Week Stay</th><th>2+ Weeks Stay</th></tr>
-      <tr><td>1BR</td><td>Ksh 3,500/night</td><td>Ksh 3,000/night</td><td>Ksh 2,700/night</td></tr>
-      <tr><td>Studio</td><td>Ksh 2,500/night</td><td>Ksh 2,300/night</td><td>Ksh 2,100/night</td></tr>
-    </table>
-
-    <h3>Garden Estate Apartment</h3>
-    <p>1BR – Ksh 3,500/night</p>
-  </section>
-
-  <section id="booking">
-    <h2>Book Your Stay</h2>
-    <form id="bookingForm">
-      <label for="name">Your Name:</label><br>
-      <input type="text" id="name" required><br>
-      <label for="unit">Select Unit:</label><br>
-      <select id="unit">
-        <option>Ngong Road Studio</option>
-        <option>Ngong Road 1BR</option>
-        <option>Garden Estate 1BR</option>
-      </select><br>
-      <label for="dates">Preferred Dates:</label><br>
-      <input type="text" id="dates" placeholder="e.g. March 10 - March 15"><br>
-      <button type="submit" class="cta">Send Booking Request</button>
-    </form>
-  </section>
-
-  <section id="location">
-    <h2>Find Us</h2>
-    <iframe src="https://www.google.com/maps?q=Ngong%20Road%20Nairobi&output=embed" width="100%" height="300" style="border:0;" allowfullscreen></iframe>
   </section>
 
   <footer>
-    <p>© 2025 Karibu Nyumbani Apartments | Nairobi, Kenya</p>
-    <p><a class="cta" href="https://wa.me/254757942317" target="_blank">Chat with us on WhatsApp</a></p>
+    <p>&copy; 2025 Karibu Nyumbani | Nairobi Airbnbs</p>
   </footer>
 
-  <div id="img1" class="lightbox"><img src="studio.jpg" alt="Studio Apartment"></div>
-  <div id="img2" class="lightbox"><img src="1BR.jpg" alt="1 Bedroom Apartment"></div>
-  <div id="img3" class="lightbox"><img src="garden1BR.jpg" alt="Garden Estate Apartment"></div>
-
-  <script>
-    document.getElementById('bookingForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const name = document.getElementById('name').value;
-      const unit = document.getElementById('unit').value;
-      const dates = document.getElementById('dates').value;
-      const phone = "254757942317";
-      const message = `Hello, my name is ${name}. I would like to book ${unit} for ${dates}.`;
-      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
-    });
-  </script>
 </body>
 </html>
+  
