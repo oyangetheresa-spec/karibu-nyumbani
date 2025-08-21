@@ -3,160 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stay at our modern 1 Bedroom apartments in Garden Estate, Nairobi. Perfect for both short and long stays with affordable rates and easy booking.">
   <title>Garden Estate Apartments | Karibu Nyumbani</title>
-  <meta name="description" content="Stylish and affordable 1BR apartments for short and long stays at Garden Estate, Nairobi. Book your stay directly on WhatsApp.">
+  <link rel="stylesheet" href="styles.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      line-height: 1.6;
-      background: #fdfdfd;
-      color: #333;
-    }
-    header.hero {
-      position: relative;
-      background: url('images/garden-hero.jpg') no-repeat center center/cover;
-      height: 60vh;
-      display: flex; justify-content: center; align-items: center;
-      color: #fff;
-    }
-    header.hero .overlay {
-      background: rgba(0,0,0,0.5);
-      padding: 20px;
-      text-align: center;
-      border-radius: 12px;
-    }
-    header.hero h1 {
-      font-size: 2.5rem;
-      margin: 0 0 10px;
-    }
-    .cta-btn {
-      display: inline-block;
-      padding: 10px 20px;
-      margin-top: 10px;
-      background: #007bff;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.3s;
-    }
-    .cta-btn:hover {
-      background: #0056b3;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#fafafa; color:#333; }
+    header { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/garden-hero.jpg') center/cover no-repeat; color:white; text-align:center; padding:80px 20px; }
+    header h1 { font-size:2.5rem; margin-bottom:10px; }
+    header p { font-size:1.2rem; }
+
+    .section { padding:50px 20px; max-width:1100px; margin:auto; }
+    h2 { text-align:center; margin-bottom:20px; }
+
+    /* Pricing Table */
+    table { width:100%; border-collapse:collapse; margin:20px 0; }
+    th, td { border:1px solid #ddd; padding:12px; text-align:center; }
+    th { background:#4CAF50; color:white; }
+
     /* Gallery */
-    .gallery-grid .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-    }
-    .gallery-grid img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    /* Pricing */
-    .pricing-section table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-    }
-    .pricing-section th, .pricing-section td {
-      border: 1px solid #ddd;
-      padding: 12px;
-    }
-    .pricing-section th {
-      background: #f4f4f4;
-      text-align: left;
-      width: 30%;
-    }
-    .pricing-section strong {
-      color: #007bff;
-    }
-    /* Reviews */
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    blockquote {
-      background: #fafafa;
-      border-left: 5px solid #007bff;
-      padding: 15px;
-      font-style: italic;
-      border-radius: 8px;
-    }
-    blockquote span {
-      display: block;
-      margin-top: 10px;
-      font-weight: bold;
-      color: #555;
-    }
-    /* Map */
-    #map iframe {
-      border: 0;
-      border-radius: 10px;
-      width: 100%;
-      height: 300px;
-    }
-    /* Footer */
-    footer {
-      background: #333;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-    .footer-btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 16px;
-      background: #25D366;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-    }
+    .gallery { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:15px; }
+    .gallery img { width:100%; height:200px; object-fit:cover; border-radius:8px; }
+
+    /* Booking CTA */
+    .cta { text-align:center; margin:40px 0; }
+    .cta a { background:#25D366; color:white; padding:15px 25px; border-radius:30px; text-decoration:none; font-size:1.2rem; }
+    .cta a:hover { background:#20b954; }
+
+    /* Calendar */
+    .calendar { text-align:center; margin:30px auto; }
+    input[type="date"] { padding:10px; font-size:1rem; margin:10px; }
+
+    footer { background:#222; color:#bbb; text-align:center; padding:20px; margin-top:40px; }
   </style>
 </head>
 <body>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="overlay">
-      <h1>Garden Estate Apartments</h1>
-      <p>Relax & Unwind in Nairobi's Leafy Suburb</p>
-      <a href="#pricing" class="cta-btn">Check Rates</a>
-    </div>
+  <!-- Hero Section -->
+  <header>
+    <h1>Garden Estate Apartments</h1>
+    <p>Modern 1 Bedroom Homes – Affordable Comfort in Nairobi</p>
   </header>
 
-  <!-- GALLERY -->
-  <section id="gallery" class="gallery-grid">
-    <h2>Explore the Apartment</h2>
-    <div class="grid">
-      <img src="images/garden1.jpg" alt="Living Room">
-      <img src="images/garden2.jpg" alt="Bedroom">
-      <img src="images/garden3.jpg" alt="Kitchen">
-      <img src="images/garden4.jpg" alt="Bathroom">
-      <img src="images/garden5.jpg" alt="Balcony View">
-      <img src="images/garden6.jpg" alt="Apartment Exterior">
-    </div>
-  </section>
-
-  <!-- PRICING -->
-  <section id="pricing" class="pricing-section">
+  <!-- Pricing Section -->
+  <section class="section">
     <h2>Pricing</h2>
     <table>
       <tr>
-        <th>1BR Apartment</th>
-        <td>
-          <strong>KES 75,000</strong> / Month<br>
-          <strong>KES 3,500</strong> / Night<br>
-          <strong>
+        <th>Apartment Type</th>
+        <th>Per Night</th>
+        <th>Weekly Stay</th>
+        <th>2+ Weeks Stay</th>
+        <th>Monthly</th>
+      </tr>
+      <tr>
+        <td>1 Bedroom</td>
+        <td>KES 3,500</td>
+        <td>KES 3,300</td>
+        <td>KES 3,000</td>
+        <td>KES 75,000</td>
+      </tr>
+    </table>
+    <p><em>Perfect for both business and leisure travelers seeking convenience and comfort.</em></p>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section">
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+      <img src="images/garden1.jpg" alt="Garden Estate Living Room">
+      <img src="images/garden2.jpg" alt="Garden Estate Bedroom">
+      <img src="images/garden3.jpg" alt="Garden Estate Kitchen">
+      <img src="images/garden4.jpg" alt="Garden Estate Bathroom">
+    </div>
+    <p style="text-align:center; margin-top:10px;">📸 Upload your Garden Estate photos into the <code>images</code> folder later.</p>
+  </section>
+
+  <!-- Booking Section -->
+  <section class="section">
+    <h2>Book Your Stay</h2>
+    <div class="calendar">
+      <label>Check-in: <input type="date"></label>
+      <label>Check-out: <input type="date"></label>
+    </div>
+    <div class="cta">
+      <a href="https://wa.me/254757942317?text=Hello%20Karibu%20Nyumbani,%20I%20want%20to%20book%20Garden%20Estate%20apartment" target="_blank">
+        📲 Book via WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <section class="section">
+    <h2>Location</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.859620184829!2d36.886!3d-1.219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f13e4f6d9b6a7%3A0x6e9a529c66e6e9d5!2sGarden%20Estate%2C%20Nairobi!5e0!3m2!1sen!2ske!4v0000000000000"
+      width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Karibu Nyumbani | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
