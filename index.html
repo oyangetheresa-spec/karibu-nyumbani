@@ -3,156 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Karibu Nyumbani by TJ - Affordable Airbnb apartments in Nairobi. Book your short or long stay in Garden Estate or Ngong Road. We also manage Airbnbs for property owners.">
-  <title>Karibu Nyumbani by TJ - Nairobi Airbnbs</title>
+  <title>Karibu Nyumbani | Affordable Airbnb Stays in Nairobi</title>
+  <meta name="description" content="Find affordable and fully furnished Airbnb apartments in Nairobi. Garden Estate & Ngong Road stays with flexible pricing for nightly, weekly, and monthly bookings.">
+  <meta name="keywords" content="Airbnb Nairobi, Nairobi furnished apartments, Garden Estate Airbnb, Ngong Road Airbnb, short stay Nairobi, long stay apartments">
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f7f7f7;
-      color: #333;
-    }
-    header {
-      background: #2c3e50;
-      color: #fff;
-      padding: 1.5rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    nav {
-      margin-top: 0.5rem;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 0.8rem;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-    section {
-      padding: 2rem;
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 1.8rem;
-      color: #2c3e50;
-    }
-    .properties-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-    .property-card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
-      text-align: center;
-      transition: transform 0.3s;
-    }
-    .property-card:hover {
-      transform: translateY(-5px);
-    }
-    .property-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .property-card h3 {
-      margin: 1rem 0 0.5rem;
-      color: #2c3e50;
-    }
-    .property-card p {
-      padding: 0 1rem;
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-    .btn {
-      display: inline-block;
-      margin: 1rem 0 1.5rem;
-      background: #25d366;
-      color: #fff;
-      padding: 0.7rem 1.2rem;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background 0.3s;
-    }
-    .btn:hover {
-      background: #1da851;
-    }
-    footer {
-      background: #2c3e50;
-      color: #fff;
-      text-align: center;
-      padding: 1.5rem;
-      margin-top: 3rem;
-    }
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
+    header { background: linear-gradient(135deg, #007bff, #6610f2); color: white; padding: 3rem 1rem; text-align: center; }
+    header h1 { font-size: 2.5rem; margin: 0; }
+    header p { font-size: 1.2rem; margin-top: 0.5rem; }
+    nav { background: #fff; padding: 1rem; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 10; }
+    nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: 600; }
+    .container { max-width: 1100px; margin: auto; padding: 2rem 1rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+    .card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.2s; }
+    .card:hover { transform: translateY(-5px); }
+    .card img { width: 100%; height: 220px; object-fit: cover; }
+    .card-content { padding: 1rem; }
+    .card h2 { font-size: 1.4rem; margin-bottom: 0.5rem; color: #007bff; }
+    .card p { font-size: 1rem; margin-bottom: 1rem; }
+    .btn { display: inline-block; background: #007bff; color: white; padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.2s; }
+    .btn:hover { background: #0056b3; }
+    footer { background: #222; color: #ddd; text-align: center; padding: 2rem 1rem; margin-top: 3rem; }
+    footer p { margin: 0.3rem 0; }
+    footer a { color: #00bfff; text-decoration: none; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Karibu Nyumbani by TJ</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="garden-estate.html">Garden Estate</a>
-      <a href="ngong-road.html">Ngong Road</a>
-      <a href="management.html">Management</a>
-      <a href="thank-you.html">Thank You</a>
-    </nav>
+    <h1>Karibu Nyumbani</h1>
+    <p>Your home away from home – Affordable Airbnb stays in Nairobi</p>
   </header>
 
-  <section id="properties">
-    <h2>Our Listings</h2>
-    <div class="properties-grid">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="ngong-road.html">Ngong Road</a>
+    <a href="garden-estate.html">Garden Estate</a>
+    <a href="services.html">Management Services</a>
+  </nav>
 
-      <!-- Garden Estate -->
-      <div class="property-card">
-        <img src="https://via.placeholder.com/400x250?text=Garden+Estate+1BR" alt="Garden Estate Airbnb">
-        <h3>Garden Estate</h3>
-        <p>Modern 1BR in Garden Estate, perfect for both short and long stays.</p>
-        <a href="garden-estate.html" class="btn">View Details</a>
-      </div>
-
+  <section class="container">
+    <h2>Featured Airbnb Stays in Nairobi</h2>
+    <div class="grid">
       <!-- Ngong Road -->
-      <div class="property-card">
-        <img src="https://via.placeholder.com/400x250?text=Ngong+Road+Studios+%26+1BR" alt="Ngong Road Airbnb">
-        <h3>Ngong Road</h3>
-        <p>Stylish studios and 1BR apartments with flexible pricing options.</p>
-        <a href="ngong-road.html" class="btn">View Details</a>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x250?text=Ngong+Road+Apartment" alt="Ngong Road Airbnb apartment in Nairobi">
+        <div class="card-content">
+          <h2>Ngong Road Apartments</h2>
+          <p>Modern 1BR and studio apartments along Ngong Road. Flexible nightly, weekly, and monthly pricing.</p>
+          <a href="ngong-road.html" class="btn">View Ngong Road Stays</a>
+        </div>
       </div>
-
-      <!-- Management Services -->
-      <div class="property-card">
-        <img src="https://via.placeholder.com/400x250?text=Airbnb+Management" alt="Airbnb Management Nairobi">
-        <h3>Management Services</h3>
-        <p>We market and manage Airbnbs across Nairobi for property owners.</p>
-        <a href="management.html" class="btn">Learn More</a>
+      <!-- Garden Estate -->
+      <div class="card">
+        <img src="https://via.placeholder.com/400x250?text=Garden+Estate+Apartment" alt="Garden Estate Airbnb apartment in Nairobi">
+        <div class="card-content">
+          <h2>Garden Estate Apartments</h2>
+          <p>Affordable and fully furnished 1BR units in Garden Estate with discounts for long-term stays.</p>
+          <a href="garden-estate.html" class="btn">View Garden Estate Stays</a>
+        </div>
       </div>
-
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <div style="text-align:center;">
-      <p>Have questions or want to book directly? Reach us on WhatsApp.</p>
-      <a href="https://wa.me/254757942317?text=Hello%20Karibu%20Nyumbani%2C%20I%27m%20interested%20in%20booking%20an%20Airbnb." 
-         class="btn" 
-         target="_blank" 
-         onclick="window.location.href='thank-you.html';">
-         📲 Contact Us on WhatsApp
-      </a>
+      <!-- Services -->
+      <div class="card">
+        <img src="https://via.placeholder.com/400x250?text=Airbnb+Management" alt="Airbnb property management in Nairobi">
+        <div class="card-content">
+          <h2>Airbnb Management</h2>
+          <p>We also manage and market Airbnb apartments across Nairobi. Maximize your rental income stress-free.</p>
+          <a href="services.html" class="btn">See Our Services</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Karibu Nyumbani by TJ | Nairobi, Kenya</p>
+    <p>&copy; 2025 Karibu Nyumbani. All Rights Reserved.</p>
+    <p>Contact us on WhatsApp: <a href="https://wa.me/254757942317">+254 757 942 317</a></p>
+    <p>Explore more stays: <a href="ngong-road.html">Ngong Road</a> | <a href="garden-estate.html">Garden Estate</a></p>
   </footer>
 </body>
 </html>
