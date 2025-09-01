@@ -48,6 +48,23 @@
       z-index: 10;
     }
 
+    /* Hero Image */
+    .booking-image {
+      width: 100%;
+      max-height: 250px;
+      overflow: hidden;
+      margin: 1rem 0;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .booking-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
     form {
       display: flex;
       flex-direction: column;
@@ -130,6 +147,29 @@
     .booking-summary {
       margin-bottom: 1rem;
     }
+
+    /* House rules / notes */
+    .house-rules {
+      background: #fff3e6;
+      padding: 1rem 1.5rem;
+      border-radius: 15px;
+      margin-top: 2rem;
+      text-align: left;
+    }
+
+    .house-rules h2 {
+      color: #ff6f61;
+      margin-bottom: 0.5rem;
+    }
+
+    .house-rules ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+
+    .house-rules ul li {
+      margin: 0.3rem 0;
+    }
   </style>
 </head>
 <body>
@@ -139,6 +179,11 @@
   </header>
 
   <div class="container">
+    <!-- Hero Image -->
+    <div class="booking-image">
+      <img src="booking-hero.jpg" alt="Cozy 1BR Apartment" />
+    </div>
+
     <form id="bookingForm" target="_blank">
       <label for="property">Choose Property:</label>
       <select id="property" required>
@@ -161,6 +206,19 @@
     <div class="cta">
       <a href="#" id="dynamicBackButton" class="back-link">← Go Back</a>
     </div>
+
+    <!-- House Rules / Important Notes -->
+    <section class="house-rules">
+      <h2>Important Notes / House Rules</h2>
+      <ul>
+        <li>Check-in: 11:00 AM | Checkout: 11:00 AM</li>
+        <li>Late checkout (12 PM or 1 PM) allowed with prior notice</li>
+        <li>Guest must provide identification at check-in</li>
+        <li>No soiling of bedsheets</li>
+        <li>No loud music</li>
+        <li>Cancellation allowed</li>
+      </ul>
+    </section>
   </div>
 
   <script>
