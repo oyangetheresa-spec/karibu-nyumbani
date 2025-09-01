@@ -48,11 +48,6 @@
       z-index: 10;
     }
 
-    h2 {
-      color: #ff6f61;
-      margin-bottom: 1rem;
-    }
-
     form {
       display: flex;
       flex-direction: column;
@@ -89,20 +84,24 @@
       background: #ff3d2e;
     }
 
+    /* Dynamic Back Button */
     .back-link {
       display: inline-block;
-      margin-top: 1.5rem;
-      color: #ff6f61;
+      background: #ff6f61;
+      color: white;
+      padding: 0.8rem 1.5rem;
       text-decoration: none;
       font-weight: bold;
+      border-radius: 30px;
       transition: 0.3s;
+      margin-top: 1rem;
     }
 
     .back-link:hover {
-      color: #ff3d2e;
+      background: #ff3d2e;
     }
 
-    /* Style Flatpickr calendar to match vibrant theme */
+    /* Flatpickr */
     .flatpickr-calendar {
       border-radius: 15px;
       border: 2px solid #ff6f61;
@@ -119,6 +118,17 @@
     .flatpickr-day:hover {
       background: #ffcc70;
       color: #222;
+    }
+
+    /* Starting price & summary */
+    .starting-price, .booking-summary {
+      margin-top: 0.5rem;
+      color: #ff6f61;
+      font-weight: bold;
+    }
+
+    .booking-summary {
+      margin-bottom: 1rem;
     }
   </style>
 </head>
@@ -137,13 +147,20 @@
         <option value="Garden Estate">Garden Estate</option>
       </select>
 
+      <div class="starting-price" id="startingPrice">Starting from: Ksh 3,500/night</div>
+
       <label for="datePicker">Select Dates:</label>
       <input type="text" id="datePicker" placeholder="Pick your check-in and check-out" required>
+
+      <div class="booking-summary" id="bookingSummary"></div>
 
       <button type="submit">Book via WhatsApp</button>
     </form>
 
-    <a href="ngong-road.html" class="back-link">← Back to Ngong Road Apartments</a>
+    <!-- Dynamic Back Button -->
+    <div class="cta">
+      <a href="#" id="dynamicBackButton" class="back-link">← Go Back</a>
+    </div>
   </div>
 
   <script>
@@ -151,14 +168,51 @@
     flatpickr("#datePicker", {
       mode: "range",
       minDate: "today",
-      dateFormat: "d-m-Y"
+      dateFormat: "d-m-Y",
+      onChange: updateSummary
     });
+
+    const propertyDropdown = document.getElementById("property");
+    const backButton = document.getElementById("dynamicBackButton");
+    const bookingSummary = document.getElementById("bookingSummary");
+
+    // Update dynamic back button
+    function updateBackButton() {
+      const property = propertyDropdown.value;
+      if(property === "Ngong Road") {
+        backButton.href = "ngong-road.html";
+        backButton.textContent = "← Back to Ngong Road Apartments";
+      } else if(property === "Garden Estate") {
+        backButton.href = "garden-estate.html";
+        backButton.textContent = "← Back to Garden Estate Apartments";
+      } else {
+        backButton.href = "#";
+        backButton.textContent = "← Go Back";
+      }
+    }
+
+    propertyDropdown.addEventListener("change", () => {
+      updateBackButton();
+      updateSummary();
+    });
+    updateBackButton();
+
+    // Update booking summary
+    function updateSummary() {
+      const property = propertyDropdown.value;
+      const dates = document.getElementById("datePicker").value;
+      if(property && dates) {
+        bookingSummary.textContent = `You are booking ${property} Apartments for: ${dates}`;
+      } else {
+        bookingSummary.textContent = "";
+      }
+    }
 
     // WhatsApp pre-filled message
     const form = document.getElementById("bookingForm");
     form.addEventListener("submit", function(e){
       e.preventDefault();
-      const property = document.getElementById("property").value;
+      const property = propertyDropdown.value;
       const dates = document.getElementById("datePicker").value;
       if(!property) return alert("Please select a property.");
       if(!dates) return alert("Please select your check-in and check-out dates.");
