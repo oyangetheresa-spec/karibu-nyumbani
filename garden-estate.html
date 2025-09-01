@@ -3,88 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ngong Road Airbnb - 1 Bedroom & Studio Apartments</title>
-  <meta name="description" content="Affordable Airbnb stays on Ngong Road, Nairobi. Stylish 1BR and Studio apartments with flexible pricing for nightly, weekly, and monthly bookings.">
-  <meta name="keywords" content="Ngong Road Airbnb, Nairobi Airbnb, Studio apartment Nairobi, 1 bedroom Airbnb Nairobi, short stay Nairobi, monthly rentals Nairobi">
+  <meta name="description" content="Garden Estate Airbnb - Elegant 1-bedroom apartments in a serene environment. Great for short and long stays.">
+  <title>Garden Estate Airbnb | Karibu Nyumbani</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
-    header { background: linear-gradient(to right, #ff9966, #ff5e62); color: white; padding: 20px; text-align: center; }
-    h1 { margin: 0; font-size: 2rem; }
-    nav a { margin: 0 10px; color: white; text-decoration: none; }
-    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
-    h2 { color: #ff5e62; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; }
-    th, td { border: 1px solid #ddd; padding: 12px; text-align: center; }
-    th { background: #ff5e62; color: white; }
-    ul { line-height: 1.8; }
-    footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 20px; }
-    .gallery { margin-top: 40px; }
-    .photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
-    .photo-grid img { width: 100%; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
-    .contact { text-align: center; margin-top: 30px; }
-    .contact a { display: inline-block; padding: 12px 20px; background: #25d366; color: white; border-radius: 8px; text-decoration: none; font-weight: bold; }
+    body { font-family: Arial, sans-serif; }
+    .gallery img { border-radius: 10px; margin-bottom: 15px; }
+    footer { background: #222; color: #eee; padding: 20px; text-align: center; }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Ngong Road Airbnb</h1>
-    <p>Stylish 1BR & Studio Apartments in Nairobi</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="garden-estate.html">Garden Estate</a>
-    </nav>
-  </header>
+  <div class="container py-5">
+    <h1 class="text-center mb-4">Garden Estate Apartments</h1>
 
-  <section>
-    <h2>1 Bedroom Apartment Pricing</h2>
-    <table>
-      <tr><th>Stay Duration</th><th>Price (KES)</th></tr>
-      <tr><td>Per Night</td><td>3,500</td></tr>
-      <tr><td>1 Week Stay</td><td>3,300 / night</td></tr>
-      <tr><td>2+ Weeks Stay</td><td>3,000 / night</td></tr>
-      <tr><td>Monthly</td><td>75,000</td></tr>
-    </table>
-
-    <h2>Studio Apartment Pricing</h2>
-    <table>
-      <tr><th>Stay Duration</th><th>Price (KES)</th></tr>
-      <tr><td>Per Night</td><td>2,500</td></tr>
-      <tr><td>1 Week Stay</td><td>2,500 / night</td></tr>
-      <tr><td>2+ Weeks Stay</td><td>2,300 / night</td></tr>
-      <tr><td>Monthly</td><td>60,000 (utilities paid separately)</td></tr>
-    </table>
-  </section>
-
-  <section>
-    <h2>House Rules</h2>
-    <ul>
-      <li>Check-in: 11:00 AM | Check-out: 10:00 AM</li>
-      <li>No smoking inside the apartment</li>
-      <li>No parties or loud music</li>
-      <li>Respect neighbors and shared spaces</li>
-      <li>For studios: long-term guests pay for water, gas, and electricity tokens</li>
-    </ul>
-  </section>
-
-  <section class="gallery">
-    <h2>Photo Gallery</h2>
-    <div class="photo-grid">
-      <img src="https://via.placeholder.com/500x300?text=Living+Room" alt="Living room at Ngong Road Airbnb">
-      <img src="https://via.placeholder.com/500x300?text=Bedroom" alt="Bedroom at Ngong Road Airbnb">
-      <img src="https://via.placeholder.com/500x300?text=Kitchen" alt="Kitchen at Ngong Road Airbnb">
-      <img src="https://via.placeholder.com/500x300?text=Bathroom" alt="Bathroom at Ngong Road Airbnb">
+    <!-- Gallery -->
+    <div class="row gallery">
+      <div class="col-md-4"><img src="images/garden-estate/living-room.jpg" class="img-fluid" alt="Garden Estate Living Room"></div>
+      <div class="col-md-4"><img src="images/garden-estate/bedroom.jpg" class="img-fluid" alt="Garden Estate Bedroom"></div>
+      <div class="col-md-4"><img src="images/garden-estate/balcony.jpg" class="img-fluid" alt="Garden Estate Balcony"></div>
     </div>
-  </section>
 
-  <section class="contact">
-    <h2>Book Your Stay</h2>
-    <p>Message us directly on WhatsApp for quick booking and enquiries:</p>
-    <a href="https://wa.me/254757942317" target="_blank">Chat on WhatsApp</a>
-  </section>
+    <!-- Pricing -->
+    <h2 class="mt-5">Pricing</h2>
+    <table class="table table-bordered">
+      <thead><tr><th>Unit</th><th>Per Night</th><th>1 Week</th><th>2+ Weeks</th><th>Monthly</th></tr></thead>
+      <tbody>
+        <tr><td>1 Bedroom</td><td>3,500</td><td>3,300</td><td>3,000</td><td>75,000</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Rules -->
+    <h2 class="mt-5">House Rules</h2>
+    <ul>
+      <li>Check-in: 10:00 AM</li>
+      <li>No smoking indoors</li>
+      <li>No pets allowed</li>
+      <li>Quiet hours after 10 PM</li>
+    </ul>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Karibu Nyumbani Airbnb | Ngong Road Apartments</p>
+    <p>&copy; 2025 Karibu Nyumbani. <a href="index.html">Back to Home</a></p>
+    <p><a href="https://wa.me/254757942317" class="text-success">Book via WhatsApp</a></p>
   </footer>
 
 </body>
