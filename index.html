@@ -112,18 +112,48 @@
     </div>
   </nav>
 
-  <!-- Hero Carousel Section (Fully Automatic) -->
-  <div id="heroCarousel" class="carousel slide hero" data-bs-ride="carousel">
-    <div class="carousel-inner" id="carouselInner"></div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+<h1 class="visually-hidden">Karibu Nyumbani Airbnb | Nairobi Apartments</h1>
+
+ <!-- H1 for SEO (hidden visually) -->
+<h1 class="visually-hidden">Karibu Nyumbani Airbnb | Nairobi Apartments</h1>
+
+<!-- Hero Carousel Section -->
+<div id="heroCarousel" class="carousel slide hero" data-bs-ride="carousel">
+  <div class="carousel-inner" id="carouselInner">
+    <!-- Slides will be inserted here dynamically via JS -->
   </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- Automatic Hero Carousel Script -->
+<script>
+fetch('images/index/hero/images.json')
+  .then(response => response.json())
+  .then(images => {
+    const carouselInner = document.getElementById('carouselInner');
+    images.forEach((file, idx) => {
+      const slide = document.createElement('div');
+      slide.className = "carousel-item" + (idx === 0 ? " active" : "");
+      slide.innerHTML = `
+        <img src="images/index/hero/${file}" class="d-block w-100" alt="Hero Image ${idx+1}" style="height:70vh; object-fit:cover;">
+        <div class="carousel-caption d-block">
+          <h2 class="hero-title">Stylish 1BR & Studio Apartments in Nairobi</h2>   <!-- H2 -->
+          <h3 class="hero-sub">Flexible nightly, weekly, and monthly stays</h3>    <!-- H3 -->
+        </div>
+      `;
+      carouselInner.appendChild(slide);
+    });
+  })
+  .catch(err => console.error("Failed to load hero images:", err));
+</script>
 
   <!-- CTA Buttons Section -->
   <section class="section text-center">
