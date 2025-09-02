@@ -123,26 +123,109 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Automatic Hero Carousel Script -->
-  <script>
-  fetch('images/index/hero/images.json')
-    .then(response => response.json())
-    .then(images => {
-      const carouselInner = document.getElementById('carouselInner');
-      images.forEach((file, idx) => {
-        const slide = document.createElement('div');
-        slide.className = "carousel-item" + (idx === 0 ? " active" : "");
-        slide.innerHTML = `
-          <img src="images/index/hero/${file}" class="d-block w-100" alt="Hero Image ${idx+1}" style="height:70vh; object-fit:cover;">
-          <div class="carousel-caption d-block">
-            <h1 class="hero-title">Karibu Nyumbani Airbnb</h1>
-            <p class="hero-sub">Stylish 1BR & Studio Apartments in Nairobi</p>
-          </div>
-        `;
-        carouselInner.appendChild(slide);
-      });
-    })
-    .catch(err => console.error("Failed to load hero images:", err));
-  </script>
+ <script>
+fetch('images/index/hero/images.json')
+  .then(response => response.json())
+  .then(images => {
+    const carouselInner = document.getElementById('carouselInner');
+    if (!images || images.length === 0) {
+      console.warn("No hero images found.");
+      return;
+    }
+
+    images.forEach((file, idx) => {
+      const slide = document.createElement('div');
+      slide.className = "carousel-item" + (idx === 0 ? " active" : "");
+      slide.innerHTML = `
+        <img 
+          src="images/index/hero/${file}" 
+          class="d-block w-100" 
+          alt="Stylish Airbnb apartment in Nairobi - Image ${idx+1}" 
+          style="height:70vh; object-fit:cover;" 
+          loading="lazy"
+        >
+        <div class="carousel-caption d-block">
+          <h2 class="hero-title">Karibu Nyumbani Airbnb</h2>
+          <p class="hero-sub">Stylish 1BR & Studio Apartments in Nairobi</p>
+        </div>
+      `;
+      carouselInner.appendChild(slide);
+    });
+  })
+  .catch(err => console.error("Failed to load hero images:", err));
+</script>
+
+<!-- Floating WhatsApp Buttons (Fully Enhanced) -->
+<a href="https://wa.me/254757942317" target="_blank" rel="noopener noreferrer" class="floating-whatsapp booking-btn">
+  Book via WhatsApp
+</a>
+
+<a href="https://wa.me/254757942317" target="_blank" rel="noopener noreferrer" class="floating-whatsapp management-btn">
+  Airbnb Management Enquiry
+</a>
+
+<style>
+  .floating-whatsapp {
+    position: fixed;
+    right: 20px;
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+    color: white;
+    padding: 15px 22px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-decoration: none;
+    z-index: 1000;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0;                /* start invisible for animation */
+    transform: translateY(30px); /* start slightly below */
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+
+  /* Hover pop effect */
+  .floating-whatsapp:hover {
+    transform: scale(1.05);
+  }
+
+  /* Desktop positions */
+  .booking-btn { bottom: 20px; }
+  .management-btn { bottom: 80px; }
+
+  /* Mobile optimization */
+  @media (max-width: 768px) {
+    .floating-whatsapp {
+      padding: 14px 20px;
+      font-size: 0.95rem;
+      right: 15px;
+    }
+    .booking-btn { bottom: 15px; }
+    .management-btn { bottom: 65px; }
+  }
+
+  @media (max-width: 480px) {
+    .floating-whatsapp {
+      padding: 12px 18px;
+      font-size: 0.9rem;
+    }
+    .booking-btn { bottom: 12px; }
+    .management-btn { bottom: 55px; }
+  }
+</style>
+
+<script>
+  window.addEventListener('load', () => {
+    const buttons = document.querySelectorAll('.floating-whatsapp');
+    buttons.forEach((btn, idx) => {
+      setTimeout(() => {
+        btn.style.opacity = '1';
+        btn.style.transform = 'translateY(0)';
+      }, 300 * idx); // staggered appearance
+    });
+  });
+</script>
+
 
 </body>
 </html>
