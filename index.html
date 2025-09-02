@@ -60,6 +60,37 @@
     ]
   }
   </script>
+  
+  <!-- LodgingBusiness / Apartment Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Karibu Nyumbani Airbnb",
+  "image": [
+    "https://oyangetheresa-spec.github.io/karibu-nyumbani/images/index/hero/header1.jpg"
+  ],
+  "description": "Stylish 1BR and Studio apartments for short-term and long-term stays in Nairobi.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Ngong Road / Garden Estate",
+    "addressLocality": "Nairobi",
+    "addressCountry": "KE"
+  },
+  "telephone": "+254757942317",
+  "url": "https://oyangetheresa-spec.github.io/karibu-nyumbani/",
+  "priceRange": "KES 2500 – 75000",
+  "currenciesAccepted": "KES",
+  "checkinTime": "14:00",
+  "checkoutTime": "12:00",
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Air Conditioning", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Kitchen", "value": true }
+  ]
+}
+</script>
+
 </head>
 <body>
 
@@ -155,7 +186,18 @@ fetch('images/index/hero/images.json')
   .catch(err => console.error("Failed to load hero images:", err));
 </script>
 
-<!-- Floating WhatsApp Buttons (Fully Enhanced) -->
+<!-- Pricing & Instant Booking Section -->
+<section class="section text-center">
+  <!-- Pricing Info -->
+  <p style="font-weight:bold; font-size:1.2rem; color:#ff6a00; margin-bottom:10px;">
+    1BR Apartments starting at <strong>KES 3,500/night</strong> • Studios from <strong>KES 2,500/night</strong>
+  </p>
+  <p style="color:#ee0979; font-weight:600; margin-top:5px;">
+    Weekly & monthly discounts available — limited availability, book now!
+  </p>
+</section>
+
+<!-- Floating WhatsApp Buttons (Enhanced & Integrated) -->
 <a href="https://wa.me/254757942317" target="_blank" rel="noopener noreferrer" class="floating-whatsapp booking-btn">
   Book via WhatsApp
 </a>
@@ -179,21 +221,18 @@ fetch('images/index/hero/images.json')
     z-index: 1000;
     text-align: center;
     white-space: nowrap;
-    opacity: 0;                /* start invisible for animation */
-    transform: translateY(30px); /* start slightly below */
+    opacity: 0;
+    transform: translateY(30px);
     transition: transform 0.4s ease, opacity 0.4s ease;
   }
 
-  /* Hover pop effect */
   .floating-whatsapp:hover {
     transform: scale(1.05);
   }
 
-  /* Desktop positions */
   .booking-btn { bottom: 20px; }
   .management-btn { bottom: 80px; }
 
-  /* Mobile optimization */
   @media (max-width: 768px) {
     .floating-whatsapp {
       padding: 14px 20px;
@@ -221,10 +260,11 @@ fetch('images/index/hero/images.json')
       setTimeout(() => {
         btn.style.opacity = '1';
         btn.style.transform = 'translateY(0)';
-      }, 300 * idx); // staggered appearance
+      }, 300 * idx);
     });
   });
 </script>
+
 
 
 </body>
