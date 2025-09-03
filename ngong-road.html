@@ -88,27 +88,57 @@
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1.5rem;
     }
+
     .gallery-item {
-      position: relative;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
-    .gallery-item img {
-      width: 100%;
-      display: block;
-      border-radius: 15px;
-    }
-    .price-tag {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      background: rgba(255, 111, 97, 0.9);
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 10px;
-      font-weight: bold;
-    }
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Overlay */
+.gallery-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+/* Labels inside overlay */
+.label-tag, .price-tag {
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  margin: 0.2rem 0;
+  text-align: center;
+  background: rgba(255, 111, 97, 0.9);
+}
+
     table {
       width: 100%;
       border-collapse: collapse;
@@ -215,15 +245,22 @@
  
   <div class="container">
     <section class="gallery">
-      <div class="gallery-item">
-        <img src="studio.jpg" alt="Studio Apartment Ngong Road">
-        <span class="price-tag">From Ksh 2,500/night</span>
-      </div>
-      <div class="gallery-item">
-        <img src="1br.jpg" alt="1 Bedroom Apartment Ngong Road">
-        <span class="price-tag">From Ksh 3,500/night</span>
-      </div>
-    </section>
+  <div class="gallery-item">
+    <img src="studio.jpg" alt="Studio Apartment Ngong Road">
+    <div class="overlay">
+      <span class="label-tag">Studio</span>
+      <span class="price-tag">From Ksh 2,500/night</span>
+    </div>
+  </div>
+  <div class="gallery-item">
+    <img src="1br.jpg" alt="1 Bedroom Apartment Ngong Road">
+    <div class="overlay">
+      <span class="label-tag">1 Bedroom</span>
+      <span class="price-tag">From Ksh 3,500/night</span>
+    </div>
+  </div>
+</section>
+
 
     <section>
       <h2>Studio Pricing</h2>
