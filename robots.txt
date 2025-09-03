@@ -1,4 +1,6 @@
+# Allow all crawlers
 User-agent: *
 Allow: /
 
+# Link to sitemap
 Sitemap: https://oyangetheresa-spec.github.io/karibu-nyumbani/sitemap.xml
