@@ -112,23 +112,37 @@
       margin: 0.3rem 0;
     }
 
-    .price-table {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      background: rgba(255, 111, 97, 0.9);
-      color: white;
-      padding: 0.5rem;
-      border-radius: 10px;
-      font-size: 0.9rem;
-      text-align: right;
-    }
-    .price-table table {
-      border-collapse: collapse;
-    }
-    .price-table td {
-      padding: 2px 5px;
-    }
+   .pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.pricing-table th, .pricing-table td {
+  border: 2px solid #ffdd00; /* yellow border matching navbar */
+  padding: 1rem;
+}
+
+.pricing-table th {
+  background: #222; /* black header */
+  color: #ffdd00;  /* yellow text */
+  font-size: 1.1rem;
+}
+
+.pricing-table td {
+  background: #fff8f0; /* soft background matching page */
+  color: #222;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.pricing-table tr:hover td {
+  background: #ffdd00; /* yellow highlight on hover */
+  color: #222;
+  transform: scale(1.02);
+}
+
 
     /* House Rules */
     .house-rules {
@@ -260,29 +274,34 @@
     </div>
   </div>
 </section>
+   
 <section>
   <h2>1BR Apartment Pricing</h2>
-  <table>
-    <tr>
-      <th>Duration</th>
-      <th>Rate</th>
-    </tr>
-    <tr>
-      <td>Per Night</td>
-      <td>Ksh 3,500</td>
-    </tr>
-    <tr>
-      <td>1 Week</td>
-      <td>Ksh 3,300 / night</td>
-    </tr>
-    <tr>
-      <td>2 Weeks +</td>
-      <td>Ksh 3,000 / night</td>
-    </tr>
-    <tr>
-      <td>Monthly</td>
-      <td>Ksh 75,000</td>
-    </tr>
+  <table class="pricing-table">
+    <thead>
+      <tr>
+        <th>Duration</th>
+        <th>Rate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Per Night</td>
+        <td>Ksh 3,500</td>
+      </tr>
+      <tr>
+        <td>1 Week</td>
+        <td>Ksh 3,300 / night</td>
+      </tr>
+      <tr>
+        <td>2 Weeks +</td>
+        <td>Ksh 3,000 / night</td>
+      </tr>
+      <tr>
+        <td>Monthly</td>
+        <td>Ksh 75,000</td>
+      </tr>
+    </tbody>
   </table>
 </section>
 
