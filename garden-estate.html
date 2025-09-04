@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Garden Estate Apartments | Karibu Nyumbani</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+ <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
   <link rel="stylesheet" href="styles.css">
   <style>
     body {
@@ -182,25 +185,40 @@
   </script>
 </head>
 <body>
-  <!-- Bootstrap Navbar -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
+ <body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
       <a class="navbar-brand" href="index.html">Karibu Nyumbani</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="ngong.html">Ngong Road</a></li>
-          <li class="nav-item"><a class="nav-link active" href="garden.html">Garden Estate</a></li>
-          <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="booking.html">Booking</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="garden-estate.html">Garden Estate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ngong-road.html">Ngong Road</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <header>
+    <h1>Garden Estate Apartments</h1>
+    <p>Comfortable 1 Bedroom Apartments for Your Stay</p>
+  </header>
+
+   
   <header>
     <h1>Garden Estate Apartments</h1>
     <p>Comfortable 1 Bedroom Apartments for Your Stay</p>
@@ -286,6 +304,8 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Bootstrap JS Bundle (includes Popper for toggles) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
