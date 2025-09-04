@@ -203,6 +203,64 @@ fetch('images/index/hero/images.json')
   </ul>
 </section>
 
+  <!-- FAQ Section -->
+<section class="section container">
+  <h2>Frequently Asked Questions</h2>
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq1">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+          What are your check-in and check-out times?
+        </button>
+      </h2>
+      <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Check-in is from 2 PM, and check-out is by 12 PM.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq2">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+          Do you offer discounts for weekly or monthly stays?
+        </button>
+      </h2>
+      <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Yes! Weekly and monthly discounts are available when booking directly with us.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are your check-in and check-out times?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check-in is from 2 PM, and check-out is by 12 PM."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer discounts for weekly or monthly stays?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Weekly and monthly discounts are available when booking directly with us."
+      }
+    }
+  ]
+}
+</script>
+
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Karibu Nyumbani | <a href="index.html" style="color: #ff6a00;">Home</a></p>
