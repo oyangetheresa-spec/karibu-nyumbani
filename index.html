@@ -39,6 +39,13 @@
       border-radius: 12px;
       padding: 1rem 2rem;
     }
+    .hero img {
+  width: 100%;            /* Fill the width of the carousel */
+  height: 70vh;           /* Keep the same height for all slides */
+  object-fit: cover;      /* Fill container without leaving white space */
+  object-position: center;/* Keep main subject centered */
+}
+
   </style>
 
   <!-- JSON-LD Schema -->
@@ -125,7 +132,7 @@
     <div class="carousel-item active">
       <img src="images/index/hero/header1.jpg" class="d-block w-100" 
            alt="Stylish Airbnb apartment at Racecourse Gardens, Nairobi - Hero 1" 
-           style="height:70vh; object-fit:cover;" loading="lazy">
+            loading="lazy">
       <div class="carousel-caption d-block">
         <h2 class="hero-title">Karibu Nyumbani Airbnb</h2>
         <p class="hero-sub">Stylish 1BR & Studio Apartments in Nairobi</p>
@@ -176,7 +183,7 @@ fetch('images/index/hero/images.json')
         slide.innerHTML = `
           <img src="${imgSrc}" class="d-block w-100" 
                alt="Stylish Airbnb apartment at Racecourse Gardens, Nairobi - Image ${idx + 1}" 
-               style="height:70vh; object-fit:cover;" loading="lazy">
+                loading="lazy">
           <div class="carousel-caption d-block">
             <h2 class="hero-title">Karibu Nyumbani Airbnb</h2>
             <p class="hero-sub">Stylish 1BR & Studio Apartments in Nairobi</p>
