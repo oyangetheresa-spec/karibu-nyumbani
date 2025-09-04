@@ -127,11 +127,11 @@
 <!-- Hero Carousel Section -->
 <div id="heroCarousel" class="carousel slide carousel-fade hero" data-bs-ride="carousel" data-bs-interval="3000">
   <div class="carousel-inner" id="carouselInner">
-    <!-- Static slides -->
+
     <div class="carousel-item active">
       <img src="images/index/hero/header1.jpg" class="d-block w-100" 
            alt="Stylish Airbnb apartment at Racecourse Gardens, Nairobi - Hero 1" 
-           loading="lazy">
+           loading="lazy" style="height:70vh; object-fit:cover;">
       <div class="carousel-caption d-block">
         <h2 class="hero-title">Karibu Nyumbani Airbnb</h2>
         <p class="hero-sub">Stylish 1BR & Studio Apartments in Nairobi</p>
@@ -141,7 +141,7 @@
     <div class="carousel-item">
       <img src="images/index/hero/header2.jpg" class="d-block w-100" 
            alt="Stylish Airbnb apartment at Racecourse Gardens, Nairobi - Hero 2" 
-           loading="lazy">
+           loading="lazy" style="height:70vh; object-fit:cover;">
       <div class="carousel-caption d-block">
         <h2 class="hero-title">Karibu Nyumbani Airbnb</h2>
         <p class="hero-sub">Flexible nightly, weekly, and monthly stays</p>
@@ -151,13 +151,13 @@
     <div class="carousel-item">
       <img src="images/index/hero/header3.jpg" class="d-block w-100" 
            alt="Stylish Airbnb apartment at Racecourse Gardens, Nairobi - Hero 3" 
-           loading="lazy">
+           loading="lazy" style="height:70vh; object-fit:cover;">
       <div class="carousel-caption d-block">
         <h2 class="hero-title">Karibu Nyumbani Airbnb</h2>
         <p class="hero-sub">Experience Comfort and Style in Nairobi</p>
       </div>
     </div>
-    <!-- Dynamic slides from JSON will be appended here -->
+
   </div>
 
   <!-- Carousel Controls -->
@@ -170,32 +170,6 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
-<!-- Hero Carousel JS -->
-<script>
-fetch('images/index/hero/images.json')
-  .then(res => res.json())
-  .then(images => {
-    const carouselInner = document.getElementById('carouselInner');
-    images.forEach((file) => {
-      const slide = document.createElement('div');
-      slide.className = "carousel-item"; // NO 'active'
-      slide.innerHTML = `
-        <img src="images/index/hero/${file}" class="d-block w-100" 
-             alt="Stylish Airbnb apartment at Racecourse Gardens, Nairobi" 
-             loading="lazy">
-      `;
-      carouselInner.appendChild(slide);
-    });
-
-    // Initialize carousel after dynamic slides
-    const carousel = new bootstrap.Carousel('#heroCarousel', {
-      interval: 3000,
-      ride: 'carousel'
-    });
-  })
-  .catch(err => console.error("Failed to load hero images:", err));
-</script>
 
 <!-- Hero Carousel CSS -->
 <style>
