@@ -76,13 +76,62 @@
     </div>
   </nav>
 
-  <!-- Page Header -->
-  <header>
-    <h1>Ngong Road Airbnb Apartments | Karibu Nyumbani Nairobi</h1>
-    <p>Modern Studios & 1BRs with Flexible Pricing</p>
-  </header>
-
   <div class="container">
+    
+   <!-- Hero Video Section (SEO & Mobile Optimized) -->
+<section class="hero-video position-relative mb-5" style="height: 500px; overflow: hidden;">
+  <!-- Background Video with Poster -->
+  <video autoplay muted loop playsinline class="w-100 h-100" style="object-fit: cover;" poster="images/ngong-road/hero.jpg">
+    <source src="images/ngong-road/hero.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay with H1 for SEO -->
+  <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center px-3" style="background: rgba(0,0,0,0.4);">
+    <!-- H1 is critical for SEO -->
+    <h1 class="text-white fw-bold hero-title">Ngong Road Airbnb Apartments | Karibu Nyumbani Nairobi</h1>
+    <p class="text-white hero-sub mb-4">
+      Modern Studios & 1BRs with flexible pricing, fully furnished and budget-friendly stays.
+    </p>
+    <a href="booking.html" class="btn btn-lg hero-btn">Check Availability & Book</a>
+  </div>
+</section>
+
+<!-- Responsive Styles -->
+<style>
+  .hero-video { height: 500px; }
+  .hero-title { font-size: 2.5rem; line-height: 1.2; }
+  .hero-sub { font-size: 1.2rem; max-width: 600px; }
+
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .hero-video { height: 350px; }
+    .hero-title { font-size: 1.8rem; }
+    .hero-sub { font-size: 1rem; }
+    .hero-btn { font-size: 0.9rem; padding: 0.8rem 1.5rem; }
+  }
+
+  @media (max-width: 480px) {
+    .hero-video { height: 250px; }
+    .hero-title { font-size: 1.5rem; }
+    .hero-sub { font-size: 0.9rem; }
+    .hero-btn { font-size: 0.8rem; padding: 0.6rem 1.2rem; }
+  }
+
+  .hero-btn {
+    background: #ff6f61;
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .hero-btn:hover {
+    background: #ff3d2e;
+    color: white;
+  }
+</style>
+
     <!-- Carousel Section -->
     <section id="apartments-carousel" class="mb-5">
       <div id="apartmentCarousel" class="carousel slide" data-bs-ride="carousel">
