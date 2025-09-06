@@ -82,10 +82,11 @@
    <!-- Hero Video Section (SEO & Mobile Optimized) -->
 <section class="hero-video position-relative mb-5" style="height: 500px; overflow: hidden;">
   <!-- Background Video with Poster -->
-  <video autoplay muted loop playsinline class="w-100 h-100" style="object-fit: cover;" poster="images/ngong-road/hero.jpg">
-    <source src="images/ngong-road/hero.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+ <video autoplay muted loop playsinline class="w-100 h-100" style="object-fit: cover;" poster="images/ngong-road/hero.jpg">
+  <source src="images/ngong-road/hero.mp4" type="video/mp4">
+  <track src="images/ngong-road/hero-captions.vtt" kind="captions" srclang="en" label="English">
+  Your browser does not support the video tag. See <a href="booking.html">booking page</a> instead.
+</video>
 
   <!-- Overlay with H1 for SEO -->
   <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center px-3" style="background: rgba(0,0,0,0.4);">
@@ -214,6 +215,48 @@
         </tbody>
       </table>
     </section>
+    <!-- Guest Reviews / Trust Section -->
+<section class="reviews my-5">
+  <div class="container">
+    <h2 class="text-center mb-4" style="color:#ff6f61;">What Our Guests Say</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <p class="card-text">"Clean, cozy, and convenient location. Highly recommend!"</p>
+            <h6 class="card-subtitle text-muted">– Jane K., Nairobi</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <p class="card-text">"Great value for money. The host was very responsive."</p>
+            <h6 class="card-subtitle text-muted">– Michael O., Nairobi</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <p class="card-text">"Modern apartments with all amenities. Loved my stay!"</p>
+            <h6 class="card-subtitle text-muted">– Aisha N., Nairobi</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.reviews .card {
+  border-radius: 15px;
+  transition: transform 0.2s;
+}
+.reviews .card:hover {
+  transform: translateY(-5px);
+}
+</style>
 
     <!-- House Rules -->
     <section class="rules">
