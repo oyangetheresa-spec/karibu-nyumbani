@@ -5,62 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ngong Road Airbnb | Karibu Nyumbani by TJ</title>
   <meta name="description" content="Stay at our vibrant Airbnb apartments on Ngong Road. Fully furnished studios & 1BRs from Ksh 2,500 per night. Modern, cozy, and budget-friendly with weekly and monthly discounts.">
-
-  <!-- Ensure Google indexes this page -->
-<meta name="robots" content="index, follow">
-
-<!-- Optional: Avoid duplicate content -->
-<link rel="canonical" href="https://oyangetheresa-spec.github.io/karibu-nyumbani/ngong-road.html">
-
-  <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://oyangetheresa-spec.github.io/karibu-nyumbani/ngong-road.html">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Schema Markup -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LodgingBusiness",
-  "name": "Karibu Nyumbani by TJ - Ngong Road",
-  "image": [
-    "https://oyangetheresa-spec.github.io/karibu-nyumbani/images/ngong/studio.jpg",
-    "https://oyangetheresa-spec.github.io/karibu-nyumbani/images/ngong/1br.jpg"
-  ],
-  "description": "Modern Airbnb apartments on Ngong Road - Studios and 1BRs with flexible pricing.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Ngong Road",
-    "addressLocality": "Nairobi",
-    "addressCountry": "KE"
-  },
-  "telephone": "+254757942317",
-  "url": "https://oyangetheresa-spec.github.io/karibu-nyumbani/ngong-road.html",
-  "priceRange": "KES 2500 – 75000",
-  "currenciesAccepted": "KES",
-  "checkinTime": "14:00",
-  "checkoutTime": "12:00",
-  "amenityFeature": [
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "Wi-Fi",
-      "value": true
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Karibu Nyumbani by TJ - Ngong Road",
+    "image": [
+      "https://oyangetheresa-spec.github.io/karibu-nyumbani/images/ngong/studio.jpg",
+      "https://oyangetheresa-spec.github.io/karibu-nyumbani/images/ngong/1br.jpg"
+    ],
+    "description": "Modern Airbnb apartments on Ngong Road - Studios and 1BRs with flexible pricing.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ngong Road",
+      "addressLocality": "Nairobi",
+      "addressCountry": "KE"
     },
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "Air Conditioning",
-      "value": true
-    },
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "Kitchen",
-      "value": true
-    }
-  ]
-}
-</script>
-
-
+    "telephone": "+254757942317",
+    "url": "https://oyangetheresa-spec.github.io/karibu-nyumbani/ngong-road.html",
+    "priceRange": "KES 2500 – 75000",
+    "currenciesAccepted": "KES",
+    "checkinTime": "14:00",
+    "checkoutTime": "12:00",
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Wi-Fi",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Air Conditioning",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Kitchen",
+        "value": true
+      }
+    ]
+  }
+  </script>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -83,97 +72,17 @@
       margin: auto;
       padding: 2rem;
     }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .gallery-item {
-  position: relative;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.gallery-item img {
-  width: 100%;
-  display: block;
-  border-radius: 15px;
-  transition: transform 0.3s;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.05);
-}
-
-/* Overlay */
-.gallery-item .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.35);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.gallery-item:hover .overlay {
-  opacity: 1;
-}
-
-/* Labels inside overlay */
-.label-tag, .price-tag {
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  font-weight: bold;
-  margin: 0.2rem 0;
-  text-align: center;
-  background: rgba(255, 111, 97, 0.9);
-}
-
-    table {
+    .carousel-inner img {
       width: 100%;
-      border-collapse: collapse;
-      margin-top: 2rem;
+      height: auto;
     }
-    table th, table td {
-      border: 1px solid #ddd;
+    .carousel-caption {
+      background: rgba(0, 0, 0, 0.5);
       padding: 1rem;
-      text-align: center;
+      border-radius: 8px;
     }
-    table th {
-      background: #ff6f61;
+    .carousel-caption h5, .carousel-caption p {
       color: white;
-    }
-    .rules {
-      background: #fff3e6;
-      padding: 2rem;
-      margin: 2rem 0;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .rules h2 {
-      margin-top: 0;
-      color: #ff6f61;
-    }
-    .rules ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .rules ul li {
-      padding: 0.5rem 0;
-      border-bottom: 1px solid #eee;
-    }
-    .rules ul li:last-child {
-      border-bottom: none;
     }
     .cta {
       text-align: center;
@@ -194,124 +103,97 @@
   </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-warning" href="index.html">Karibu Nyumbani</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="ngong-road.html">Ngong Road</a></li>
+          <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Ngong Road Airbnb Apartments | Karibu Nyumbani Nairobi</h1>
+    <p>Modern Studios & 1BRs with Flexible Pricing</p>
+  </header>
+
   <div class="container">
-    <a class="navbar-brand fw-bold text-warning" href="index.html">Karibu Nyumbani</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="ngong-road.html">Ngong Road</a></li>
-        <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-   <!-- SEO H1 for Google -->
-  <h1 class="visually-hidden">Ngong Road Airbnb | Karibu Nyumbani Nairobi Apartments</h1>
-
-<!-- Hero Section -->
-<section class="hero">
-  <div class="hero-overlay">
-    <h1 class="hero-title">Ngong Road Airbnb Apartments | Karibu Nyumbani Nairobi</h1>
-    <p class="hero-sub">Modern Studios & 1BRs with Flexible Pricing</p>
-  </div>
-</section>
- 
-  <div class="container">
-    <section class="gallery">
-  <div class="gallery-item">
-    <img src="studio.jpg" alt="Studio Apartment Ngong Road">
-    <div class="overlay">
-      <span class="label-tag">Studio</span>
-      <span class="price-tag">From Ksh 2,500/night</span>
-    </div>
-  </div>
-  <div class="gallery-item">
-    <img src="1br.jpg" alt="1 Bedroom Apartment Ngong Road">
-    <div class="overlay">
-      <span class="label-tag">1 Bedroom</span>
-      <span class="price-tag">From Ksh 3,500/night</span>
-    </div>
-  </div>
-</section>
-
+    <section id="apartments-carousel" class="mb-5">
+      <div id="apartmentCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#apartmentCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Studio"></button>
+          <button type="button" data-bs-target="#apartmentCarousel" data-bs-slide-to="1" aria-label="1BR"></button>
+        </div>
+        <div class="carousel-inner rounded-4 shadow-lg">
+          <div class="carousel-item active">
+            <img src="studio.jpg" class="d-block w-100" alt="Studio Apartment Ngong Road">
+            <div class="carousel-caption d-none d-md-block bg-overlay p-3 rounded">
+              <h5>Studio Apartment</h5>
+              <p>From Ksh 2,500/night</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="1br.jpg" class="d-block w-100" alt="1 Bedroom Apartment Ngong Road">
+            <div class="carousel-caption d-none d-md-block bg-overlay p-3 rounded">
+              <h5>1 Bedroom Apartment</h5>
+              <p>From Ksh 3,500/night</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#apartmentCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#apartmentCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
 
     <section>
       <h2>Studio Pricing</h2>
-      <table>
-        <tr>
-          <th>Duration</th>
-          <th>Rate</th>
-        </tr>
-        <tr>
-          <td>Per Night</td>
-          <td>Ksh 2,500</td>
-        </tr>
-        <tr>
-          <td>2 Weeks +</td>
-          <td>Ksh 2,300 / night</td>
-        </tr>
-        <tr>
-          <td>Monthly</td>
-          <td>Ksh 60,000</td>
-        </tr>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Duration</th>
+            <th>Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Per Night</td>
+            <td>Ksh 2,500</td>
+          </tr>
+          <tr>
+            <td>2 Weeks +</td>
+            <td>Ksh 2,300 / night</td>
+          </tr>
+          <tr>
+            <td>Monthly</td>
+            <td>Ksh 60,000</td>
+          </tr>
+        </tbody>
       </table>
     </section>
 
     <section>
       <h2>1BR Pricing</h2>
-      <table>
-        <tr>
-          <th>Duration</th>
-          <th>Rate</th>
-        </tr>
-        <tr>
-          <td>Per Night</td>
-          <td>Ksh 3,500</td>
-        </tr>
-        <tr>
-          <td>1 Week</td>
-          <td>Ksh 3,300 / night</td>
-        </tr>
-        <tr>
-          <td>2 Weeks +</td>
-          <td>Ksh 3,000 / night</td>
-        </tr>
-        <tr>
-          <td>Monthly</td>
-          <td>Ksh 75,000</td>
-        </tr>
-      </table>
-    </section>
-
-    <section class="rules">
-      <h2>House Rules</h2>
-      <ul>
-        <li>Guests must provide valid identification at check-in.</li>
-        <li>Check-in is from 11:00 AM.</li>
-        <li>Check-out is strictly at 11:00 AM.</li>
-        <li>For late checkout (12 noon – 1 PM), please notify us earlier.</li>
-        <li>No soiling of bedsheets – extra cleaning charges may apply.</li>
-        <li>No loud music allowed.</li>
-        <li>cancellation is allowed depending on context .</li>
-      </ul>
-    </section>
-
-   <div class="cta">
-  <a href="booking.html">Check Availability & Book</a>
-</div>
- </div>
-  
-  <!-- Floating WhatsApp Button -->
-<a href="https://wa.me/254757942317" class="whatsapp-btn" target="_blank">💬 WhatsApp</a>
-
-  <!-- Bootstrap JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-</body> 
-</html>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Duration</th>
+            <th>Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Per Night</td>
+            <td>Ksh 3,500</td>
