@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Airbnb Apartments | Karibu Nyumbani by TJ</title>
+  <meta name="description" content="Browse Karibu Nyumbani's Airbnb apartments in Nairobi and Kiambu. Studios and 1BRs on Ngong Road and Thindigua. Fully furnished, cozy, and affordable.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #fff8f0; }
+    .page-header { background: linear-gradient(90deg, #ff6f61, #ffcc70); color: white; text-align: center; padding: 2rem; }
+    .card { border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.2s; }
+    .card:hover { transform: translateY(-5px); }
+    .btn-custom { background: #ff6f61; color: white; border-radius: 30px; font-weight: bold; }
+    .btn-custom:hover { background: #ff3d2e; color: white; }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-warning" href="index.html">Karibu Nyumbani</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="apartments.html">Apartments</a></li>
+          <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <h1>Our Airbnb Apartments</h1>
+    <p>Choose from stylish 1BRs and Studios in Ngong Road and Thindigua</p>
+  </header>
+
+  <!-- Apartments Catalog -->
+  <div class="container my-5">
+    <div class="row g-4">
+
+      <!-- Ngong Rd 1BR -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="images/ngong-road/1br.jpg" class="card-img-top" alt="1BR Ngong Road">
+          <div class="card-body">
+            <h5 class="card-title">1 Bedroom Apartment – Ngong Rd</h5>
+            <p class="card-text">From Ksh 3,500/night. Cozy and fully furnished for comfort.</p>
+            <a href="ngong-road.html" class="btn btn-custom">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ngong Rd 1BR (Second Unit) -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="images/ngong-road/1br-bedroom.jpg" class="card-img-top" alt="1BR Ngong Road Second">
+          <div class="card-body">
+            <h5 class="card-title">1 Bedroom Apartment – Ngong Rd (2)</h5>
+            <p class="card-text">Modern layout with flexible booking options.</p>
+            <a href="ngong-road.html" class="btn btn-custom">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ngong Rd Studio -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="images/ngong-road/studio.jpg" class="card-img-top" alt="Studio Ngong Road">
+          <div class="card-body">
+            <h5 class="card-title">Studio Apartment – Ngong Rd</h5>
+            <p class="card-text">From Ksh 2,500/night. Stylish and budget-friendly.</p>
+            <a href="ngong-road.html" class="btn btn-custom">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ngong Rd Studio (Second Unit) -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="images/ngong-road/studio-living.jpg" class="card-img-top" alt="Studio Ngong Road 2">
+          <div class="card-body">
+            <h5 class="card-title">Studio Apartment – Ngong Rd (2)</h5>
+            <p class="card-text">Bright, modern space perfect for short stays.</p>
+            <a href="ngong-road.html" class="btn btn-custom">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thindigua Studio -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="images/thindigua/studio.jpg" class="card-img-top" alt="Studio Thindigua Kiambu">
+          <div class="card-body">
+            <h5 class="card-title">Studio Apartment – Thindigua, Kiambu Rd</h5>
+            <p class="card-text">From Ksh 2,800/night. Peaceful, convenient, and fully equipped.</p>
+            <a href="thindigua.html" class="btn btn-custom">View Details</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
