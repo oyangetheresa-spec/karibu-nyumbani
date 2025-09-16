@@ -54,100 +54,145 @@
 {
   "@context": "https://schema.org",
   "@type": "LodgingBusiness",
-  "name": "Karibu Nyumbani Apartments",
-  "url": "https://karibunyumbanibytj.co.ke/",
+  "name": "Karibu Nyumbani by TJ",
   "image": "https://karibunyumbanibytj.co.ke/images/index/hero/header1.jpg",
-  "description": "Furnished Studio & 1BR Airbnb Nairobi short stay apartments near Ngong Road. Includes Wi-Fi, kitchen, parking, and flexible nightly, weekly, and monthly rentals.",
-  "telephone": ["+254757942317", "+254748101279"],
-  "priceRange": "KES 2,500 - 3,500 per night",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Ngong Road",
-    "addressLocality": "Nairobi",
-    "addressRegion": "Nairobi",
-    "addressCountry": "KE"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "-1.2921",
-    "longitude": "36.8219"
-  },
-  "amenityFeature": [
-    { "@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": "true" },
-    { "@type": "LocationFeatureSpecification", "name": "Parking", "value": "true" },
-    { "@type": "LocationFeatureSpecification", "name": "Kitchen", "value": "true" },
-    { "@type": "LocationFeatureSpecification", "name": "Furnished", "value": "true" }
-  ],
-  "sameAs": [
-    "https://www.airbnb.com/users/show/your-profile-id",
-    "https://www.facebook.com/yourpage",
-    "https://www.instagram.com/yourpage"
-  ]
-}
-</script>
-</head>
-  
-  <!-- LodgingBusiness / Apartment Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LodgingBusiness",
-  "name": "Karibu Nyumbani Airbnb",
-  "description": "Stylish and affordable Airbnb-style apartments along Ngong Road, Nairobi. Offering Studio and 1-Bedroom units with nightly, weekly, and monthly stays. Perfect for business or leisure travelers seeking comfort and convenience.",
-  "image": [
-    "https://karibunyumbanibytj.co.ke/images/index/hero/header1.jpg",
-    "https://karibunyumbanibytj.co.ke/images/index/hero/header2.jpg",
-    "https://karibunyumbanibytj.co.ke/images/index/hero/header3.jpg"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Ngong Road, Racecourse Gardens",
-    "addressLocality": "Nairobi",
-    "addressCountry": "KE"
-  },
+  "logo": "https://karibunyumbanibytj.co.ke/images/logo.png",
+  "description": "Furnished studios and 1-bedroom apartments for short and long stays in Nairobi. Conveniently located at Racecourse Gardens, Ngong Road.",
+  "url": "https://karibunyumbanibytj.co.ke",
   "telephone": "+254757942317",
-  "contactPoint": [
-    {
-      "@type": "ContactPoint",
-      "telephone": "+254757942317",
-      "contactType": "customer service",
-      "availableLanguage": ["en", "sw"],
-      "url": "https://wa.me/254757942317"
-    },
-    {
-      "@type": "ContactPoint",
-      "telephone": "+254748101279",
-      "contactType": "customer service",
-      "availableLanguage": ["en", "sw"],
-      "url": "https://wa.me/254748101279"
-    }
-  ],
-  "priceRange": "KES 2,500 - 3,500 per night",
-  "amenityFeature": [
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "Studio Apartment",
-      "value": "KES 2,500 per night"
-    },
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "1-Bedroom Apartment",
-      "value": "KES 3,500 per night"
-    }
-  ],
+  "additionalProperty": {
+    "@type": "PropertyValue",
+    "name": "Secondary Contact",
+    "value": "+254748101279"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Racecourse Gardens, Ngong Road",
+    "addressLocality": "Nairobi",
+    "addressCountry": "KE"
+  },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": -1.3000,
-    "longitude": 36.7500
+    "latitude": -1.3085,
+    "longitude": 36.7741
   },
-  "url": "https://karibunyumbanibytj.co.ke/",
-  "sameAs": [
-    "https://maps.app.goo.gl/tS2G13BtZSy9HtZLA",
-    "https://wa.me/254757942317",
-    "https://wa.me/254748101279"
-  ]
+  "priceRange": "KES 2,500 - 3,500 per night",
+  "checkinTime": "11:30",
+  "checkoutTime": "10:00",
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Free Parking", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Smart TV", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Pets Allowed", "value": false },
+    { "@type": "LocationFeatureSpecification", "name": "Smoking Policy", "value": "Smoking allowed only outside on the balcony" }
+  ],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "Studio Apartment",
+      "priceSpecification": [
+        {
+          "@type": "UnitPriceSpecification",
+          "price": "2500",
+          "priceCurrency": "KES",
+          "unitCode": "DAY"
+        },
+        {
+          "@type": "UnitPriceSpecification",
+          "price": "20",
+          "priceCurrency": "USD",
+          "unitCode": "DAY"
+        }
+      ],
+      "availability": "http://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "name": "1 Bedroom Apartment",
+      "priceSpecification": [
+        {
+          "@type": "UnitPriceSpecification",
+          "price": "3500",
+          "priceCurrency": "KES",
+          "unitCode": "DAY"
+        },
+        {
+          "@type": "UnitPriceSpecification",
+          "price": "28",
+          "priceCurrency": "USD",
+          "unitCode": "DAY"
+        }
+      ],
+      "availability": "http://schema.org/InStock"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "25"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Alice W." },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Amazing stay! The apartment was clean, stylish and very comfortable."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "James K." },
+      "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
+      "reviewBody": "Great location and value for money. Highly recommend Karibu Nyumbani."
+    }
+  ],
+  "mainEntityOfPage": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the nightly rate for Karibu Nyumbani apartments?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Studios start from KES 2,500 ($20) per night and 1-bedroom apartments from KES 3,500 ($28) per night."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where are the apartments located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We are located at Racecourse Gardens, Ngong Road, Nairobi — close to transport, shops, and key landmarks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the check-in and check-out times?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Check-in time is from 11:30 AM, and check-out is by 10:00 AM."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are pets allowed at the apartments?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, pets are not allowed at Karibu Nyumbani apartments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is smoking allowed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Smoking is only allowed outside on the balcony."
+        }
+      }
+    ]
+  }
 }
 </script>
+
 
 </head>
 <body>
