@@ -4,160 +4,210 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Airbnb Apartments | Karibu Nyumbani by TJ</title>
-  <meta name="description" content="Explore our Airbnb apartments at Karibu Nyumbani on Ngong Road. Fully furnished 1BRs and Studios with balcony, Wi-Fi, and swimming pool access. Affordable stays in Nairobi.">
+  <meta name="description" content="Browse Karibu Nyumbani's Airbnb apartments in Nairobi and Kiambu. Studios and 1BRs on Ngong Road and Thindigua. Fully furnished, cozy, and affordable.">
   <link rel="canonical" href="https://karibunyumbanibytj.co.ke/apartments.html" />
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
   <style>
-    body { font-family: 'Poppins', sans-serif; background: #fff8f0; }
-    .page-header { background: linear-gradient(90deg, #ff6f61, #ffcc70); color: white; text-align: center; padding: 2rem; }
-    .card { border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.2s; }
-    .card:hover { transform: translateY(-5px); }
-    .btn-custom { background: #ff6f61; color: white; border-radius: 30px; font-weight: bold; }
-    .btn-custom:hover { background: #ff3d2e; color: white; }
-    .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 999; text-decoration: none; }
-    .whatsapp-btn:hover { background: #1ebd5a; color: white; }
+    body { 
+      font-family: 'Poppins', sans-serif; 
+      background: #fff8f0; 
+    }
+
+    .page-header { 
+      background: linear-gradient(90deg, #0dcaf0, #20c997); 
+      color: white; 
+      text-align: center; 
+      padding: 2rem; 
+    }
+
+    .card { 
+      border-radius: 15px; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+      transition: transform 0.2s; 
+    }
+    .card:hover { 
+      transform: translateY(-5px); 
+    }
+
+    .btn-custom { 
+      background: #0dcaf0; 
+      color: white; 
+      border-radius: 30px; 
+      font-weight: bold; 
+      transition: background 0.3s ease; 
+    }
+    .btn-custom:hover { 
+      background: #20c997; 
+      color: white; 
+    }
+
+    /* Navbar styles */
+    .text-teal {
+      color: #0dcaf0 !important;
+    }
+    .navbar-nav .nav-link {
+      transition: color 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #0dcaf0;
+    }
+    .phone-link {
+      transition: color 0.3s ease;
+    }
+    .phone-link:hover {
+      color: #0dcaf0;
+    }
   </style>
 </head>
 <body>
-  
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold text-warning" href="index.html" title="Karibu Nyumbani Home">Karibu Nyumbani</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html" title="Go to Home page">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="apartments.html" title="View our Apartments">Apartments</a></li>
-        <li class="nav-item"><a class="nav-link" href="ngong-road.html" title="Explore Ngong Road property">Ngong Road</a></li>
-        <li class="nav-item"><a class="nav-link" href="booking.html" title="Book your stay">Booking</a></li>
-        
-        <!-- Phone numbers in mobile menu -->
-        <li class="nav-item d-lg-none">
-          <a href="tel:+254757942317" class="nav-link text-warning fw-bold">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-teal" href="index.html" title="Karibu Nyumbani Home">Karibu Nyumbani</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html" title="Go to Home page">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="apartments.html" title="View our Apartments">Apartments</a></li>
+          <li class="nav-item"><a class="nav-link" href="ngong-road.html" title="Explore Ngong Road property">Ngong Road</a></li>
+          <li class="nav-item"><a class="nav-link" href="booking.html" title="Book your stay">Booking</a></li>
+
+          <!-- Phone numbers in mobile menu -->
+          <li class="nav-item d-lg-none">
+            <a href="tel:+254757942317" class="nav-link text-light fw-semibold">
+              <i class="bi bi-telephone"></i> +254 757 942 317
+            </a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a href="tel:+254748101279" class="nav-link text-light fw-semibold">
+              <i class="bi bi-telephone"></i> +254 748 101 279
+            </a>
+          </li>
+        </ul>
+
+        <!-- Phone numbers on desktop -->
+        <div class="d-none d-lg-flex align-items-center ms-3">
+          <a href="tel:+254757942317" class="text-light fw-semibold me-3 phone-link">
             <i class="bi bi-telephone"></i> +254 757 942 317
           </a>
-        </li>
-        <li class="nav-item d-lg-none">
-          <a href="tel:+254748101279" class="nav-link text-warning fw-bold">
+          <a href="tel:+254748101279" class="text-light fw-semibold phone-link">
             <i class="bi bi-telephone"></i> +254 748 101 279
           </a>
-        </li>
-      </ul>
-
-      <!-- Phone numbers on desktop -->
-      <div class="d-none d-lg-flex align-items-center ms-3">
-        <a href="tel:+254757942317" class="text-warning fw-bold me-3">
-          <i class="bi bi-telephone"></i> +254 757 942 317
-        </a>
-        <a href="tel:+254748101279" class="text-warning fw-bold">
-          <i class="bi bi-telephone"></i> +254 748 101 279
-        </a>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
-
-<!-- Bootstrap icons (needed for phone icon) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-✅ On desktop → phone numbers show on the right side of the navbar.
-✅ On mobile → phone numbers show inside the dropdown menu.
-✅ Both are click-to-call.
+  </nav>
 
   <!-- Page Header -->
   <header class="page-header">
     <h1>Our Airbnb Apartments</h1>
-    <p>Unique 1BRs & Studios on Ngong Road – all with balcony, Wi-Fi & pool access</p>
+    <p>Choose from stylish 1BRs and Studios in Ngong Road and Thindigua</p>
   </header>
 
   <!-- Apartments Catalog -->
   <div class="container my-5">
     <div class="row g-4">
 
-      <!-- 1BR: The Haven -->
+      <!-- Ngong Rd 1BR - Sunrise Haven -->
       <div class="col-md-4">
         <div class="card h-100">
-          <img src="images/placeholders/haven.jpg" class="card-img-top" alt="The Haven 1BR">
+          <img src="images/placeholders/1br-sunrise.jpg" class="card-img-top" alt="Sunrise Haven Ngong Rd">
           <div class="card-body">
-            <h5 class="card-title">The Haven – 1BR</h5>
-            <p class="card-text">From Ksh 3,500/night (~$28). Spacious and private with balcony access.</p>
+            <h5 class="card-title">Sunrise Haven – 1BR (Ngong Rd)</h5>
+            <p class="card-text">From Ksh 3,500 / $27 per night. Cozy and fully furnished with balcony access.</p>
             <a href="booking.html" class="btn btn-custom">Book Now</a>
           </div>
         </div>
       </div>
 
-      <!-- 1BR: The Vista -->
+      <!-- Ngong Rd 1BR - Urban Oasis -->
       <div class="col-md-4">
         <div class="card h-100">
-          <img src="images/placeholders/vista.jpg" class="card-img-top" alt="The Vista 1BR">
+          <img src="images/placeholders/1br-oasis.jpg" class="card-img-top" alt="Urban Oasis Ngong Rd">
           <div class="card-body">
-            <h5 class="card-title">The Vista – 1BR</h5>
-            <p class="card-text">From Ksh 3,500/night (~$28). Modern, airy design with a pool view.</p>
+            <h5 class="card-title">Urban Oasis – 1BR (Ngong Rd)</h5>
+            <p class="card-text">From Ksh 3,500 / $27 per night. Modern layout, Wi-Fi, pool access.</p>
             <a href="booking.html" class="btn btn-custom">Book Now</a>
           </div>
         </div>
       </div>
 
-      <!-- Studio: The Nest -->
+      <!-- Ngong Rd Studio - Cozy Nook -->
       <div class="col-md-4">
         <div class="card h-100">
-          <img src="images/placeholders/nest.jpg" class="card-img-top" alt="The Nest Studio">
+          <img src="images/placeholders/studio-cozy.jpg" class="card-img-top" alt="Cozy Nook Ngong Rd">
           <div class="card-body">
-            <h5 class="card-title">The Nest – Studio</h5>
-            <p class="card-text">From Ksh 2,500/night (~$20). Cozy and fully furnished for comfort.</p>
+            <h5 class="card-title">Cozy Nook – Studio (Ngong Rd)</h5>
+            <p class="card-text">From Ksh 2,500 / $19 per night. Stylish, budget-friendly with balcony.</p>
             <a href="booking.html" class="btn btn-custom">Book Now</a>
           </div>
         </div>
       </div>
 
-      <!-- Studio: The Glow -->
+      <!-- Ngong Rd Studio - City Lights -->
       <div class="col-md-4">
         <div class="card h-100">
-          <img src="images/placeholders/glow.jpg" class="card-img-top" alt="The Glow Studio">
+          <img src="images/placeholders/studio-city.jpg" class="card-img-top" alt="City Lights Ngong Rd">
           <div class="card-body">
-            <h5 class="card-title">The Glow – Studio</h5>
-            <p class="card-text">From Ksh 2,500/night (~$20). Bright interiors with a modern touch.</p>
+            <h5 class="card-title">City Lights – Studio (Ngong Rd)</h5>
+            <p class="card-text">From Ksh 2,500 / $19 per night. Bright and modern with Wi-Fi and pool.</p>
             <a href="booking.html" class="btn btn-custom">Book Now</a>
           </div>
         </div>
       </div>
 
-      <!-- Studio: The Loft -->
+      <!-- Ngong Rd Studio - Poolside Retreat -->
       <div class="col-md-4">
         <div class="card h-100">
-          <img src="images/placeholders/loft.jpg" class="card-img-top" alt="The Loft Studio">
+          <img src="images/placeholders/studio-poolside.jpg" class="card-img-top" alt="Poolside Retreat Ngong Rd">
           <div class="card-body">
-            <h5 class="card-title">The Loft – Studio</h5>
-            <p class="card-text">From Ksh 2,500/night (~$20). Sleek design with balcony and Wi-Fi.</p>
+            <h5 class="card-title">Poolside Retreat – Studio (Ngong Rd)</h5>
+            <p class="card-text">From Ksh 2,500 / $19 per night. Overlooks swimming pool, peaceful vibes.</p>
             <a href="booking.html" class="btn btn-custom">Book Now</a>
           </div>
         </div>
       </div>
 
-      <!-- Studio: The Pearl -->
+      <!-- Ngong Rd Studio - Balcony Bliss -->
       <div class="col-md-4">
         <div class="card h-100">
-          <img src="images/placeholders/pearl.jpg" class="card-img-top" alt="The Pearl Studio">
+          <img src="images/placeholders/studio-balcony.jpg" class="card-img-top" alt="Balcony Bliss Ngong Rd">
           <div class="card-body">
-            <h5 class="card-title">The Pearl – Studio</h5>
-            <p class="card-text">From Ksh 2,500/night (~$20). Elegant, comfortable, and affordable.</p>
+            <h5 class="card-title">Balcony Bliss – Studio (Ngong Rd)</h5>
+            <p class="card-text">From Ksh 2,500 / $19 per night. Private balcony, perfect for sunsets.</p>
             <a href="booking.html" class="btn btn-custom">Book Now</a>
           </div>
         </div>
       </div>
 
-      <!-- Studio: The Nook -->
+      <!-- Ngong Rd Studio - The Nest -->
       <div class="col-md-4">
         <div class="card h-100">
-          <img src="images/placeholders/nook.jpg" class="card-img-top" alt="The Nook Studio">
+          <img src="images/placeholders/studio-nest.jpg" class="card-img-top" alt="The Nest Ngong Rd">
           <div class="card-body">
-            <h5 class="card-title">The Nook – Studio</h5>
-            <p class="card-text">From Ksh 2,500/night (~$20). Intimate space perfect for short stays.</p>
+            <h5 class="card-title">The Nest – Studio (Ngong Rd)</h5>
+            <p class="card-text">From Ksh 2,500 / $19 per night. Compact, comfy, ideal for short stays.</p>
+            <a href="booking.html" class="btn btn-custom">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thindigua Studio -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="images/placeholders/studio-thindigua.jpg" class="card-img-top" alt="Thindigua Studio Kiambu">
+          <div class="card-body">
+            <h5 class="card-title">Serene Escape – Studio (Thindigua, Kiambu Rd)</h5>
+            <p class="card-text">From Ksh 2,800 / $21 per night. Quiet location, fully equipped.</p>
             <a href="booking.html" class="btn btn-custom">Book Now</a>
           </div>
         </div>
@@ -166,14 +216,7 @@
     </div>
   </div>
 
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani!%20I'm%20interested%20in%20booking%20one%20of%20your%20apartments.%20Could%20you%20share%20availability%20and%20pricing?" 
-     class="whatsapp-btn" target="_blank" aria-label="Chat with us on WhatsApp">
-    <i class="bi bi-whatsapp"></i>
-  </a>
-
-  <!-- Bootstrap JS + Icons -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </body>
 </html>
