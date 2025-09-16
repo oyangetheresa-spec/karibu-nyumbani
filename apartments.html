@@ -17,12 +17,11 @@
     .btn-custom:hover { background: #006666; color: white; }
     .whatsapp-btn { background: #25d366; color: white; border-radius: 30px; font-weight: bold; margin-top: 15px; }
     .whatsapp-btn:hover { background: #1ebe5b; color: white; }
-
-    /* Navbar styling */
     .navbar-brand { font-weight: bold; color: #ffdd00 !important; } /* Yellow brand */
-    .navbar-nav .nav-link { color: #fff !important; font-weight: bold; } /* White links */
-    .navbar-nav .nav-link:hover { color: #888 !important; } /* Grey hover */
-    .contact-info { color: #20c997; margin-left: 15px; font-size: 0.9rem; }
+    .navbar-nav .nav-link { color: #fff !important; } /* White links */
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active { color: #ccc !important; } /* Grey on hover/active */
+    .contact-info { color: #ccc !important; margin-left: 15px; font-size: 0.9rem; }
   </style>
 </head>
 <body>
@@ -63,7 +62,7 @@
           <div class="card-body">
             <h5 class="card-title">The Haven – 1BR</h5>
             <p class="card-text">KES 3,500 / $27 per night. Cozy, private, and fully furnished with a balcony.</p>
-            <a href="booking.html" class="btn btn-custom">Book Now</a>
+            <a href="booking.html?apartment=The Haven – 1BR" class="btn btn-custom">Book Now</a>
             <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20booking%20The%20Haven%201BR%20apartment." class="btn whatsapp-btn">WhatsApp Us</a>
           </div>
         </div>
@@ -76,7 +75,7 @@
           <div class="card-body">
             <h5 class="card-title">The Vista – 1BR</h5>
             <p class="card-text">KES 3,500 / $27 per night. Modern layout with great views and pool access.</p>
-            <a href="booking.html" class="btn btn-custom">Book Now</a>
+            <a href="booking.html?apartment=The Vista – 1BR" class="btn btn-custom">Book Now</a>
             <a href="https://wa.me/254748101279?text=Hi%20Karibu%20Nyumbani,%20I'd%20like%20to%20book%20The%20Vista%201BR%20apartment." class="btn whatsapp-btn">WhatsApp Us</a>
           </div>
         </div>
@@ -89,7 +88,7 @@
           <div class="card-body">
             <h5 class="card-title">The Nest – Studio</h5>
             <p class="card-text">KES 2,500 / $19 per night. Stylish and budget-friendly with balcony access.</p>
-            <a href="booking.html" class="btn btn-custom">Book Now</a>
+            <a href="booking.html?apartment=The Nest – Studio" class="btn btn-custom">Book Now</a>
             <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'd%20like%20to%20book%20The%20Nest%20Studio%20apartment." class="btn whatsapp-btn">WhatsApp Us</a>
           </div>
         </div>
@@ -102,7 +101,7 @@
           <div class="card-body">
             <h5 class="card-title">The Retreat – Studio</h5>
             <p class="card-text">KES 2,500 / $19 per night. Quiet, modern retreat with all amenities.</p>
-            <a href="booking.html" class="btn btn-custom">Book Now</a>
+            <a href="booking.html?apartment=The Retreat – Studio" class="btn btn-custom">Book Now</a>
             <a href="https://wa.me/254748101279?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Retreat%20Studio%20apartment." class="btn whatsapp-btn">WhatsApp Us</a>
           </div>
         </div>
@@ -115,7 +114,7 @@
           <div class="card-body">
             <h5 class="card-title">The Oasis – Studio</h5>
             <p class="card-text">KES 2,500 / $19 per night. Bright, peaceful space with Wi-Fi and pool access.</p>
-            <a href="booking.html" class="btn btn-custom">Book Now</a>
+            <a href="booking.html?apartment=The Oasis – Studio" class="btn btn-custom">Book Now</a>
             <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'd%20like%20to%20book%20The%20Oasis%20Studio%20apartment." class="btn whatsapp-btn">WhatsApp Us</a>
           </div>
         </div>
@@ -128,7 +127,7 @@
           <div class="card-body">
             <h5 class="card-title">The Loft – Studio</h5>
             <p class="card-text">KES 2,500 / $19 per night. Modern loft-style living with balcony views.</p>
-            <a href="booking.html" class="btn btn-custom">Book Now</a>
+            <a href="booking.html?apartment=The Loft – Studio" class="btn btn-custom">Book Now</a>
             <a href="https://wa.me/254748101279?text=Hi%20Karibu%20Nyumbani,%20I'd%20like%20to%20book%20The%20Loft%20Studio%20apartment." class="btn whatsapp-btn">WhatsApp Us</a>
           </div>
         </div>
@@ -141,7 +140,7 @@
           <div class="card-body">
             <h5 class="card-title">The Hideout – Studio</h5>
             <p class="card-text">KES 2,500 / $19 per night. Private hideaway with balcony and cozy interior.</p>
-            <a href="booking.html" class="btn btn-custom">Book Now</a>
+            <a href="booking.html?apartment=The Hideout – Studio" class="btn btn-custom">Book Now</a>
             <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Hideout%20Studio%20apartment." class="btn whatsapp-btn">WhatsApp Us</a>
           </div>
         </div>
