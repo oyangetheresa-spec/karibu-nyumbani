@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Your Stay | Karibu Nyumbani</title>
-  <link rel="canonical" href="https://karibunyumbanibytj.co.ke/page-url/" />
+  <link rel="canonical" href="https://karibunyumbanibytj.co.ke/booking.html" />
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,87 +18,80 @@
       color: #222;
     }
 
-    /* Navbar Black + Yellow */
+    /* Navbar */
     .navbar {
-      background-color: #000; /* Black */
+      background-color: #000; 
     }
     .navbar-brand,
     .navbar-nav .nav-link {
-      color: #ffdd00 !important; /* Yellow */
+      color: #00bfa5 !important; /* Teal */
       font-weight: bold;
     }
     .navbar-nav .nav-link:hover {
       text-decoration: underline;
     }
 
-    header {
-      text-align: center;
-      padding: 2rem;
-      background: #000;
-      color: #ffdd00;
-    }
-
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    /* Hero Image */
+    /* Hero Section */
     .hero {
       position: relative;
-      text-align: center;
-      color: white;
+      width: 100%;
+      height: 450px;
+      overflow: hidden;
     }
     .hero img {
       width: 100%;
-      height: 400px;
+      height: 100%;
       object-fit: cover;
       filter: brightness(70%);
     }
-    .hero-text {
+    .hero-form-container {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-    }
-    .hero-text h2 {
-      font-size: 2rem;
-      background: rgba(0,0,0,0.6);
-      padding: 0.5rem 1rem;
-      border-radius: 10px;
-    }
-
-    /* Booking Section */
-    .booking-section {
-      max-width: 800px;
-      margin: 2rem auto;
+      background: rgba(255,255,255,0.95);
       padding: 2rem;
-      background: #f9f9f9;
       border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
-
-    .booking-section h2 {
-      color: #000;
+    .hero-form-container h2 {
+      text-align: center;
       margin-bottom: 1rem;
+      color: #00796b;
     }
 
     .form-label {
       font-weight: bold;
     }
-
-    /* CTA Button */
     .btn-book {
-      background: #ffdd00;
-      color: #000;
+      background: #00bfa5;
+      color: white;
       font-weight: bold;
       border: none;
       padding: 0.75rem 1.5rem;
       border-radius: 30px;
+      width: 100%;
       transition: 0.3s;
     }
     .btn-book:hover {
-      background: #e6c900;
+      background: #008e76;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        height: 400px;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero {
+        height: 350px;
+      }
+      .hero-form-container {
+        padding: 1rem;
+      }
     }
   </style>
 
@@ -109,87 +102,69 @@
     "@type": "LodgingBusiness",
     "name": "Karibu Nyumbani Airbnb",
     "description": "Affordable furnished apartments in Ngong Road, Nairobi. Book daily, weekly, or monthly stays with flexible check-in.",
-    "image": "images/header1.jpg",
-    "url": "https://oyangetheresa-spec.github.io/karibu-nyumbani/booking.html",
+    "image": "images/booking/booking-room.jpg",
+    "url": "https://karibunyumbanibytj.co.ke/booking.html",
     "telephone": "+254757942317",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Ngong Road",
       "addressLocality": "Nairobi",
       "addressCountry": "Kenya"
-    },
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "KES",
-      "price": "3500",
-      "availability": "https://schema.org/InStock",
-      "validFrom": "2025-01-01",
-      "url": "https://oyangetheresa-spec.github.io/karibu-nyumbani/booking.html"
     }
   }
   </script>
 </head>
 <body>
 
-  <!-- Navigation Bar -->
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold text-warning" href="index.html" title="Karibu Nyumbani Home">Karibu Nyumbani</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html" title="Go to Home page">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="apartments.html" title="View our Apartments">Apartments</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="ngong-road.html" title="Explore Ngong Road property">Ngong Road</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="booking.html" title="Book your stay">Booking</a>
-        </li>
-      </ul>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html" title="Karibu Nyumbani Home">Karibu Nyumbani</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="apartments.html">Apartments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ngong-road.html">Ngong Road</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="booking.html">Booking</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
-  
-   <!-- Header -->
-  <header>
-    <h1>Book Your Stay at Karibu Nyumbani</h1>
-    <p>Secure your apartment in Nairobi with ease</p>
-  </header>
+  </nav>
 
-  <!-- Hero Image -->
+  <!-- Hero Image + Booking Form Overlay -->
   <section class="hero">
-    <img src="images/booking/booking-room.jpg" alt="Karibu Nyumbani Airbnb" class="img-fluid">
-    <div class="hero-text">
-      <h2>Your Comfort, Our Priority</h2>
+    <img src="images/booking/booking-room.jpg" alt="Karibu Nyumbani Airbnb">
+    <div class="hero-form-container">
+      <h2>Book Your Stay</h2>
+      <form id="whatsappBookingForm">
+        <div class="mb-3">
+          <label for="checkin" class="form-label">Check-in Date</label>
+          <input type="date" id="checkin" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="checkout" class="form-label">Check-out Date</label>
+          <input type="date" id="checkout" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="guests" class="form-label">Number of Guests</label>
+          <input type="number" id="guests" class="form-control" min="1" max="6" required>
+        </div>
+        <button type="submit" class="btn-book">Book via WhatsApp</button>
+      </form>
     </div>
   </section>
-
-<!-- Booking Form -->
-<div class="booking-section">
-  <h2>Check Availability & Book</h2>
-  <form id="whatsappBookingForm">
-    <div class="mb-3">
-      <label for="checkin" class="form-label">Check-in Date</label>
-      <input type="date" id="checkin" class="form-control" required>
-    </div>
-    <div class="mb-3">
-      <label for="checkout" class="form-label">Check-out Date</label>
-      <input type="date" id="checkout" class="form-control" required>
-    </div>
-    <div class="mb-3">
-      <label for="guests" class="form-label">Number of Guests</label>
-      <input type="number" id="guests" class="form-control" min="1" max="4" required>
-    </div>
-    <button type="submit" class="btn-book">Book via WhatsApp</button>
-  </form>
-</div>
 
 <script>
   document.getElementById("whatsappBookingForm").addEventListener("submit", function(e) {
@@ -199,11 +174,11 @@
     const checkout = document.getElementById("checkout").value;
     const guests = document.getElementById("guests").value;
 
-    const phoneNumber = "254757942317"; // Your WhatsApp number
+    const phoneNumber = "254757942317"; // WhatsApp number
     const message = `Hello, I would like to book a stay at Karibu Nyumbani.%0A
-    Check-in: ${checkin}%0A
-    Check-out: ${checkout}%0A
-    Guests: ${guests}`;
+Check-in: ${checkin}%0A
+Check-out: ${checkout}%0A
+Guests: ${guests}`;
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, "_blank");
