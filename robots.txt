@@ -1,6 +1,6 @@
-# Allow all crawlers
+# Allow all search engines to crawl everything
 User-agent: *
-Allow: /
+Disallow:
 
-# Link to sitemap
-Sitemap: https://oyangetheresa-spec.github.io/karibu-nyumbani/sitemap.xml
+# Point to the sitemap for faster indexing
+Sitemap: https://karibunyumbanibytj.co.ke/sitemap.xml
