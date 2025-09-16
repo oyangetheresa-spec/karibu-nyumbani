@@ -3,153 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Airbnb Apartments | Karibu Nyumbani by TJ</title>
-  <meta name="description" content="Browse Karibu Nyumbani's Airbnb apartments on Ngong Road, Nairobi. Fully furnished 1BRs and Studios with Wi-Fi, swimming pool, balcony access, and affordable rates.">
+  <title>Apartments | Karibu Nyumbani</title>
+  <meta name="description" content="Browse and book Karibu Nyumbani fully furnished Airbnb apartments on Ngong Road, Nairobi. 1BR & Studio units with warm modern design.">
   <link rel="canonical" href="https://karibunyumbanibytj.co.ke/apartments.html" />
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+
   <style>
-    body { font-family: 'Poppins', sans-serif; background: #f8fafc; }
-    .page-header { background: linear-gradient(90deg, #008080, #20c997); color: white; text-align: center; padding: 2rem; }
-    .card { border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.2s; }
-    .card:hover { transform: translateY(-5px); }
-    .btn-custom { background: #008080; color: white; border-radius: 30px; font-weight: bold; }
-    .btn-custom:hover { background: #006666; color: white; }
-    .whatsapp-btn { background: #25d366; color: white; border-radius: 30px; font-weight: bold; margin-top: 15px; }
-    .whatsapp-btn:hover { background: #1ebe5b; color: white; }
-    .navbar-brand { font-weight: bold; color: #ffdd00 !important; } /* Yellow brand */
-    .navbar-nav .nav-link { color: #fff !important; } /* White links */
-    .navbar-nav .nav-link:hover,
-    .navbar-nav .nav-link.active { color: #ccc !important; } /* Grey on hover/active */
-    .contact-info { color: #ccc !important; margin-left: 15px; font-size: 0.9rem; }
+    body { font-family: 'Poppins', sans-serif; margin:0; padding:0; background:#fff; color:#222; }
+
+    /* Navbar */
+    .navbar-brand { color:#ffdd00 !important; font-weight:bold; }
+    .navbar-nav .nav-link { color:white !important; font-weight:bold; }
+    .navbar-nav .nav-link:hover { color:grey !important; text-decoration:none; }
+    .contact-info { color:white !important; margin-left: 15px; }
+
+    /* Apartment Cards */
+    .apartment-card {
+      background-color: #F5E6CC; /* warm beige */
+      color: black;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .apartment-card h3 {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .apartment-card p {
+      margin-bottom: 10px;
+    }
+    .btn-book {
+      background:#ffdd00;
+      color:#000;
+      font-weight:bold;
+      border:none;
+      padding:0.5rem 1.5rem;
+      border-radius:30px;
+    }
+    .btn-book:hover {
+      background:#e6c900;
+    }
   </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html" title="Karibu Nyumbani Home">Karibu Nyumbani</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="apartments.html">Apartments</a></li>
-          <li class="nav-item"><a class="nav-link" href="ngong-road.html">Ngong Road</a></li>
-          <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
-          <li class="nav-item contact-info">📞 +254757942317</li>
-          <li class="nav-item contact-info">📞 +254748101279</li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Page Header -->
-  <header class="page-header">
-    <h1>Our Airbnb Apartments on Ngong Road</h1>
-    <p>Choose from 1BRs and Studios — all fully furnished with balcony access, Wi-Fi, and swimming pool</p>
-  </header>
-
-  <!-- Apartments Catalog -->
-  <div class="container my-5">
-    <div class="row g-4">
-
-      <!-- The Haven (1BR) -->
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="images/ngong-road/haven.jpg" class="card-img-top" alt="The Haven 1BR Airbnb Apartment on Ngong Road">
-          <div class="card-body">
-            <h5 class="card-title">The Haven – 1BR</h5>
-            <p class="card-text">KES 3,500 / $27 per night. Cozy, private, and fully furnished with a balcony.</p>
-            <a href="booking.html?apartment=The Haven – 1BR" class="btn btn-custom">Book Now</a>
-            <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20booking%20The%20Haven%201BR%20apartment." class="btn whatsapp-btn">WhatsApp Us</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- The Vista (1BR) -->
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="images/ngong-road/vista.jpg" class="card-img-top" alt="The Vista 1BR Airbnb Apartment on Ngong Road">
-          <div class="card-body">
-            <h5 class="card-title">The Vista – 1BR</h5>
-            <p class="card-text">KES 3,500 / $27 per night. Modern layout with great views and pool access.</p>
-            <a href="booking.html?apartment=The Vista – 1BR" class="btn btn-custom">Book Now</a>
-            <a href="https://wa.me/254748101279?text=Hi%20Karibu%20Nyumbani,%20I'd%20like%20to%20book%20The%20Vista%201BR%20apartment." class="btn whatsapp-btn">WhatsApp Us</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- The Nest (Studio) -->
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="images/ngong-road/nest.jpg" class="card-img-top" alt="The Nest Studio Airbnb Apartment on Ngong Road">
-          <div class="card-body">
-            <h5 class="card-title">The Nest – Studio</h5>
-            <p class="card-text">KES 2,500 / $19 per night. Stylish and budget-friendly with balcony access.</p>
-            <a href="booking.html?apartment=The Nest – Studio" class="btn btn-custom">Book Now</a>
-            <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'd%20like%20to%20book%20The%20Nest%20Studio%20apartment." class="btn whatsapp-btn">WhatsApp Us</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- The Retreat (Studio) -->
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="images/ngong-road/retreat.jpg" class="card-img-top" alt="The Retreat Studio Airbnb Apartment on Ngong Road">
-          <div class="card-body">
-            <h5 class="card-title">The Retreat – Studio</h5>
-            <p class="card-text">KES 2,500 / $19 per night. Quiet, modern retreat with all amenities.</p>
-            <a href="booking.html?apartment=The Retreat – Studio" class="btn btn-custom">Book Now</a>
-            <a href="https://wa.me/254748101279?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Retreat%20Studio%20apartment." class="btn whatsapp-btn">WhatsApp Us</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- The Oasis (Studio) -->
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="images/ngong-road/oasis.jpg" class="card-img-top" alt="The Oasis Studio Airbnb Apartment on Ngong Road">
-          <div class="card-body">
-            <h5 class="card-title">The Oasis – Studio</h5>
-            <p class="card-text">KES 2,500 / $19 per night. Bright, peaceful space with Wi-Fi and pool access.</p>
-            <a href="booking.html?apartment=The Oasis – Studio" class="btn btn-custom">Book Now</a>
-            <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'd%20like%20to%20book%20The%20Oasis%20Studio%20apartment." class="btn whatsapp-btn">WhatsApp Us</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- The Loft (Studio) -->
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="images/ngong-road/loft.jpg" class="card-img-top" alt="The Loft Studio Airbnb Apartment on Ngong Road">
-          <div class="card-body">
-            <h5 class="card-title">The Loft – Studio</h5>
-            <p class="card-text">KES 2,500 / $19 per night. Modern loft-style living with balcony views.</p>
-            <a href="booking.html?apartment=The Loft – Studio" class="btn btn-custom">Book Now</a>
-            <a href="https://wa.me/254748101279?text=Hi%20Karibu%20Nyumbani,%20I'd%20like%20to%20book%20The%20Loft%20Studio%20apartment." class="btn whatsapp-btn">WhatsApp Us</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- The Hideout (Studio) -->
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="images/ngong-road/hideout.jpg" class="card-img-top" alt="The Hideout Studio Airbnb Apartment on Ngong Road">
-          <div class="card-body">
-            <h5 class="card-title">The Hideout – Studio</h5>
-            <p class="card-text">KES 2,500 / $19 per night. Private hideaway with balcony and cozy interior.</p>
-            <a href="booking.html?apartment=The Hideout – Studio" class="btn btn-custom">Book Now</a>
-            <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Hideout%20Studio%20apartment." class="btn whatsapp-btn">WhatsApp Us</a>
-          </div>
-        </div>
-      </div>
-
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Karibu Nyumbani</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="apartments.html">Apartments</a></li>
+        <li class="nav-item"><a class="nav-link" href="ngong-road.html">Ngong Road</a></li>
+        <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+        <li class="nav-item contact-info">📞 +254757942317</li>
+        <li class="nav-item contact-info">📞 +254748101279</li>
+      </ul>
     </div>
   </div>
+</nav>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Apartments Section -->
+<div class="container my-5">
+  <h1 class="text-center mb-4">Our Apartments on Ngong Road</h1>
+  <p class="text-center mb-5">Choose from our stylish, fully furnished 1BR and Studio apartments in Nairobi. Click "Book Now" to reserve your stay instantly via WhatsApp.</p>
+
+  <div class="row">
+    <!-- 1BR: The Royal -->
+    <div class="col-md-6">
+      <div class="apartment-card">
+        <h3>The Royal (1BR)</h3>
+        <p><strong>Price:</strong> $35 / Ksh 3,500 per night</p>
+        <p>Spacious 1BR apartment on Ngong Road, designed for comfort and luxury.</p>
+        <a href="booking.html?apartment=The Royal" class="btn-book">Book Now</a>
+      </div>
+    </div>
+
+    <!-- 1BR: The Urban -->
+    <div class="col-md-6">
+      <div class="apartment-card">
+        <h3>The Urban (1BR)</h3>
+        <p><strong>Price:</strong> $35 / Ksh 3,500 per night</p>
+        <p>Modern 1BR apartment with a stylish interior, ideal for both short and long stays.</p>
+        <a href="booking.html?apartment=The Urban" class="btn-book">Book Now</a>
+      </div>
+    </div>
+
+    <!-- Studio: The Haven -->
+    <div class="col-md-6">
+      <div class="apartment-card">
+        <h3>The Haven (Studio)</h3>
+        <p><strong>Price:</strong> $25 / Ksh 2,500 per night</p>
+        <p>Cozy studio apartment with all essentials, perfect for a solo traveler or couple.</p>
+        <a href="booking.html?apartment=The Haven" class="btn-book">Book Now</a>
+      </div>
+    </div>
+
+    <!-- Studio: The Nest -->
+    <div class="col-md-6">
+      <div class="apartment-card">
+        <h3>The Nest (Studio)</h3>
+        <p><strong>Price:</strong> $25 / Ksh 2,500 per night</p>
+        <p>Bright and airy studio apartment offering both comfort and convenience.</p>
+        <a href="booking.html?apartment=The Nest" class="btn-book">Book Now</a>
+      </div>
+    </div>
+
+    <!-- Studio: The Oasis -->
+    <div class="col-md-6">
+      <div class="apartment-card">
+        <h3>The Oasis (Studio)</h3>
+        <p><strong>Price:</strong> $25 / Ksh 2,500 per night</p>
+        <p>Stylish studio apartment featuring modern amenities and a serene vibe.</p>
+        <a href="booking.html?apartment=The Oasis" class="btn-book">Book Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
