@@ -11,7 +11,13 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
-  body { font-family: 'Poppins', sans-serif; margin:0; padding:0; background:#fff; color:#222; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding:0;
+    background:#fff;
+    color:#222;
+  }
 
   /* Navbar */
   .navbar-brand { color:#ffdd00 !important; font-weight:bold; }
@@ -23,59 +29,62 @@
   /* Hero Section */
   .hero {
     position: relative;
-    height: 500px;
-    overflow: hidden;
+    overflow: visible;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    background: url('images/booking/booking-room.jpg') center/cover no-repeat;
   }
-  .hero img {
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    filter: brightness(60%);
-  }
+
   .hero-overlay {
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    color:white;
-    padding: 0 1rem;
+    background: rgba(0,0,0,0.6);
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 90%;
+    color: white;
+    text-align: center;
   }
+
   .hero-overlay h1 {
-    font-size:2.5rem;
-    margin-bottom:1rem;
-    text-align:center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
+
   .hero-overlay p {
-    font-size:1.2rem;
-    margin-bottom:2rem;
-    text-align:center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
   }
-  .booking-form {
-    background: rgba(0,0,0,0.7);
-    padding:2rem;
-    border-radius:15px;
-    max-width:600px;
-    width:100%;
-  }
+
   .booking-form .form-label { color:white; font-weight:bold; }
   .booking-form input { margin-bottom:1rem; }
-  .btn-book { background:#ffdd00; color:#000; font-weight:bold; border:none; padding:0.75rem 1.5rem; border-radius:30px; width:100%; }
+  .btn-book {
+    background:#ffdd00;
+    color:#000;
+    font-weight:bold;
+    border:none;
+    padding:0.75rem 1.5rem;
+    border-radius:30px;
+    width:100%;
+    transition: background 0.3s;
+  }
   .btn-book:hover { background:#e6c900; }
+
   @media (max-width:768px) {
-    .hero { height:400px; }
+    .hero { min-height: 400px; padding: 1.5rem 0; }
     .hero-overlay h1 { font-size:2rem; }
     .hero-overlay p { font-size:1rem; }
   }
+
   @media (max-width:480px) {
-    .hero { height:300px; }
+    .hero { min-height: 300px; padding: 1rem 0; }
     .hero-overlay h1 { font-size:1.5rem; }
     .hero-overlay p { font-size:0.9rem; }
   }
+
+  html { scroll-behavior: smooth; }
 </style>
 </head>
 <body>
@@ -100,9 +109,8 @@
   </div>
 </nav>
 
-<!-- Hero with Booking Form -->
+<!-- Hero Section with Booking Form -->
 <section class="hero">
-  <img src="images/booking/booking-room.jpg" alt="Karibu Nyumbani Airbnb">
   <div class="hero-overlay">
     <h1>Book Your Stay at Karibu Nyumbani</h1>
     <p>Fully furnished 1BR & Studio apartments in Nairobi — check availability instantly</p>
@@ -139,20 +147,18 @@
     document.getElementById('apartment').value = apartmentName;
   }
 
+  // WhatsApp Booking Form submission
   document.getElementById("whatsappBookingForm").addEventListener("submit", function(e) {
     e.preventDefault();
     const apartment = document.getElementById("apartment").value;
     const checkin = document.getElementById("checkin").value;
     const checkout = document.getElementById("checkout").value;
     const guests = document.getElementById("guests").value;
-    const phoneNumber = "254757942317"; // main WhatsApp number
+    const phoneNumber = "254757942317";
 
-    let message;
-    if(apartment){
-      message = `Hello, I would like to book ${apartment} at Karibu Nyumbani.%0ACheck-in: ${checkin}%0ACheck-out: ${checkout}%0AGuests: ${guests}`;
-    } else {
-      message = `Hello, I would like to book a stay at Karibu Nyumbani.%0ACheck-in: ${checkin}%0ACheck-out: ${checkout}%0AGuests: ${guests}`;
-    }
+    let message = apartment
+      ? `Hello, I would like to book ${apartment} at Karibu Nyumbani.%0ACheck-in: ${checkin}%0ACheck-out: ${checkout}%0AGuests: ${guests}`
+      : `Hello, I would like to book a stay at Karibu Nyumbani.%0ACheck-in: ${checkin}%0ACheck-out: ${checkout}%0AGuests: ${guests}`;
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, "_blank");
