@@ -3,21 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Airbnb Apartments | Karibu Nyumbani by TJ</title>
-<meta name="description" content="Browse Karibu Nyumbani's Airbnb apartments on Ngong Road, Nairobi. Fully furnished 1BRs and Studios with Wi-Fi, balcony access, and affordable rates.">
-<link rel="canonical" href="https://karibunyumbanibytj.co.ke/apartments.html" />
+
+<title>Furnished Airbnb Apartments in Nairobi | Karibu Nyumbani</title>
+<meta name="description" content="Discover fully furnished Airbnb apartments in Nairobi near Ngong Road. 1BR & Studio rentals with Wi-Fi, kitchen and parking — nightly, weekly & monthly stays.">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://karibunyumbanibytj.co.ke/apartments/" />
+
+<!-- Open Graph / Social -->
+<meta property="og:title" content="Furnished Airbnb Apartments in Nairobi | Karibu Nyumbani">
+<meta property="og:description" content="Discover fully furnished Airbnb apartments in Nairobi near Ngong Road. 1BR & Studio rentals with Wi-Fi, kitchen and parking — nightly, weekly & monthly stays.">
+<meta property="og:image" content="https://karibunyumbanibytj.co.ke/images/ngong-road/haven.jpg">
+<meta property="og:url" content="https://karibunyumbanibytj.co.ke/apartments/">
+<meta property="og:type" content="website">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Furnished Airbnb Apartments in Nairobi | Karibu Nyumbani">
+<meta name="twitter:description" content="Discover fully furnished Airbnb apartments in Nairobi near Ngong Road. 1BR & Studio rentals with Wi-Fi, kitchen and parking — nightly, weekly & monthly stays.">
+<meta name="twitter:image" content="https://karibunyumbanibytj.co.ke/images/ngong-road/haven.jpg">
+
+<!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17463721552">
-</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17463721552"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'AW-17463721552');
 </script>
+
 <style>
   body { font-family: 'Poppins', sans-serif; background: #ffffff; } /* white */
   
@@ -38,7 +55,7 @@
   /* Apartment Cards */
   .card { border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); background:#ffffff; transition: transform 0.2s; }
   .card:hover { transform: translateY(-5px); }
-  .card-img-top { border-top-left-radius: 15px; border-top-right-radius: 15px; object-fit: cover; height: 200px; }
+  .card-img-top { border-top-left-radius: 15px; border-top-right-radius: 15px; object-fit: cover; height: 200px; width:100%; }
   .card-body h5 { margin-top: 0.5rem; font-weight: bold; }
   .btn-custom { background: #ffdd00; color: #000; border-radius: 30px; font-weight: bold; margin-right: 5px; }
   .btn-custom:hover { background: #e6c900; color: #000; }
@@ -52,16 +69,16 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container">
-    <a class="navbar-brand" href="index.html" title="Karibu Nyumbani Home">Karibu Nyumbani</a>
+    <a class="navbar-brand" href="/" title="Karibu Nyumbani Home">Karibu Nyumbani</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto align-items-lg-center">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" href="apartments.html">Apartments</a></li>
-        <li class="nav-item"><a class="nav-link" href="ngong-road.html">Ngong Road</a></li>
-        <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/apartments/">Apartments</a></li>
+        <li class="nav-item"><a class="nav-link" href="/ngong-road/">Ngong Road</a></li>
+        <li class="nav-item"><a class="nav-link" href="/booking/">Booking</a></li>
         <li class="nav-item contact-info">📞 +254757942317</li>
         <li class="nav-item contact-info">📞 +254748101279</li>
       </ul>
@@ -82,12 +99,12 @@
     <!-- The Haven (1BR) -->
     <div class="col-md-4">
       <div class="card h-100">
-        <img src="images/ngong-road/haven.jpg" class="card-img-top" alt="The Haven 1BR Airbnb Apartment">
+        <img src="/images/ngong-road/haven.jpg" class="card-img-top" alt="The Haven 1BR Airbnb Apartment">
         <div class="card-body">
           <h5 class="card-title">The Haven – 1BR</h5>
           <p class="card-text">KES 3,500 / $27 per night</p>
-          <a href="booking.html?apartment=The Haven" class="btn btn-custom">Book Now</a>
-          <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Haven%201BR" class="btn whatsapp-btn">WhatsApp Us</a>
+          <a href="/booking/?apartment=The%20Haven" class="btn btn-custom">Book Now</a>
+          <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Haven%201BR" class="btn whatsapp-btn" target="_blank" rel="noopener">WhatsApp Us</a>
         </div>
       </div>
     </div>
@@ -95,12 +112,12 @@
     <!-- The Vista (1BR) -->
     <div class="col-md-4">
       <div class="card h-100">
-        <img src="images/ngong-road/vista.jpg" class="card-img-top" alt="The Vista 1BR Airbnb Apartment">
+        <img src="/images/ngong-road/vista.jpg" class="card-img-top" alt="The Vista 1BR Airbnb Apartment">
         <div class="card-body">
           <h5 class="card-title">The Vista – 1BR</h5>
           <p class="card-text">KES 3,500 / $27 per night</p>
-          <a href="booking.html?apartment=The Vista" class="btn btn-custom">Book Now</a>
-          <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Vista%201BR" class="btn whatsapp-btn">WhatsApp Us</a>
+          <a href="/booking/?apartment=The%20Vista" class="btn btn-custom">Book Now</a>
+          <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Vista%201BR" class="btn whatsapp-btn" target="_blank" rel="noopener">WhatsApp Us</a>
         </div>
       </div>
     </div>
@@ -108,12 +125,12 @@
     <!-- The Nest (Studio) -->
     <div class="col-md-4">
       <div class="card h-100">
-        <img src="images/ngong-road/nest.jpg" class="card-img-top" alt="The Nest Studio Airbnb Apartment">
+        <img src="/images/ngong-road/nest.jpg" class="card-img-top" alt="The Nest Studio Airbnb Apartment">
         <div class="card-body">
           <h5 class="card-title">The Nest – Studio</h5>
           <p class="card-text">KES 2,500 / $19 per night</p>
-          <a href="booking.html?apartment=The Nest" class="btn btn-custom">Book Now</a>
-          <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Nest%20Studio" class="btn whatsapp-btn">WhatsApp Us</a>
+          <a href="/booking/?apartment=The%20Nest" class="btn btn-custom">Book Now</a>
+          <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Nest%20Studio" class="btn whatsapp-btn" target="_blank" rel="noopener">WhatsApp Us</a>
         </div>
       </div>
     </div>
@@ -121,12 +138,12 @@
     <!-- The Retreat (Studio) -->
     <div class="col-md-4">
       <div class="card h-100">
-        <img src="images/ngong-road/retreat.jpg" class="card-img-top" alt="The Retreat Studio Airbnb Apartment">
+        <img src="/images/ngong-road/retreat.jpg" class="card-img-top" alt="The Retreat Studio Airbnb Apartment">
         <div class="card-body">
           <h5 class="card-title">The Retreat – Studio</h5>
           <p class="card-text">KES 2,500 / $19 per night</p>
-          <a href="booking.html?apartment=The Retreat" class="btn btn-custom">Book Now</a>
-          <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Retreat%20Studio" class="btn whatsapp-btn">WhatsApp Us</a>
+          <a href="/booking/?apartment=The%20Retreat" class="btn btn-custom">Book Now</a>
+          <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Retreat%20Studio" class="btn whatsapp-btn" target="_blank" rel="noopener">WhatsApp Us</a>
         </div>
       </div>
     </div>
@@ -134,12 +151,12 @@
     <!-- The Oasis (Studio) -->
     <div class="col-md-4">
       <div class="card h-100">
-        <img src="images/ngong-road/oasis.jpg" class="card-img-top" alt="The Oasis Studio Airbnb Apartment">
+        <img src="/images/ngong-road/oasis.jpg" class="card-img-top" alt="The Oasis Studio Airbnb Apartment">
         <div class="card-body">
           <h5 class="card-title">The Oasis – Studio</h5>
           <p class="card-text">KES 2,500 / $19 per night</p>
-          <a href="booking.html?apartment=The Oasis" class="btn btn-custom">Book Now</a>
-          <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Oasis%20Studio" class="btn whatsapp-btn">WhatsApp Us</a>
+          <a href="/booking/?apartment=The%20Oasis" class="btn btn-custom">Book Now</a>
+          <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Oasis%20Studio" class="btn whatsapp-btn" target="_blank" rel="noopener">WhatsApp Us</a>
         </div>
       </div>
     </div>
@@ -147,12 +164,12 @@
     <!-- The Loft (Studio) -->
     <div class="col-md-4">
       <div class="card h-100">
-        <img src="images/ngong-road/loft.jpg" class="card-img-top" alt="The Loft Studio Airbnb Apartment">
+        <img src="/images/ngong-road/loft.jpg" class="card-img-top" alt="The Loft Studio Airbnb Apartment">
         <div class="card-body">
           <h5 class="card-title">The Loft – Studio</h5>
           <p class="card-text">KES 2,500 / $19 per night</p>
-          <a href="booking.html?apartment=The Loft" class="btn btn-custom">Book Now</a>
-          <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Loft%20Studio" class="btn whatsapp-btn">WhatsApp Us</a>
+          <a href="/booking/?apartment=The%20Loft" class="btn btn-custom">Book Now</a>
+          <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Loft%20Studio" class="btn whatsapp-btn" target="_blank" rel="noopener">WhatsApp Us</a>
         </div>
       </div>
     </div>
@@ -160,12 +177,12 @@
     <!-- The Hideout (Studio) -->
     <div class="col-md-4">
       <div class="card h-100">
-        <img src="images/ngong-road/hideout.jpg" class="card-img-top" alt="The Hideout Studio Airbnb Apartment">
+        <img src="/images/ngong-road/hideout.jpg" class="card-img-top" alt="The Hideout Studio Airbnb Apartment">
         <div class="card-body">
           <h5 class="card-title">The Hideout – Studio</h5>
           <p class="card-text">KES 2,500 / $19 per night</p>
-          <a href="booking.html?apartment=The Hideout" class="btn btn-custom">Book Now</a>
-          <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Hideout%20Studio" class="btn whatsapp-btn">WhatsApp Us</a>
+          <a href="/booking/?apartment=The%20Hideout" class="btn btn-custom">Book Now</a>
+          <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Hideout%20Studio" class="btn whatsapp-btn" target="_blank" rel="noopener">WhatsApp Us</a>
         </div>
       </div>
     </div>
