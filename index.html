@@ -46,6 +46,18 @@
   object-fit: cover;      /* Fill container without leaving white space */
   object-position: center;/* Keep main subject centered */
 }
+    .hero-title-mobile {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .hero-title-desktop {
+    display: none;
+  }
+  .hero-title-mobile {
+    display: inline;
+  }
+}
 
   </style>
 
@@ -186,7 +198,10 @@
        alt="Airbnb apartments along Ngong Road Nairobi - Hero 1" 
        loading="lazy" style="height:70vh; object-fit:cover;">
   <div class="carousel-caption d-block">
-    <h2 class="hero-title">Airbnb Apartments on Ngong Road, Nairobi</h2>
+    <h2 class="hero-title">
+  <span class="hero-title-desktop">Airbnb Apartments on Ngong Road, Nairobi</span>
+  <span class="hero-title-mobile">Airbnb on Ngong Road</span>
+</h2>
     <p class="hero-sub">Fully furnished 1BR & Studio | Wi-Fi, Parking, Kitchen | From KES 2,500/night</p>
     <a href="https://wa.me/254757942317?text=Hello%2C%20I%27m%20interested%20in%20booking%20an%20apartment%20at%20Karibu%20Nyumbani%20by%20TJ." 
        class="btn btn-vibrant" target="_blank" rel="noopener noreferrer">
