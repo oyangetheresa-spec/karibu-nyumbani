@@ -111,17 +111,65 @@
   <div class="row g-4">
 
     <!-- The Haven (1BR) -->
-  <div class="col-md-4">
+ <!-- The Haven (1BR) -->
+<div class="col-md-4">
   <div class="card h-100">
-    <img src="/images/ngong-road/haven.jpg" class="card-img-top" alt="The Haven 1BR Airbnb Apartment">
+    <!-- Optimized image with lazy loading -->
+    <img src="/images/ngong-road/haven.jpg" 
+         class="card-img-top" 
+         alt="The Haven 1BR Furnished Airbnb Apartment Nairobi with WiFi, Balcony & Pool" 
+         loading="lazy">
+
     <div class="card-body">
+      <!-- Title -->
       <h5 class="card-title">The Haven – 1BR</h5>
-      <p class="card-text">
+
+      <!-- Pricing with anchor effect -->
+      <p class="card-text mb-1">
         <span style="text-decoration:line-through; color:#888;">KES 3,500 / $27</span><br>
-        <span class="offer">🎉 Now KES 3,000 / $23 per night</span>
+        <span class="offer">🎉 Special: KES 3,000 / $23 per night</span>
       </p>
-      <p style="color:#444; font-size:0.9rem;">⭐ Rated 4.8/5 by 120 guests</p>
+
+      <!-- Urgency timer -->
+      <p id="haven-timer" style="color:#e63946; font-weight:bold;"></p>
+      <script>
+        (function(){
+          const deadline = new Date().getTime() + (12*60*60*1000); // 12h countdown
+          const x = setInterval(function(){
+            const now = new Date().getTime();
+            const t = deadline - now;
+            if (t < 0) {
+              clearInterval(x);
+              document.getElementById("haven-timer").innerHTML = "⏳ Offer ends soon!";
+            } else {
+              const h = Math.floor((t%(1000*60*60*24))/(1000*60*60));
+              const m = Math.floor((t%(1000*60*60))/(1000*60));
+              document.getElementById("haven-timer").innerHTML = "⏳ Deal ends in " + h + "h " + m + "m";
+            }
+          }, 1000);
+        })();
+      </script>
+
+      <!-- Guest trust signals -->
+      <p style="color:#444; font-size:0.9rem;">⭐ Rated 4.8/5 by 120 happy guests</p>
       <p style="color:green; font-size:0.9rem;">✅ Available this week – only 1 left!</p>
+
+      <!-- Amenities icons -->
+      <div class="amenities mb-3" style="font-size:1.2rem;">
+        <span title="WiFi">📶</span>
+        <span title="Swimming Pool">🏊</span>
+        <span title="Balcony">🌇</span>
+        <span title="Parking">🚗</span>
+        <span title="Kitchen">🍳</span>
+        <span title="Smart TV">📺</span>
+      </div>
+
+      <!-- Lifestyle blurb -->
+      <p style="font-size:0.9rem; color:#555;">
+        Wake up to sweeping city views from your private balcony, enjoy high-speed WiFi for work or streaming, and relax by the pool after a long day. Perfect for couples or business travelers.
+      </p>
+
+      <!-- Action buttons -->
       <a href="/booking/?apartment=The%20Haven" class="btn btn-custom">Book Now</a>
       <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Haven%201BR" 
          class="btn whatsapp-btn" target="_blank" rel="noopener">📲 WhatsApp Us</a>
