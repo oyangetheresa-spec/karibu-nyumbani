@@ -178,17 +178,64 @@
 </div>
 
     <!-- The Vista (1BR) -->
-   <div class="col-md-4">
+  <!-- The Vista (1BR) -->
+<div class="col-md-4">
   <div class="card h-100">
-    <img src="/images/ngong-road/vista.jpg" class="card-img-top" alt="The Vista 1BR Airbnb Apartment">
+    <!-- Optimized image with lazy loading -->
+    <img src="/images/ngong-road/vista.jpg" 
+         class="card-img-top" 
+         alt="The Vista 1BR Furnished Airbnb Apartment Nairobi with Balcony, WiFi & City Views" 
+         loading="lazy">
+
     <div class="card-body">
-      <h5 class="card-title">The Vista – 1BR</h5>
-      <p class="card-text">
+      <!-- Title -->
+      <h5 class="card-title">The Vista (1BR)</h5>
+
+      <!-- Pricing with anchor effect -->
+      <p class="card-text mb-1">
         <span style="text-decoration:line-through; color:#888;">KES 3,500 / $27</span><br>
-        <span class="offer">🎉 Now KES 3,000 / $23 per night</span>
+        <span class="offer">🎉 Special: KES 3,000 / $23 per night</span>
       </p>
+
+      <!-- Urgency timer -->
+      <p id="vista-timer" style="color:#e63946; font-weight:bold;"></p>
+      <script>
+        (function(){
+          const deadline = new Date().getTime() + (10*60*60*1000); // 10h countdown
+          const x = setInterval(function(){
+            const now = new Date().getTime();
+            const t = deadline - now;
+            if (t < 0) {
+              clearInterval(x);
+              document.getElementById("vista-timer").innerHTML = "⏳ Offer ends soon!";
+            } else {
+              const h = Math.floor((t%(1000*60*60*24))/(1000*60*60));
+              const m = Math.floor((t%(1000*60*60))/(1000*60));
+              document.getElementById("vista-timer").innerHTML = "⏳ Deal ends in " + h + "h " + m + "m";
+            }
+          }, 1000);
+        })();
+      </script>
+
+      <!-- Guest trust signals -->
       <p style="color:#444; font-size:0.9rem;">⭐ Rated 4.9/5 by 95 guests</p>
       <p style="color:green; font-size:0.9rem;">✅ Limited availability – book fast!</p>
+
+      <!-- Amenities icons -->
+      <div class="amenities mb-3" style="font-size:1.2rem;">
+        <span title="WiFi">📶</span>
+        <span title="Balcony with Views">🌇</span>
+        <span title="Parking">🚗</span>
+        <span title="Kitchen">🍳</span>
+        <span title="Smart TV">📺</span>
+      </div>
+
+      <!-- Lifestyle blurb -->
+      <p style="font-size:0.9rem; color:#555;">
+        Enjoy panoramic city views from your balcony, stay connected with high-speed WiFi, and unwind with Netflix on your Smart TV. A stylish retreat for couples or solo travelers who love comfort and scenery.
+      </p>
+
+      <!-- Action buttons -->
       <a href="/booking/?apartment=The%20Vista" class="btn btn-custom">Book Now</a>
       <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Vista%201BR" 
          class="btn whatsapp-btn" target="_blank" rel="noopener">📲 WhatsApp Us</a>
@@ -197,39 +244,128 @@
 </div>
     
     <!-- The Nest (Studio) -->
-  <div class="col-md-4">
+ <!-- The Nest (Studio) -->
+<div class="col-md-4">
   <div class="card h-100">
-    <img src="/images/ngong-road/nest.jpg" class="card-img-top" alt="The Nest Studio Airbnb Apartment">
+    <!-- Optimized image with lazy loading -->
+    <img src="/images/ngong-road/nest.jpg" 
+         class="card-img-top" 
+         alt="The Nest Studio Airbnb Apartment Nairobi – Cozy Budget Stay with WiFi & Kitchenette" 
+         loading="lazy">
+
     <div class="card-body">
-      <h5 class="card-title">The Nest – Studio</h5>
-      <p class="card-text">KES 2,500 / $19 per night</p>
+      <!-- Title -->
+      <h5 class="card-title">The Nest (Studio)</h5>
 
-      <!-- Trust signal -->
+      <!-- Pricing with anchor effect -->
+      <p class="card-text mb-1">
+        <span style="text-decoration:line-through; color:#888;">KES 2,800 / $22</span><br>
+        <span class="offer">🎉 Special: KES 2,500 / $19 per night</span>
+      </p>
+
+      <!-- Urgency timer -->
+      <p id="nest-timer" style="color:#e63946; font-weight:bold;"></p>
+      <script>
+        (function(){
+          const deadline = new Date().getTime() + (8*60*60*1000); // 8h countdown
+          const x = setInterval(function(){
+            const now = new Date().getTime();
+            const t = deadline - now;
+            if (t < 0) {
+              clearInterval(x);
+              document.getElementById("nest-timer").innerHTML = "⏳ Offer ends soon!";
+            } else {
+              const h = Math.floor((t%(1000*60*60*24))/(1000*60*60));
+              const m = Math.floor((t%(1000*60*60))/(1000*60));
+              document.getElementById("nest-timer").innerHTML = "⏳ Deal ends in " + h + "h " + m + "m";
+            }
+          }, 1000);
+        })();
+      </script>
+
+      <!-- Guest trust signals -->
       <p style="color:#444; font-size:0.9rem;">⭐ Rated 4.7/5 by 85 guests</p>
-
-      <!-- Scarcity -->
       <p style="color:green; font-size:0.9rem;">✅ Popular choice – book early!</p>
 
+      <!-- Amenities icons -->
+      <div class="amenities mb-3" style="font-size:1.2rem;">
+        <span title="WiFi">📶</span>
+        <span title="Kitchenette">🍳</span>
+        <span title="Compact Comfort">🛋️</span>
+        <span title="Smart TV">📺</span>
+      </div>
+
+      <!-- Lifestyle blurb -->
+      <p style="font-size:0.9rem; color:#555;">
+        A cozy and budget-friendly studio with everything you need — fast WiFi, a kitchenette for home-style meals, and a snug living space. Perfect for solo travelers or couples seeking simplicity and comfort.
+      </p>
+
+      <!-- Action buttons -->
       <a href="/booking/?apartment=The%20Nest" class="btn btn-custom">Book Now</a>
       <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Nest%20Studio" 
          class="btn whatsapp-btn" target="_blank" rel="noopener">📲 WhatsApp Us</a>
     </div>
   </div>
-</div> 
+</div>
+
     <!-- The Retreat (Studio) -->
-   <div class="col-md-4">
+  <!-- The Retreat (Studio) -->
+<div class="col-md-4">
   <div class="card h-100">
-    <img src="/images/ngong-road/retreat.jpg" class="card-img-top" alt="The Retreat Studio Airbnb Apartment">
+    <!-- Optimized image with lazy loading -->
+    <img src="/images/ngong-road/retreat.jpg" 
+         class="card-img-top" 
+         alt="The Retreat Studio Airbnb Apartment Nairobi – Peaceful Stay with WiFi & Kitchenette" 
+         loading="lazy">
+
     <div class="card-body">
-      <h5 class="card-title">The Retreat – Studio</h5>
-      <p class="card-text">KES 2,500 / $19 per night</p>
+      <!-- Title -->
+      <h5 class="card-title">The Retreat (Studio)</h5>
 
-      <!-- Trust signal -->
+      <!-- Pricing with anchor effect -->
+      <p class="card-text mb-1">
+        <span style="text-decoration:line-through; color:#888;">KES 2,800 / $22</span><br>
+        <span class="offer">🎉 Special: KES 2,500 / $19 per night</span>
+      </p>
+
+      <!-- Urgency timer -->
+      <p id="retreat-timer" style="color:#e63946; font-weight:bold;"></p>
+      <script>
+        (function(){
+          const deadline = new Date().getTime() + (9*60*60*1000); // 9h countdown
+          const x = setInterval(function(){
+            const now = new Date().getTime();
+            const t = deadline - now;
+            if (t < 0) {
+              clearInterval(x);
+              document.getElementById("retreat-timer").innerHTML = "⏳ Offer ends soon!";
+            } else {
+              const h = Math.floor((t%(1000*60*60*24))/(1000*60*60));
+              const m = Math.floor((t%(1000*60*60))/(1000*60));
+              document.getElementById("retreat-timer").innerHTML = "⏳ Deal ends in " + h + "h " + m + "m";
+            }
+          }, 1000);
+        })();
+      </script>
+
+      <!-- Guest trust signals -->
       <p style="color:#444; font-size:0.9rem;">⭐ Rated 4.6/5 by 70 guests</p>
-
-      <!-- Scarcity -->
       <p style="color:green; font-size:0.9rem;">✅ Cozy escape – often booked on weekends!</p>
 
+      <!-- Amenities icons -->
+      <div class="amenities mb-3" style="font-size:1.2rem;">
+        <span title="WiFi">📶</span>
+        <span title="Kitchenette">🍳</span>
+        <span title="Peaceful Vibes">🌿</span>
+        <span title="Smart TV">📺</span>
+      </div>
+
+      <!-- Lifestyle blurb -->
+      <p style="font-size:0.9rem; color:#555;">
+        A peaceful studio retreat designed for relaxation. Stay connected with WiFi, cook light meals in your kitchenette, and recharge in a cozy atmosphere. Ideal for weekend getaways or solo travelers seeking calm.
+      </p>
+
+      <!-- Action buttons -->
       <a href="/booking/?apartment=The%20Retreat" class="btn btn-custom">Book Now</a>
       <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Retreat%20Studio" 
          class="btn whatsapp-btn" target="_blank" rel="noopener">📲 WhatsApp Us</a>
@@ -238,19 +374,63 @@
 </div>
     
     <!-- The Oasis (Studio) -->
- <div class="col-md-4">
+<!-- The Oasis (Studio) -->
+<div class="col-md-4">
   <div class="card h-100">
-    <img src="/images/ngong-road/oasis.jpg" class="card-img-top" alt="The Oasis Studio Airbnb Apartment">
+    <!-- Optimized image with lazy loading -->
+    <img src="/images/ngong-road/oasis.jpg" 
+         class="card-img-top" 
+         alt="The Oasis Studio Airbnb Apartment in Nairobi – Romantic Peaceful Stay with Pool & WiFi" 
+         loading="lazy">
+
     <div class="card-body">
-      <h5 class="card-title">The Oasis – Studio</h5>
-      <p class="card-text">KES 2,500 / $19 per night</p>
+      <!-- Title -->
+      <h5 class="card-title">The Oasis (Studio)</h5>
 
-      <!-- Trust signal -->
+      <!-- Pricing with anchor effect -->
+      <p class="card-text mb-1">
+        <span style="text-decoration:line-through; color:#888;">KES 2,800 / $22</span><br>
+        <span class="offer">💝 Romantic deal: KES 2,500 / $19 per night</span>
+      </p>
+
+      <!-- Urgency timer -->
+      <p id="oasis-timer" style="color:#e63946; font-weight:bold;"></p>
+      <script>
+        (function(){
+          const deadline = new Date().getTime() + (8*60*60*1000); // 8h countdown
+          const x = setInterval(function(){
+            const now = new Date().getTime();
+            const t = deadline - now;
+            if (t < 0) {
+              clearInterval(x);
+              document.getElementById("oasis-timer").innerHTML = "⏳ Offer ending soon!";
+            } else {
+              const h = Math.floor((t%(1000*60*60*24))/(1000*60*60));
+              const m = Math.floor((t%(1000*60*60))/(1000*60));
+              document.getElementById("oasis-timer").innerHTML = "⏳ Deal ends in " + h + "h " + m + "m";
+            }
+          }, 1000);
+        })();
+      </script>
+
+      <!-- Guest trust signals -->
       <p style="color:#444; font-size:0.9rem;">⭐ Loved by couples for peaceful getaways</p>
-
-      <!-- Scarcity -->
       <p style="color:green; font-size:0.9rem;">✅ Popular pick – limited availability this week</p>
 
+      <!-- Amenities icons -->
+      <div class="amenities mb-3" style="font-size:1.2rem;">
+        <span title="WiFi">📶</span>
+        <span title="Balcony">🌅</span>
+        <span title="Swimming Pool">🏊</span>
+        <span title="Romantic Vibes">💖</span>
+      </div>
+
+      <!-- Lifestyle blurb -->
+      <p style="font-size:0.9rem; color:#555;">
+        The Oasis is your romantic hideaway — couples love its calm atmosphere, balcony views, and pool access. Perfect for peaceful weekends, quiet evenings, or reconnecting in comfort.
+      </p>
+
+      <!-- Action buttons -->
       <a href="/booking/?apartment=The%20Oasis" class="btn btn-custom">Book Now</a>
       <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Oasis%20Studio" 
          class="btn whatsapp-btn" target="_blank" rel="noopener">📲 WhatsApp Us</a>
@@ -259,69 +439,98 @@
 </div>
     
     <!-- The Loft (Studio) -->
-   <div class="col-md-4">
-  <div class="card h-100">
-    <img src="/images/ngong-road/loft.jpg" class="card-img-top" alt="The Loft Studio Airbnb Apartment">
+ <!-- The Loft (Studio) -->
+<div class="col-md-4">
+  <div class="card h-100" data-apartment="The Loft">
+    <!-- Optimized image with lazy loading -->
+    <img src="/images/ngong-road/loft.jpg"
+         class="card-img-top"
+         alt="The Loft Studio Airbnb Apartment in Nairobi – Modern design with cozy vibes and WiFi"
+         loading="lazy" decoding="async">
+
     <div class="card-body">
-      <h5 class="card-title">The Loft – Studio</h5>
-      <p class="card-text">KES 2,500 / $19 per night</p>
+      <!-- Title -->
+      <h5 class="card-title">The Loft (Studio)</h5>
 
-      <!-- Trust signal -->
-      <p style="color:#444; font-size:0.9rem;">🌟 Guests love its modern design & cozy vibes</p>
+      <!-- Pricing -->
+      <p class="card-text mb-1">
+        <span class="offer">KES 2,500 / $19 per night</span>
+      </p>
 
-      <!-- Scarcity -->
-      <p style="color:green; font-size:0.9rem;">🔥 Only 1 Loft left for this weekend</p>
+      <!-- Trust + scarcity -->
+      <p style="color:#444; font-size:0.9rem;">⭐ Rated 4.8/5 by 88 guests – loved for modern design & cozy vibes</p>
+      <p style="color:green; font-size:0.9rem;">🔥 Only 1 Loft left for this weekend – book fast!</p>
 
-      <a href="/booking/?apartment=The%20Loft" class="btn btn-custom">Book Now</a>
-      <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Loft%20Studio" 
-         class="btn whatsapp-btn" target="_blank" rel="noopener">📲 WhatsApp Us</a>
+      <!-- Amenities -->
+      <ul class="list-inline amenities mb-3" style="font-size:1.2rem; padding-left:0; margin-bottom:0;">
+        <li class="list-inline-item" title="WiFi" aria-hidden="true">📶<span class="visually-hidden">WiFi</span></li>
+        <li class="list-inline-item" title="City View" aria-hidden="true">🌆<span class="visually-hidden">City view</span></li>
+        <li class="list-inline-item" title="Smart TV" aria-hidden="true">📺<span class="visually-hidden">Smart TV</span></li>
+        <li class="list-inline-item" title="Workspace" aria-hidden="true">💻<span class="visually-hidden">Workspace</span></li>
+      </ul>
+
+      <!-- Lifestyle blurb -->
+      <p style="font-size:0.9rem; color:#555; margin-top:0.5rem;">
+        The Loft blends modern design with cozy comfort. Perfect for digital nomads, young couples, or anyone
+        who wants a stylish stay near Nairobi’s Ngong Road. Guests love the city views, fast WiFi, and relaxing vibes.
+      </p>
+
+      <!-- CTAs -->
+      <div class="d-grid gap-2 d-md-block">
+        <a href="/booking/?apartment=The%20Loft" class="btn btn-custom" aria-label="Book The Loft now">Book Now</a>
+        <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Loft%20Studio"
+           class="btn whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat about The Loft on WhatsApp">
+           📲 WhatsApp Us
+        </a>
+      </div>
     </div>
   </div>
 </div>
-
     <!-- The Hideout (Studio) -->
- <div class="col-md-4">
-  <div class="card h-100">
-    <img src="/images/ngong-road/hideout.jpg" class="card-img-top" alt="The Hideout Studio Airbnb Apartment">
+<!-- The Hideout (Studio) -->
+<div class="col-md-4">
+  <div class="card h-100" data-apartment="The Hideout">
+    <!-- Optimized image -->
+    <img src="/images/ngong-road/hideout.jpg"
+         class="card-img-top"
+         alt="The Hideout Studio Airbnb Apartment in Nairobi – Private cozy stay with WiFi"
+         loading="lazy" decoding="async">
+
     <div class="card-body">
-      <h5 class="card-title">The Hideout – Studio</h5>
-      <p class="card-text">KES 2,500 / $19 per night</p>
+      <!-- Title -->
+      <h5 class="card-title">The Hideout (Studio)</h5>
 
-      <!-- Trust signal -->
-      <p style="color:#444; font-size:0.9rem;">🛏️ Perfect for solo travelers seeking privacy</p>
+      <!-- Pricing -->
+      <p class="card-text mb-1">
+        <span class="offer">KES 2,500 / $19 per night</span>
+      </p>
 
-      <!-- Scarcity -->
-      <p style="color:green; font-size:0.9rem;">⏳ Limited availability – book before it’s gone</p>
+      <!-- Trust + scarcity -->
+      <p style="color:#444; font-size:0.9rem;">⭐ Rated 4.7/5 by 76 guests – perfect for solo travelers seeking privacy</p>
+      <p style="color:green; font-size:0.9rem;">⏳ Limited availability – book before it’s gone!</p>
 
-      <a href="/booking/?apartment=The%20Hideout" class="btn btn-custom">Book Now</a>
-      <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Hideout%20Studio" 
-         class="btn whatsapp-btn" target="_blank" rel="noopener">📲 WhatsApp Us</a>
-    </div>
-  </div>
-</div>
+      <!-- Amenities -->
+      <ul class="list-inline amenities mb-3" style="font-size:1.2rem; padding-left:0; margin-bottom:0;">
+        <li class="list-inline-item" title="WiFi" aria-hidden="true">📶<span class="visually-hidden">WiFi</span></li>
+        <li class="list-inline-item" title="Workspace" aria-hidden="true">💻<span class="visually-hidden">Workspace</span></li>
+        <li class="list-inline-item" title="Smart TV" aria-hidden="true">📺<span class="visually-hidden">Smart TV</span></li>
+        <li class="list-inline-item" title="Peaceful" aria-hidden="true">🛏️<span class="visually-hidden">Peaceful stay</span></li>
+      </ul>
 
-     <!-- The Grove (Studio) -->
-    <div class="col-md-4">
-  <div class="card h-100">
-    <img src="/images/ngong-road/grove.jpg" class="card-img-top" alt="The Grove Studio Airbnb Apartment in Thindigua">
-    <div class="card-body">
-      <h5 class="card-title">The Grove – Studio (Thindigua)</h5>
-      <p class="card-text">KES 2,500 / $19 per night</p>
+      <!-- Lifestyle blurb -->
+      <p style="font-size:0.9rem; color:#555; margin-top:0.5rem;">
+        The Hideout is a private and cozy studio ideal for solo travelers or remote workers.
+        Guests love its calm environment, reliable WiFi, and comfortable setup for both rest and productivity.
+      </p>
 
-      <!-- Trust & newness -->
-      <p style="color:#444; font-size:0.9rem;">✨ Brand-new listing – be among the first guests</p>
-
-      <!-- Scarcity -->
-      <p style="color:green; font-size:0.9rem;">🚀 Introductory price – limited time offer</p>
-
-      <a href="/booking/?apartment=The%20Grove%20Studio" class="btn btn-custom">Book Now</a>
-      <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Grove%20Studio%20(Thindigua)" 
-         class="btn whatsapp-btn" target="_blank" rel="noopener">📲 WhatsApp Us</a>
-    </div>
-  </div>
-</div>
-
-
+      <!-- CTAs -->
+      <div class="d-grid gap-2 d-md-block">
+        <a href="/booking/?apartment=The%20Hideout" class="btn btn-custom" aria-label="Book The Hideout now">Book Now</a>
+        <a href="https://wa.me/254757942317?text=Hi%20Karibu%20Nyumbani,%20I'm%20interested%20in%20The%20Hideout%20Studio"
+           class="btn whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat about The Hideout on WhatsApp">
+           📲 WhatsApp Us
+        </a>
+      </div>
     </div>
   </div>
 </div>
