@@ -1,265 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book Airbnb Apartments in Nairobi | Karibu Nyumbani</title>
+  <meta name="description" content="Book fully furnished Airbnb apartments in Nairobi along Ngong Road. From 2,500 KSh (~$17) per night. Modern 1BR & Studio stays. Reserve quickly via WhatsApp or our booking form." />
+  <link rel="canonical" href="https://karibunyumbanibytj.co.ke/booking/" />
 
-<title>Book Airbnb Apartments in Nairobi | Karibu Nyumbani</title>
-<meta name="description" content="Book fully furnished Airbnb apartments in Nairobi along Ngong Road. From 2,500 KSh ($17) per night. Modern 1BR & Studio stays. Reserve quickly via WhatsApp or our booking form.">
-<link rel="canonical" href="https://karibunyumbanibytj.co.ke/booking/" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root{
+      --brand-yellow: #ffdd00;
+      --brand-yellow-dark: #e6c900;
+      --hero-overlay: rgba(0,0,0,0.65);
+      --card-radius: 14px;
+    }
 
-<style>
-  body { font-family: 'Poppins', sans-serif; background:#fff; color:#222; margin:0; padding:0; }
+    body{ font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:#222; background:#fff; }
 
-  /* Navbar */
-  .navbar-brand { color:#ffdd00 !important; font-weight:bold; }
-  .navbar-nav .nav-link { color:white !important; font-weight:bold; }
-  .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active { color:grey !important; }
+    /* Navbar */
+    .navbar-brand { color: var(--brand-yellow) !important; font-weight:700; }
+    .nav-link { color: #fff !important; font-weight:600; }
 
-  /* Hero */
-  .hero {
-    background: url('images/booking/booking-room.jpg') center/cover no-repeat;
-    position: relative;
-    padding: 3rem 0;
-  }
-  .hero-overlay {
-    background: rgba(0,0,0,0.65);
-    border-radius: 15px;
-    max-width: 1200px;
-    margin: auto;
-    padding: 2rem;
-    color: white;
-  }
-  .hero h1 { font-size: 2.2rem; font-weight:700; }
-  .hero p { font-size: 1.1rem; margin-bottom:1rem; }
+    /* HERO */
+    .hero {
+      background: url('/images/booking/booking-room.jpg') center/cover no-repeat;
+      padding: 3.5rem 0;
+      position: relative;
+    }
+    .hero-overlay {
+      background: var(--hero-overlay);
+      border-radius: 16px;
+      padding: 1.5rem;
+      color: #fff;
+    }
 
-  /* Trust cues */
-  .trust-cues { display:flex; flex-wrap:wrap; gap:0.5rem; margin:1rem 0; }
-  .trust-cue { background: rgba(255,221,0,0.9); padding:6px 15px; border-radius:20px; font-weight:600; color:#000; }
+    .hero-row { gap: 1.5rem; align-items: center; }
+    .form-card {
+      background: rgba(255,255,255,0.03);
+      padding: 1.15rem;
+      border-radius: var(--card-radius);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    }
+    .price-tag { color: var(--brand-yellow); font-weight:700; font-size:1.05rem; }
+    .price-note { font-size:0.9rem; color:#eee; margin-top: 0.25rem; }
 
-  /* Booking form */
-  .booking-form label { color:white; font-weight:bold; }
-  .btn-book { background:#ffdd00; color:#000; font-weight:bold; border:none; border-radius:30px; padding:0.75rem 1.5rem; width:100%; }
-  .btn-book:hover { background:#e6c900; }
+    .trust-cues { display:flex; gap:0.5rem; flex-wrap:wrap; margin-top: 0.85rem; }
+    .trust-cue { background: var(--brand-yellow); color: #000; padding:6px 12px; border-radius:20px; font-weight:700; font-size:0.9rem; box-shadow:0 4px 12px rgba(0,0,0,0.12); }
 
-  /* Layout split */
-  .hero-content { display:flex; flex-wrap:wrap; gap:2rem; }
-  .form-side { flex:1; min-width:300px; }
-  .info-side { flex:1; min-width:300px; display:flex; flex-direction:column; justify-content:center; }
+    .btn-book { background: var(--brand-yellow); color:#000; border-radius:30px; font-weight:800; border:none; padding:0.8rem 1rem; }
+    .btn-book:hover{ background: var(--brand-yellow-dark); color:#000; }
 
-  /* Scroll cue */
-  .scroll-down { text-align:center; margin-top:1rem; font-size:0.9rem; color:#ddd; }
+    .scroll-cue { text-align:center; color:#f0f0f0; margin-top:0.9rem; font-size:0.95rem; }
 
-  /* Section styles */
-  section { padding: 3rem 1rem; }
-  .section-title { text-align:center; margin-bottom:2rem; font-weight:bold; font-size:2rem; }
+    /* content sections */
+    section { padding: 3rem 1rem; }
+    .section-title { text-align:center; font-size:1.8rem; margin-bottom:1.25rem; font-weight:700; }
 
-  .benefit { text-align:center; padding:1rem; }
-  .apartment-card { border:1px solid #eee; border-radius:15px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.05); transition:0.3s; }
-  .apartment-card:hover { transform:translateY(-5px); }
-  .apartment-card img { width:100%; height:180px; object-fit:cover; }
+    .apartment-card { border-radius:12px; overflow:hidden; box-shadow:0 6px 16px rgba(0,0,0,0.06); border:1px solid #eee; background:#fff; }
+    .apartment-card img { width:100%; height:200px; object-fit:cover; display:block; }
 
-  /* Footer CTA */
-  .footer-cta { background:#222; color:white; text-align:center; padding:2rem; }
-  .footer-cta .btn-book { max-width:300px; margin:auto; display:block; }
-</style>
+    .review { background:#f7f7f7; padding:1rem; border-radius:12px; margin-bottom:0.75rem; }
+
+    .footer-cta { background:#111; color:#fff; padding:2rem; text-align:center; }
+
+    /* Floating WhatsApp button */
+    .whatsapp-fab {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 1200;
+      background: #25D366;
+      color: white;
+      border-radius: 999px;
+      padding: 12px 14px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      display:flex;
+      gap:10px;
+      align-items:center;
+      font-weight:700;
+      text-decoration:none;
+    }
+    .whatsapp-fab .wa-text { display:none; }
+    @media (max-width: 767px){
+      .whatsapp-fab { right: 12px; bottom: 12px; padding:12px; }
+      .whatsapp-fab .wa-text { display:inline-block; font-size:0.95rem; }
+    }
+
+    /* Sticky form on larger screens */
+    @media (min-width: 992px){
+      .form-side { position: sticky; top: 24px; }
+    }
+
+    /* small screens, stack nicely */
+    @media (max-width: 767px){
+      .hero { padding: 2rem 0; }
+      .hero-overlay { padding: 1rem; }
+    }
+  </style>
 </head>
 <body>
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-  <div class="container">
-    <a class="navbar-brand" href="/">Karibu Nyumbani</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="/apartments/">Apartments</a></li>
-        <li class="nav-item"><a class="nav-link" href="/ngong-road/">Ngong Road</a></li>
-        <li class="nav-item"><a class="nav-link active" href="/booking/">Booking</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Hero with split booking + info -->
-<section class="hero">
-  <div class="hero-overlay">
-    <div class="hero-content">
-      
-      <!-- Form on the left -->
-      <div class="form-side">
-        <form id="whatsappBookingForm" class="booking-form">
-          <div class="mb-2">
-            <label for="checkin">Check-in Date</label>
-            <input type="date" id="checkin" class="form-control" required>
-          </div>
-          <div class="mb-2">
-            <label for="checkout">Check-out Date</label>
-            <input type="date" id="checkout" class="form-control" required>
-          </div>
-          <div class="mb-2">
-            <label for="guests">Guests</label>
-            <input type="number" id="guests" class="form-control" min="1" max="4" required>
-          </div>
-          <button type="submit" class="btn-book">Book via WhatsApp</button>
-        </form>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="/">Karibu Nyumbani</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navCollapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/apartments/">Apartments</a></li>
+          <li class="nav-item"><a class="nav-link" href="/ngong-road/">Ngong Road</a></li>
+          <li class="nav-item"><a class="nav-link active" href="/booking/">Booking</a></li>
+        </ul>
       </div>
-      
-      <!-- Info on the right -->
-      <div class="info-side">
-        <h1>Book Your Stay at Karibu Nyumbani</h1>
-        <p>Modern 1BR & Studio Apartments in Nairobi — Secure, Comfortable, and Hassle-Free.</p>
-        <p><strong>From 2,500 KSh ($17) per night</strong></p>
-        
-        <div class="trust-cues">
-          <div class="trust-cue">⭐ 4.9/5 Guest Rated</div>
-          <div class="trust-cue">✔ Instant WhatsApp Confirmation</div>
-          <div class="trust-cue">🛡 24/7 Guest Support</div>
+    </div>
+  </nav>
+
+  <!-- HERO (two-column) -->
+  <header class="hero" role="banner" aria-label="Booking hero">
+    <div class="container">
+      <div class="hero-overlay">
+        <div class="row hero-row">
+          <!-- LEFT: Form -->
+          <div class="col-lg-5 form-side">
+            <div class="form-card">
+              <h3 class="mb-1">Check availability & book</h3>
+              <div class="price-tag">From 2,500 KSh <small style="font-weight:600;color:#fff;">(~$17)</small></div>
+              <div class="price-note">Approximate USD shown for convenience. Prices subject to availability.</div>
+
+              <form id="whatsappBookingForm" class="mt-3" aria-label="Booking form">
+                <div class="mb-2">
+                  <label for="apartmentInput" class="form-label text-white">Apartment (optional)</label>
+                  <input id="apartmentInput" class="form-control" placeholder="e.g. The Haven (optional)" />
+                </div>
+
+                <div class="row g-2">
+                  <div class="col-6">
+                    <label for="checkin" class="form-label text-white">Check-in</label>
+                    <input id="checkin" type="date" class="form-control" required />
+                  </div>
+                  <div class="col-6">
+                    <label for="checkout" class="form-label text-white">Check-out</label>
+                    <input id="checkout" type="date" class="form-control" required />
+                  </div>
+                </div>
+
+                <div class="row g-2 mt-2">
+                  <div class="col-6">
+                    <label for="guests" class="form-label text-white">Guests</label>
+                    <input id="guests" type="number" class="form-control" min="1" max="6" value="1" required />
+                  </div>
+                  <div class="col-6 d-flex align-items-end">
+                    <button type="submit" class="btn btn-book w-100">Book via WhatsApp</button>
+                  </div>
+                </div>
+
+              </form>
+
+              <!-- trust cues placed right under CTA -->
+              <div class="trust-cues mt-3" aria-hidden="true">
+                <div class="trust-cue">⭐ 4.9/5 Guest Rated</div>
+                <div class="trust-cue">✔ Instant WhatsApp Confirmation</div>
+                <div class="trust-cue">🛡 24/7 Guest Support</div>
+              </div>
+
+              <div class="mt-2" style="font-size:0.9rem;color:#eee;">
+                <em>Secure booking — M-Pesa, bank transfer, or cash on arrival.</em>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Selling / Hero content -->
+          <div class="col-lg-7">
+            <div class="hero-overlay" style="background: transparent; padding:0;">
+              <h1 style="font-size:2.1rem;margin-bottom:0.5rem;">Modern 1BR & Studio Apartments in Nairobi</h1>
+              <p class="lead" style="color:#f2f2f2; max-width:70%;">Comfortable, fully furnished stays along Ngong Road — ideal for business trips, short holidays and extended stays. Quick check-in, reliable Wi-Fi, and safe parking.</p>
+
+              <ul style="list-style:none; padding-left:0; margin-top:1rem; font-size:1rem; color:#fff;">
+                <li>✅ Prime Ngong Road location — minutes from CBD & malls</li>
+                <li>✅ High-speed Wi-Fi and smart TV in every unit</li>
+                <li>✅ Flexible stays: nightly, weekly & monthly rates</li>
+              </ul>
+
+              <div class="mt-3">
+                <img src="/images/ngong-road/haven.jpg" alt="1 Bedroom apartment interior Karibu Nyumbani" loading="lazy" class="img-fluid rounded shadow" style="max-width:520px;"/>
+              </div>
+
+              <div class="scroll-cue" aria-hidden="true">↓ Scroll to see apartments, reviews & FAQs</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    
-    <!-- Scroll cue -->
-    <div class="scroll-down">Scroll to see apartments ↓</div>
-  </div>
-</section>
+  </header>
 
-  <!-- Benefits -->
+  <!-- BENEFITS -->
   <section id="benefits">
     <h2 class="section-title">Why Stay With Us?</h2>
     <div class="row text-center">
-      <div class="col-md-4 benefit"><div class="benefit-icon">🏠</div><p>Fully furnished & cozy interiors</p></div>
-      <div class="col-md-4 benefit"><div class="benefit-icon">📍</div><p>Prime location along Ngong Road</p></div>
-      <div class="col-md-4 benefit"><div class="benefit-icon">⚡</div><p>High-speed Wi-Fi & Smart TVs</p></div>
+      <div class="col-md-4 mb-3">
+        <div class="p-3">
+          <div style="font-size:2rem">🏠</div>
+          <h5 class="mt-2">Fully Furnished</h5>
+          <p class="text-muted">Comfortable interiors with kitchen and workspace.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="p-3">
+          <div style="font-size:2rem">📍</div>
+          <h5 class="mt-2">Prime Location</h5>
+          <p class="text-muted">Easy access to Ngong Road, CBD and major transport links.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="p-3">
+          <div style="font-size:2rem">⚡</div>
+          <h5 class="mt-2">Fast Wi-Fi</h5>
+          <p class="text-muted">Reliable connection — great for remote work.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Apartments -->
+  <!-- APARTMENTS -->
   <section id="apartments">
     <h2 class="section-title">Our Apartments</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-5">
         <div class="apartment-card">
-          <img src="/images/ngong-road/haven.jpg" alt="Furnished 1 Bedroom Airbnb Apartment Nairobi">
-          <div class="card-body"><h5>1 Bedroom Apartment</h5><p>Spacious comfort for couples or solo travelers.</p></div>
+          <img src="/images/ngong-road/haven.jpg" alt="Furnished 1 Bedroom Airbnb Apartment Nairobi - Karibu Nyumbani" loading="lazy">
+          <div class="p-3">
+            <h5>1 Bedroom Apartment</h5>
+            <p class="text-muted mb-0">Spacious comfort for couples or solo travellers. From <strong>2,500 KSh</strong> / ~<strong>$17</strong> per night</p>
+          </div>
         </div>
       </div>
-      <div class="col-md-4">
+
+      <div class="col-md-5">
         <div class="apartment-card">
-          <img src="/images/ngong-road/oasis.jpg" alt="Modern Studio Airbnb Apartment Nairobi">
-          <div class="card-body"><h5>Studio Apartment</h5><p>Compact yet stylish with all essentials.</p></div>
+          <img src="/images/ngong-road/oasis.jpg" alt="Studio Apartment Nairobi - Karibu Nyumbani" loading="lazy">
+          <div class="p-3">
+            <h5>Studio Apartment</h5>
+            <p class="text-muted mb-0">Compact yet stylish with all essentials. From <strong>2,500 KSh</strong> / ~<strong>$17</strong> per night</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Reviews -->
+  <!-- REVIEWS -->
   <section id="reviews">
     <h2 class="section-title">Guest Reviews</h2>
-    <div class="review"><p>"Loved the place! Clean, safe, and perfect location near Ngong Road." – <strong>Faith</strong></p></div>
-    <div class="review"><p>"The WiFi was super fast, perfect for remote work. Highly recommended!" – <strong>Daniel</strong></p></div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section id="faq">
-    <h2 class="section-title">Frequently Asked Questions</h2>
-    <div class="accordion container" id="faqAccordion">
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faqHeading1">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-            Is Wi-Fi included in the apartments?
-          </button>
-        </h2>
-        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">Yes, all our studio and 1-bedroom apartments include high-speed Wi-Fi at no extra cost.</div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faqHeading2">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-            Do you offer parking space?
-          </button>
-        </h2>
-        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">Yes, free secure parking is available for all guests at Karibu Nyumbani apartments.</div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faqHeading3">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-            Can I cancel or modify my booking?
-          </button>
-        </h2>
-        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">Yes, you can cancel or modify your booking up to 48 hours before check-in without any fees.</div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faqHeading4">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-            How close are the apartments to Ngong Road?
-          </button>
-        </h2>
-        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">All our apartments are located within minutes of Ngong Road, offering easy access to Nairobi CBD and nearby malls.</div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faqHeading5">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-            Do you offer discounts for long stays?
-          </button>
-        </h2>
-        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">Yes, we provide discounted rates for weekly and monthly stays. Contact us for details.</div>
-        </div>
-      </div>
-
+    <div class="container">
+      <div class="review"><strong>Faith</strong> — "Loved the place! Clean, safe, and perfect location near Ngong Road."</div>
+      <div class="review"><strong>Daniel</strong> — "The WiFi was super fast, perfect for remote work. Highly recommended!"</div>
     </div>
   </section>
 
-  <!-- FAQ Schema JSON-LD -->
+  <!-- FAQ -->
+  <section id="faq">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="container">
+      <div class="accordion" id="faqAccordion">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">Is Wi-Fi included in the apartments?</button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Yes, all our studio and 1-bedroom apartments include high-speed Wi-Fi at no extra cost.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Do you offer parking space?</button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Yes, secure parking is available at our properties.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Can I cancel or modify my booking?</button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Yes — you can cancel or modify up to 48 hours before check-in. Contact us for exceptions.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">How close are the apartments to Ngong Road?</button>
+          </h2>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">All units are located within minutes of Ngong Road with easy access to the CBD and malls.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading5">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">Do you offer discounts for long stays?</button>
+          </h2>
+          <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Yes — we offer weekly and monthly discounts. Message us on WhatsApp for rates.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ JSON-LD for rich results -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Is Wi-Fi included in the apartments?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes, all our studio and 1-bedroom apartments include high-speed Wi-Fi at no extra cost." }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you offer parking space?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes, free secure parking is available for all guests at Karibu Nyumbani apartments." }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I cancel or modify my booking?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes, you can cancel or modify your booking up to 48 hours before check-in without any fees." }
-      },
-      {
-        "@type": "Question",
-        "name": "How close are the apartments to Ngong Road?",
-        "acceptedAnswer": { "@type": "Answer", "text": "All our apartments are located within minutes of Ngong Road, offering easy access to Nairobi CBD and nearby malls." }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you offer discounts for long stays?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes, we provide discounted rates for weekly and monthly stays. Contact us for details." }
-      }
+      {"@type":"Question","name":"Is Wi-Fi included in the apartments?","acceptedAnswer":{"@type":"Answer","text":"Yes, all our studio and 1-bedroom apartments include high-speed Wi-Fi at no extra cost."}},
+      {"@type":"Question","name":"Do you offer parking space?","acceptedAnswer":{"@type":"Answer","text":"Yes, secure parking is available at our properties."}},
+      {"@type":"Question","name":"Can I cancel or modify my booking?","acceptedAnswer":{"@type":"Answer","text":"Yes — you can cancel or modify up to 48 hours before check-in. Contact us for exceptions."}},
+      {"@type":"Question","name":"How close are the apartments to Ngong Road?","acceptedAnswer":{"@type":"Answer","text":"All units are located within minutes of Ngong Road with easy access to the CBD and malls."}},
+      {"@type":"Question","name":"Do you offer discounts for long stays?","acceptedAnswer":{"@type":"Answer","text":"Yes — we offer weekly and monthly discounts. Message us on WhatsApp for rates."}}
     ]
   }
   </script>
@@ -268,5 +335,74 @@
   <section class="footer-cta">
     <h2>Ready to Book?</h2>
     <p>Secure your stay now — limited units available.</p>
-    <a href="https://wa.me/254757942317?text=Hello, I’d like to book a stay at Karibu Nyumbani." target="_blank" class="btn-book">Book via WhatsApp</a>
+    <a class="btn btn-book" href="https://wa.me/254757942317?text=Hello%2C%20I%E2%80%99d%20like%20to%20book%20a%20stay%20at%20Karibu%20Nyumbani." target="_blank" rel="noopener">Book via WhatsApp</a>
   </section>
+
+  <!-- Sticky WhatsApp floating button -->
+  <a id="floatingWa" class="whatsapp-fab" href="#" aria-label="Chat on WhatsApp">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M20.52 3.48A11.93 11.93 0 0012 1C6.48 1 1.97 5.34 1.97 10.4c0 1.83.53 3.52 1.46 4.99L1 23l7-2.09c1.32.36 2.73.54 4.03.54 5.52 0 10.03-4.34 10.03-9.4 0-2.52-1-4.84-2.54-6.56z" fill="#fff" opacity=".06"/><path d="M17.472 14.382l-.962.49a.75.75 0 00-.296.249l-.39.49c-.183.233-.554.25-.78.042l-.8-.7a5.872 5.872 0 01-3.014-3.784l-.17-.66c-.16-.624.21-1.264.83-1.45l1.35-.42c.252-.078.53.01.71.22l1.05 1.2c.23.264.23.66-.01.93l-.88.95c-.15.16-.16.4-.03.58.87 1.27 2.26 2.07 3.78 2.29.32.04.59.31.63.63.06.45-.38.84-.8.68z" fill="#fff"/></svg>
+    <span class="wa-text">Chat / Book</span>
+  </a>
+
+  <!-- WhatsApp booking script -->
+  <script>
+    (function(){
+      const phone = "254757942317"; // WhatsApp number in international format (no +)
+
+      // Build message with optional apartment param from URL
+      function buildMessage(apartment, checkin, checkout, guests){
+        let parts = [];
+        if (apartment) parts.push(`Apartment: ${apartment}`);
+        parts.push(`Check-in: ${checkin || 'TBD'}`);
+        parts.push(`Check-out: ${checkout || 'TBD'}`);
+        parts.push(`Guests: ${guests || '1'}`);
+        return `Hello, I would like to book a stay at Karibu Nyumbani.%0A` + encodeURIComponent(parts.join("%0A"));
+      }
+
+      // Form submit handler
+      const form = document.getElementById("whatsappBookingForm");
+      if (form){
+        form.addEventListener("submit", function(e){
+          e.preventDefault();
+          const apt = (document.getElementById("apartmentInput") || {}).value || new URLSearchParams(location.search).get('apartment') || '';
+          const checkin = document.getElementById("checkin").value || '';
+          const checkout = document.getElementById("checkout").value || '';
+          const guests = document.getElementById("guests").value || '1';
+          const rawMessage = buildMessage(apt, checkin, checkout, guests);
+          // Use wa.me link
+          const waUrl = `https://wa.me/${phone}?text=${rawMessage}`;
+          window.open(waUrl, "_blank");
+        });
+      }
+
+      // Floating WhatsApp button default action: open generic message
+      const fab = document.getElementById("floatingWa");
+      if (fab){
+        fab.addEventListener("click", function(e){
+          e.preventDefault();
+          // If form has values, use them; otherwise open a quick info message
+          const checkin = (document.getElementById("checkin") || {}).value;
+          const checkout = (document.getElementById("checkout") || {}).value;
+          const guests = (document.getElementById("guests") || {}).value;
+          const apt = (document.getElementById("apartmentInput") || {}).value || new URLSearchParams(location.search).get('apartment') || '';
+          let msg;
+          if (checkin || checkout || apt){
+            msg = buildMessage(apt, checkin, checkout, guests);
+          } else {
+            msg = encodeURIComponent("Hello, I have a question about booking at Karibu Nyumbani.");
+          }
+          window.open(`https://wa.me/${phone}?text=${msg}`, "_blank");
+        });
+      }
+
+      // Accessibility: keyboard open on enter
+      fab.addEventListener("keyup", function(e){
+        if(e.key === "Enter") fab.click();
+      });
+    })();
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
