@@ -95,23 +95,57 @@
 </nav>
 
 <!-- Hero with Booking -->
+<!-- Hero with Booking -->
 <section class="hero">
   <div class="hero-overlay">
     <h1>Book Your Stay at Karibu Nyumbani</h1>
     <p>Modern 1BR & Studio Apartments in Nairobi — Secure, Comfortable, and Hassle-Free</p>
+
+    <!-- Trust cues -->
     <div class="trust-cues">
       <div class="trust-cue">⭐ 4.9/5 Guest Rated</div>
       <div class="trust-cue">✔ Instant WhatsApp Confirmation</div>
       <div class="trust-cue">🛡 24/7 Guest Support</div>
     </div>
+
+    <!-- Booking form -->
     <form id="whatsappBookingForm" class="booking-form">
-      <div class="mb-2"><label for="checkin">Check-in Date</label><input type="date" id="checkin" class="form-control" required></div>
-      <div class="mb-2"><label for="checkout">Check-out Date</label><input type="date" id="checkout" class="form-control" required></div>
-      <div class="mb-2"><label for="guests">Guests</label><input type="number" id="guests" class="form-control" min="1" max="4" required></div>
+      <div class="mb-2">
+        <label for="checkin">Check-in Date</label>
+        <input type="date" id="checkin" class="form-control" required>
+      </div>
+      <div class="mb-2">
+        <label for="checkout">Check-out Date</label>
+        <input type="date" id="checkout" class="form-control" required>
+      </div>
+      <div class="mb-2">
+        <label for="guests">Guests</label>
+        <input type="number" id="guests" class="form-control" min="1" max="4" required>
+      </div>
       <button type="submit" class="btn-book">Book via WhatsApp</button>
     </form>
+
+    <!-- Scroll cue -->
+    <div class="scroll-down mt-4">
+      <span style="font-size:0.9rem; color:#ddd;">Scroll to see apartments ↓</span>
+    </div>
   </div>
 </section>
+
+<script>
+  document.getElementById("whatsappBookingForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    const checkin = document.getElementById("checkin").value;
+    const checkout = document.getElementById("checkout").value;
+    const guests = document.getElementById("guests").value;
+    const phone = "254757942317"; // Your WhatsApp number
+    const msg = `Hello, I’d like to book a stay at Karibu Nyumbani.%0A` +
+                `Check-in: ${checkin}%0A` +
+                `Check-out: ${checkout}%0A` +
+                `Guests: ${guests}`;
+    window.open(`https://wa.me/${phone}?text=${msg}`, "_blank");
+  });
+</script>
 
 <!-- Benefits -->
 <section id="benefits">
