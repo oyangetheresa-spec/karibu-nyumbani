@@ -149,20 +149,129 @@
   <div class="review"><p>"The WiFi was super fast, perfect for remote work. Highly recommended!" – <strong>Daniel</strong></p></div>
 </section>
 
-<!-- FAQ -->
+<!-- FAQ Section -->
 <section id="faq">
   <h2 class="section-title">Frequently Asked Questions</h2>
   <div class="accordion container" id="faqAccordion">
+    
     <div class="accordion-item">
-      <h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">Is parking available?</button></h2>
-      <div id="faq1" class="accordion-collapse collapse show"><div class="accordion-body">Yes, secure parking is available at all our apartments.</div></div>
+      <h2 class="accordion-header" id="faqHeading1">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+          Is Wi-Fi included in the apartments?
+        </button>
+      </h2>
+      <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Yes, all our studio and 1-bedroom apartments include high-speed Wi-Fi at no extra cost.
+        </div>
+      </div>
     </div>
+    
     <div class="accordion-item">
-      <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">Do you allow long stays?</button></h2>
-      <div id="faq2" class="accordion-collapse collapse"><div class="accordion-body">Yes, you can book for weeks or months at discounted rates.</div></div>
+      <h2 class="accordion-header" id="faqHeading2">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+          Do you offer parking space?
+        </button>
+      </h2>
+      <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Yes, free secure parking is available for all guests at Karibu Nyumbani apartments.
+        </div>
+      </div>
     </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faqHeading3">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+          Can I cancel or modify my booking?
+        </button>
+      </h2>
+      <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Yes, you can cancel or modify your booking up to 48 hours before check-in without any fees.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faqHeading4">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+          How close are the apartments to Ngong Road?
+        </button>
+      </h2>
+      <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          All our apartments are located within minutes of Ngong Road, offering easy access to Nairobi CBD and nearby malls.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faqHeading5">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+          Do you offer discounts for long stays?
+        </button>
+      </h2>
+      <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Yes, we provide discounted rates for weekly and monthly stays. Contact us for details.
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
+
+<!-- FAQ Schema JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Wi-Fi included in the apartments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, all our studio and 1-bedroom apartments include high-speed Wi-Fi at no extra cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer parking space?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, free secure parking is available for all guests at Karibu Nyumbani apartments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I cancel or modify my booking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can cancel or modify your booking up to 48 hours before check-in without any fees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How close are the apartments to Ngong Road?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All our apartments are located within minutes of Ngong Road, offering easy access to Nairobi CBD and nearby malls."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer discounts for long stays?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we provide discounted rates for weekly and monthly stays. Contact us for details."
+      }
+    }
+  ]
+}
+</script>
+
 
 <!-- Footer CTA -->
 <section class="footer-cta">
