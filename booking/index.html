@@ -12,80 +12,33 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
-  body {
-    font-family: 'Poppins', sans-serif;
-    margin:0;
-    padding:0;
-    background:#fff;
-    color:#222;
-  }
-
-  /* Navbar */
+  body { font-family: 'Poppins', sans-serif; background:#fff; color:#222; }
   .navbar-brand { color:#ffdd00 !important; font-weight:bold; }
   .navbar-nav .nav-link { color:white !important; font-weight:bold; }
-  .navbar-nav .nav-link:hover,
-  .navbar-nav .nav-link.active { color:grey !important; text-decoration:none; }
-  .contact-info { color:white !important; margin-left: 15px; }
-
-  /* Hero Section */
   .hero {
-    position: relative;
-    overflow: visible;
-    min-height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 0;
     background: url('images/booking/booking-room.jpg') center/cover no-repeat;
+    min-height: 500px;
+    display: flex; align-items: center; justify-content: center;
   }
-
   .hero-overlay {
     background: rgba(0,0,0,0.6);
     padding: 2rem;
     border-radius: 15px;
-    max-width: 600px;
-    width: 90%;
     color: white;
+    max-width: 600px;
+    width: 95%;
     text-align: center;
   }
-
-  .hero-overlay h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .hero-overlay p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-
-  .booking-form .form-label { color:white; font-weight:bold; }
-  .booking-form input { margin-bottom:1rem; }
   .btn-book {
-    background:#ffdd00;
-    color:#000;
-    font-weight:bold;
-    border:none;
-    padding:0.75rem 1.5rem;
-    border-radius:30px;
-    width:100%;
-    transition: background 0.3s;
+    background:#ffdd00; color:#000; font-weight:bold;
+    border:none; padding:0.75rem 1.5rem; border-radius:30px;
+    width:100%; transition: background 0.3s;
   }
   .btn-book:hover { background:#e6c900; }
-
-  @media (max-width:768px) {
-    .hero { min-height: 400px; padding: 1.5rem 0; }
-    .hero-overlay h1 { font-size:2rem; }
-    .hero-overlay p { font-size:1rem; }
-  }
-
-  @media (max-width:480px) {
-    .hero { min-height: 300px; padding: 1rem 0; }
-    .hero-overlay h1 { font-size:1.5rem; }
-    .hero-overlay p { font-size:0.9rem; }
-  }
-
-  html { scroll-behavior: smooth; }
+  section { padding: 60px 20px; }
+  h2 { font-weight: bold; margin-bottom: 20px; }
+  .benefit-card { padding:20px; border:1px solid #eee; border-radius:15px; box-shadow:0 2px 8px rgba(0,0,0,0.05); }
+  .review { font-style:italic; }
 </style>
 </head>
 <body>
@@ -94,25 +47,16 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container">
     <a class="navbar-brand" href="/" title="Karibu Nyumbani Home">Karibu Nyumbani</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto align-items-lg-center">
-        <li class="nav-item">
-          <a class="nav-link" href="/" title="Go to Home page">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/apartments/" title="View our Nairobi Apartments">Apartments</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/ngong-road/" title="Explore our Ngong Road Apartments">Ngong Road</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="/booking/" title="Book your stay at Karibu Nyumbani">Booking</a>
-        </li>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/apartments/">Apartments</a></li>
+        <li class="nav-item"><a class="nav-link" href="/ngong-road/">Ngong Road</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/booking/">Booking</a></li>
         <li class="nav-item contact-info">📞 +254757942317</li>
-        <li class="nav-item contact-info">📞 +254748101279</li>
       </ul>
     </div>
   </div>
@@ -124,58 +68,129 @@
     <h1>Book Your Stay at Karibu Nyumbani</h1>
     <p>Fully furnished 1BR & Studio apartments in Nairobi — check availability instantly</p>
 
-    <div class="booking-form">
-      <form id="whatsappBookingForm">
-        <div class="mb-3">
-          <label for="apartment" class="form-label">Apartment (Optional)</label>
-          <input type="text" id="apartment" class="form-control" placeholder="Enter apartment nickname (e.g. The Haven)">
-        </div>
-        <div class="mb-3">
-          <label for="checkin" class="form-label">Check-in Date</label>
-          <input type="date" id="checkin" class="form-control" required>
-        </div>
-        <div class="mb-3">
-          <label for="checkout" class="form-label">Check-out Date</label>
-          <input type="date" id="checkout" class="form-control" required>
-        </div>
-        <div class="mb-3">
-          <label for="guests" class="form-label">Number of Guests</label>
-          <input type="number" id="guests" class="form-control" min="1" max="4" required>
-        </div>
-        <button type="submit" class="btn-book">Book via WhatsApp</button>
-      </form>
+    <form id="whatsappBookingForm">
+      <div class="mb-3">
+        <label class="form-label">Apartment (Optional)</label>
+        <input type="text" id="apartment" class="form-control" placeholder="Enter apartment nickname">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Check-in Date</label>
+        <input type="date" id="checkin" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Check-out Date</label>
+        <input type="date" id="checkout" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Guests</label>
+        <input type="number" id="guests" class="form-control" min="1" max="4" required>
+      </div>
+      <button type="submit" class="btn-book">Book via WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<!-- Benefits -->
+<section class="container text-center">
+  <h2>Why Stay With Us?</h2>
+  <div class="row g-4">
+    <div class="col-md-4"><div class="benefit-card">✅ Prime Ngong Road Location</div></div>
+    <div class="col-md-4"><div class="benefit-card">✅ Fully Furnished & WiFi</div></div>
+    <div class="col-md-4"><div class="benefit-card">✅ Secure Parking & 24/7 Support</div></div>
+  </div>
+</section>
+
+<!-- Apartments Preview -->
+<section class="bg-light text-center">
+  <div class="container">
+    <h2>Our Apartments</h2>
+    <p>Choose your preferred stay and book instantly.</p>
+    <div class="row g-4">
+      <div class="col-md-4"><a href="/booking/?apartment=The Haven" class="btn btn-book">Book The Haven</a></div>
+      <div class="col-md-4"><a href="/booking/?apartment=Studio Luxe" class="btn btn-book">Book Studio Luxe</a></div>
+      <div class="col-md-4"><a href="/booking/?apartment=Ngong View 1BR" class="btn btn-book">Book Ngong View 1BR</a></div>
     </div>
   </div>
 </section>
 
+<!-- Reviews -->
+<section class="container">
+  <h2 class="text-center">Guest Reviews</h2>
+  <div class="row g-4">
+    <div class="col-md-4"><div class="review">“Super clean and comfy. Perfect location near Ngong Road.” – Mary K.</div></div>
+    <div class="col-md-4"><div class="review">“Loved the fast WiFi and homely feel. Will book again!” – Brian O.</div></div>
+    <div class="col-md-4"><div class="review">“Easy check-in and very safe. Highly recommended.” – Anita M.</div></div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="bg-light text-center">
+  <h2>How It Works</h2>
+  <p>1. Select your dates → 2. Send booking via WhatsApp → 3. Get instant confirmation</p>
+</section>
+
+<!-- FAQ -->
+<section class="container">
+  <h2 class="text-center">Frequently Asked Questions</h2>
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q1">Do you offer WiFi?</button></h2>
+      <div id="q1" class="accordion-collapse collapse"><div class="accordion-body">Yes, all apartments have unlimited WiFi.</div></div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q2">Is parking available?</button></h2>
+      <div id="q2" class="accordion-collapse collapse"><div class="accordion-body">Yes, we provide secure parking for all guests.</div></div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q3">How do I pay?</button></h2>
+      <div id="q3" class="accordion-collapse collapse"><div class="accordion-body">We accept M-Pesa, bank transfer, or cash upon check-in.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WhatsApp CTA -->
+<section class="text-center bg-dark text-white">
+  <h2>Need Quick Assistance?</h2>
+  <p>Chat with us on WhatsApp for instant booking help.</p>
+  <a href="https://wa.me/254757942317" class="btn btn-book">Chat on WhatsApp</a>
+</section>
+
+<!-- Footer Booking Form -->
+<section class="container text-center">
+  <h2>Ready to Book?</h2>
+  <form id="footerBookingForm" class="mx-auto" style="max-width:500px;">
+    <div class="mb-3"><input type="date" id="footerCheckin" class="form-control" required></div>
+    <div class="mb-3"><input type="date" id="footerCheckout" class="form-control" required></div>
+    <div class="mb-3"><input type="number" id="footerGuests" class="form-control" min="1" max="4" required placeholder="Guests"></div>
+    <button type="submit" class="btn-book">Book Now</button>
+  </form>
+</section>
+
+<!-- JS -->
 <script>
-  // Prefill apartment nickname from URL query
-  const urlParams = new URLSearchParams(window.location.search);
-  const apartmentName = urlParams.get('apartment');
-  if(apartmentName){
-    document.getElementById('apartment').value = apartmentName;
+  // Prefill apartment from URL
+  const params = new URLSearchParams(window.location.search);
+  if(params.get('apartment')) document.getElementById('apartment').value = params.get('apartment');
+
+  // WhatsApp form handler
+  function handleBooking(form, aptField, checkinField, checkoutField, guestsField){
+    form.addEventListener("submit", e=>{
+      e.preventDefault();
+      const apt = aptField ? document.getElementById(aptField).value : "";
+      const checkin = document.getElementById(checkinField).value;
+      const checkout = document.getElementById(checkoutField).value;
+      const guests = document.getElementById(guestsField).value;
+      const phone = "254757942317";
+      const msg = apt ? 
+        `Hello, I would like to book ${apt} at Karibu Nyumbani.%0ACheck-in: ${checkin}%0ACheck-out: ${checkout}%0AGuests: ${guests}` : 
+        `Hello, I would like to book a stay at Karibu Nyumbani.%0ACheck-in: ${checkin}%0ACheck-out: ${checkout}%0AGuests: ${guests}`;
+      window.open(`https://wa.me/${phone}?text=${msg}`, "_blank");
+    });
   }
-
-  // WhatsApp Booking Form submission
-  document.getElementById("whatsappBookingForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    const apartment = document.getElementById("apartment").value;
-    const checkin = document.getElementById("checkin").value;
-    const checkout = document.getElementById("checkout").value;
-    const guests = document.getElementById("guests").value;
-    const phoneNumber = "254757942317";
-
-    let message = apartment
-      ? `Hello, I would like to book ${apartment} at Karibu Nyumbani.%0ACheck-in: ${checkin}%0ACheck-out: ${checkout}%0AGuests: ${guests}`
-      : `Hello, I would like to book a stay at Karibu Nyumbani.%0ACheck-in: ${checkin}%0ACheck-out: ${checkout}%0AGuests: ${guests}`;
-
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.open(whatsappUrl, "_blank");
-  });
+  handleBooking(document.getElementById("whatsappBookingForm"), "apartment", "checkin", "checkout", "guests");
+  handleBooking(document.getElementById("footerBookingForm"), null, "footerCheckin", "footerCheckout", "footerGuests");
 </script>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
