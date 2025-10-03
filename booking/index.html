@@ -121,82 +121,62 @@
   </nav>
 
   <!-- HERO (two-column) -->
-  <header class="hero" role="banner" aria-label="Booking hero">
-    <div class="container">
-      <div class="hero-overlay">
-        <div class="row hero-row">
-          <!-- LEFT: Form -->
-          <div class="col-lg-5 form-side">
-            <div class="form-card">
-              <h3 class="mb-1">Check availability & book</h3>
-              <div class="price-tag">From 2,500 KSh <small style="font-weight:600;color:#fff;">(~$17)</small></div>
-              <div class="price-note">Approximate USD shown for convenience. Prices subject to availability.</div>
+ <!-- Hero Section -->
+<section class="hero d-flex align-items-center" style="min-height: 90vh; background: linear-gradient(135deg, #111, #222); color: white; padding: 2rem 0;">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Left Column: Text + Form -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h1 class="fw-bold mb-3">Book Your Stay at Karibu Nyumbani</h1>
+        <p class="lead">Modern 1BR & Studio Apartments in Nairobi — Secure, Comfortable, and Hassle-Free</p>
 
-              <form id="whatsappBookingForm" class="mt-3" aria-label="Booking form">
-                <div class="mb-2">
-                  <label for="apartmentInput" class="form-label text-white">Apartment (optional)</label>
-                  <input id="apartmentInput" class="form-control" placeholder="e.g. The Haven (optional)" />
-                </div>
-
-                <div class="row g-2">
-                  <div class="col-6">
-                    <label for="checkin" class="form-label text-white">Check-in</label>
-                    <input id="checkin" type="date" class="form-control" required />
-                  </div>
-                  <div class="col-6">
-                    <label for="checkout" class="form-label text-white">Check-out</label>
-                    <input id="checkout" type="date" class="form-control" required />
-                  </div>
-                </div>
-
-                <div class="row g-2 mt-2">
-                  <div class="col-6">
-                    <label for="guests" class="form-label text-white">Guests</label>
-                    <input id="guests" type="number" class="form-control" min="1" max="6" value="1" required />
-                  </div>
-                  <div class="col-6 d-flex align-items-end">
-                    <button type="submit" class="btn btn-book w-100">Book via WhatsApp</button>
-                  </div>
-                </div>
-
-              </form>
-
-              <!-- trust cues placed right under CTA -->
-              <div class="trust-cues mt-3" aria-hidden="true">
-                <div class="trust-cue">⭐ 4.9/5 Guest Rated</div>
-                <div class="trust-cue">✔ Instant WhatsApp Confirmation</div>
-                <div class="trust-cue">🛡 24/7 Guest Support</div>
-              </div>
-
-              <div class="mt-2" style="font-size:0.9rem;color:#eee;">
-                <em>Secure booking — M-Pesa, bank transfer, or cash on arrival.</em>
-              </div>
-            </div>
-          </div>
-
-          <!-- RIGHT: Selling / Hero content -->
-          <div class="col-lg-7">
-            <div class="hero-overlay" style="background: transparent; padding:0;">
-              <h1 style="font-size:2.1rem;margin-bottom:0.5rem;">Modern 1BR & Studio Apartments in Nairobi</h1>
-              <p class="lead" style="color:#f2f2f2; max-width:70%;">Comfortable, fully furnished stays along Ngong Road — ideal for business trips, short holidays and extended stays. Quick check-in, reliable Wi-Fi, and safe parking.</p>
-
-              <ul style="list-style:none; padding-left:0; margin-top:1rem; font-size:1rem; color:#fff;">
-                <li>✅ Prime Ngong Road location — minutes from CBD & malls</li>
-                <li>✅ High-speed Wi-Fi and smart TV in every unit</li>
-                <li>✅ Flexible stays: nightly, weekly & monthly rates</li>
-              </ul>
-
-              <div class="mt-3">
-                <img src="/images/ngong-road/haven.jpg" alt="1 Bedroom apartment interior Karibu Nyumbani" loading="lazy" class="img-fluid rounded shadow" style="max-width:520px;"/>
-              </div>
-
-              <div class="scroll-cue" aria-hidden="true">↓ Scroll to see apartments, reviews & FAQs</div>
-            </div>
-          </div>
+        <!-- Trust Cues -->
+        <div class="d-flex flex-wrap gap-2 my-3">
+          <span class="badge bg-warning text-dark fw-semibold">⭐ 4.9/5 Guest Rated</span>
+          <span class="badge bg-warning text-dark fw-semibold">✔ Instant WhatsApp Confirmation</span>
+          <span class="badge bg-warning text-dark fw-semibold">🛡 24/7 Guest Support</span>
         </div>
+
+        <!-- Booking Form -->
+        <form id="whatsappBookingForm" class="p-3 bg-dark rounded shadow">
+          <div class="mb-2">
+            <label for="checkin" class="form-label text-white">Check-in Date</label>
+            <input type="date" id="checkin" class="form-control" required>
+          </div>
+          <div class="mb-2">
+            <label for="checkout" class="form-label text-white">Check-out Date</label>
+            <input type="date" id="checkout" class="form-control" required>
+          </div>
+          <div class="mb-2">
+            <label for="guests" class="form-label text-white">Guests</label>
+            <input type="number" id="guests" class="form-control" min="1" max="4" required>
+          </div>
+          <button type="submit" class="btn btn-warning fw-bold w-100">Book via WhatsApp</button>
+        </form>
       </div>
+
+      <!-- Right Column: Apartment Image -->
+      <div class="col-lg-6 text-center">
+        <img src="/images/ngong-road/haven.jpg" alt="1 Bedroom Airbnb Apartment Nairobi" class="img-fluid rounded shadow">
+      </div>
+
     </div>
-  </header>
+  </div>
+</section>
+
+<!-- WhatsApp Script -->
+<script>
+document.getElementById("whatsappBookingForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const checkin = document.getElementById("checkin").value;
+  const checkout = document.getElementById("checkout").value;
+  const guests = document.getElementById("guests").value;
+  const phone = "254757942317";
+  const msg = `Hello, I’d like to book a stay at Karibu Nyumbani.%0ACheck-in: ${checkin}%0ACheck-out: ${checkout}%0AGuests: ${guests}`;
+  window.open(`https://wa.me/${phone}?text=${msg}`, "_blank");
+});
+</script>
 
   <!-- BENEFITS -->
   <section id="benefits">
