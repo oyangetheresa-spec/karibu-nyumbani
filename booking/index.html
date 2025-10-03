@@ -131,20 +131,6 @@
   </div>
 </section>
 
-<script>
-  document.getElementById("whatsappBookingForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    const checkin = document.getElementById("checkin").value;
-    const checkout = document.getElementById("checkout").value;
-    const guests = document.getElementById("guests").value;
-    const phone = "254757942317"; // Your WhatsApp number
-    const msg = `Hello, I’d like to book a stay at Karibu Nyumbani.%0A` +
-                `Check-in: ${checkin}%0A` +
-                `Check-out: ${checkout}%0A` +
-                `Guests: ${guests}`;
-    window.open(`https://wa.me/${phone}?text=${msg}`, "_blank");
-  });
-</script>
 
 <!-- Benefits -->
 <section id="benefits">
