@@ -1,0 +1,61 @@
+body { font-family: 'Poppins', sans-serif; margin: 0; background: #fff8f0; color: #222; }
+header { background: linear-gradient(90deg, #ff6f61, #ffcc70); padding: 1.5rem; text-align: center; color: white; }
+.container { max-width: 1200px; margin: auto; padding: 2rem; }
+.navbar-nav .nav-link { transition: color 0.2s ease, transform 0.2s ease; }
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus { color: #ffc107; transform: translateY(-1px); }
+.navbar-nav .nav-link.active { color: #ffc107; font-weight: 600; }
+.navbar-nav .nav-link.active::after { content: ''; display: block; width: 100%; height: 2px; background: #ffc107; margin-top: 4px; border-radius: 1px; }
+.carousel-inner img { width: 100%; height: auto; }
+.unit-carousel { max-height: 320px; overflow: hidden; }
+.unit-carousel .carousel-inner img { height: 320px; object-fit: cover; }
+.cta a, .hero-btn { background: #ff6f61; color: white; padding: 1rem 2rem; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+.cta a:hover, .hero-btn:hover { background: #ff3d2e; }
+.rules { background: #fff3e6; padding: 2rem; margin: 2rem 0; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.rules h2 { color: #ff6f61; }
+.reviews .card { border-radius: 15px; transition: transform 0.2s; }
+.reviews .card:hover { transform: translateY(-5px); }
+.book-now-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff6f61;
+  color: white;
+  padding: 0.9rem 1.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+.book-now-btn:hover { background: #ff3d2e; }
+
+.hero-split { min-height: 420px; background-color: #ffffff; border-bottom: 1px solid #eee; }
+.hero-split h1 { font-size: 2.6rem; line-height: 1.1; letter-spacing: -1px; }
+.hero-split .hero-badge { background: #222; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 0.8rem; }
+.hero-split .hero-meta { font-size: 0.85rem; }
+.btn-hero-black { background-color: #000; color: #fff; border-radius: 8px; min-width: 220px; }
+.btn-hero-black:hover { background-color: #111; }
+.hero-video-frame { height: 420px; overflow: hidden; position: relative; }
+.hero-video-frame video { object-fit: cover; }
+.unit-card-img { height: 250px; object-fit: cover; }
+.feature-card-bg { background-color: #fafafa; border: 1px solid #eee !important; }
+.unit-description { font-size: 0.95rem; line-height: 1.6; }
+.btn-rounded-wide { border-radius: 8px; width: fit-content; min-width: 220px; }
+.image-frame { height: 350px; overflow: hidden; }
+.image-frame img { object-fit: cover; transition: transform 0.3s ease; transform: scale(1); }
+.image-frame:hover img { transform: scale(1.05); }
+.booking-section { background-color: #f8f9fa; border-top: 4px solid #000; }
+.cta-footer { background: #f5f8fa; }
+
+.white-card-bg { background: #fff; }
+
+.hosts-section { background: #fff; }
+.host-card { border-radius: 24px; }
+.host-photo { width: 112px; height: 112px; object-fit: cover; border-radius: 50%; border: 2px solid #000; }
+.photo-carousel-card { padding: 0; }
+.carousel-img { min-height: 320px; max-height: 420px; object-fit: cover; }
+.reviews-section { background: #fff; }
+.review-card { background: #fff; }
+.review-stars { color: #ffb703; font-size: 0.95rem; letter-spacing: 0.05em; }
+.secondary-link { color: #000; text-decoration: none; border-bottom: 1px dashed rgba(0, 0, 0, 0.25); }
+.secondary-link:hover { color: #111; border-color: #000; }

@@ -22,7 +22,10 @@
 
     /* Navbar */
     .navbar-brand { color: var(--brand-yellow) !important; font-weight:700; }
-    .nav-link { color: #fff !important; font-weight:600; }
+    .nav-link { color: #fff !important; font-weight:600; transition: color 0.2s ease, transform 0.2s ease; }
+    .nav-link:hover, .nav-link:focus { color: #ffdd00 !important; transform: translateY(-1px); }
+    .nav-link.active { color: #ffdd00 !important; font-weight: 700; }
+    .nav-link.active::after { content: ''; display: block; width: 100%; height: 2px; background: #ffdd00; margin-top: 4px; border-radius: 1px; }
 
     /* HERO */
     .hero {
