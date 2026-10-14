@@ -1,0 +1,379 @@
+/* =====================================================================
+   unit-page.css
+   Styles for the individual unit pages (Chic 1BR, Premium 1BR).
+   Every class starts with "u-" so it can never clash with your
+   existing /css/styles.css. Bootstrap handles the nav and the FAQ.
+   ===================================================================== */
+
+:root {
+  --u-ink: #212529;
+  --u-muted: #6c757d;
+  --u-gold: #ffc107;
+  --u-gold-dark: #b98900;
+  --u-line: #e3e0d8;
+  --u-soft: #f6f4ee;
+  --u-ph: #e9e6df;
+  --u-radius: 12px;
+}
+
+/* ---------- Basics ---------- */
+html { scroll-behavior: smooth; }
+
+.u-section {
+  padding: 40px 0;
+  border-bottom: 1px solid #efece6;
+  scroll-margin-top: 70px;           /* so anchor links don't hide under the sticky nav */
+}
+.u-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: var(--u-ink);
+}
+.u-note {
+  margin-top: 16px;
+  color: var(--u-muted);
+  font-size: .95rem;
+}
+
+/* Yellow highlight for anything you still need to fill in.
+   When a spot is done, delete the <span class="u-todo"> wrapper. */
+.u-todo {
+  background: #fff3d6;
+  color: #a05a00;
+  border-radius: 4px;
+  padding: 0 5px;
+  font-weight: 600;
+}
+
+/* ---------- Breadcrumb ---------- */
+.u-crumb {
+  background: var(--u-soft);
+  font-size: .85rem;
+  padding: 9px 0;
+  color: var(--u-muted);
+}
+.u-crumb a { color: var(--u-muted); text-decoration: none; }
+.u-crumb a:hover { text-decoration: underline; }
+
+/* ---------- Buttons ---------- */
+.u-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: 800;
+  border: 0;
+  border-radius: 10px;
+  padding: 13px 18px;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .1s ease, box-shadow .1s ease;
+}
+.u-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,.18); }
+.u-btn-dark { background: var(--u-ink); color: #fff; }
+.u-btn-dark:hover { color: #fff; }
+.u-btn-gold { background: var(--u-gold); color: var(--u-ink); }
+.u-btn-gold:hover { color: var(--u-ink); }
+.u-btn-inline { display: inline-block; width: auto; padding-left: 28px; padding-right: 28px; }
+
+/* ---------- 2. Top block ---------- */
+.u-top {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+.u-top-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  max-height: 560px;
+  object-fit: cover;
+  border-radius: var(--u-radius);
+  display: block;
+}
+.u-h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -.01em;
+  margin-bottom: 10px;
+}
+.u-price { font-size: 1.1rem; margin-bottom: 4px; }
+.u-price strong { font-size: 1.5rem; }
+.u-sub { color: var(--u-muted); font-size: .92rem; margin-bottom: 12px; }
+
+.u-chips {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.u-chips li {
+  border: 1px solid var(--u-line);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: .85rem;
+  background: #fff;
+}
+
+/* Dates form */
+.u-form {
+  background: var(--u-soft);
+  border: 1px solid var(--u-line);
+  border-radius: var(--u-radius);
+  padding: 14px;
+}
+.u-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.u-field label {
+  display: block;
+  font-size: .7rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--u-muted);
+  margin-bottom: 3px;
+  font-weight: 700;
+}
+.u-field input,
+.u-field select {
+  width: 100%;
+  border: 1px solid var(--u-line);
+  border-radius: 8px;
+  padding: 9px 10px;
+  font-size: .95rem;
+  background: #fff;
+}
+
+/* Host strip */
+.u-hoststrip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  font-size: .9rem;
+}
+.u-avatars { display: inline-flex; }
+.u-avatars img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px var(--u-line);
+}
+.u-avatars img + img { margin-left: -10px; }
+
+/* ---------- 3. Gallery ---------- */
+.u-gallery {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-auto-rows: 160px;
+  gap: 10px;
+}
+.u-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+.u-gal-big { grid-row: span 2; }
+
+/* Placeholder box (photos and the map, until you add the real thing) */
+.u-ph {
+  background: repeating-linear-gradient(135deg, var(--u-ph) 0 12px, #f0eee8 12px 24px);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8px;
+  font-size: .85rem;
+}
+
+/* ---------- 4. Why this unit ---------- */
+.u-tiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.u-tile {
+  border: 1px solid var(--u-line);
+  border-radius: var(--u-radius);
+  padding: 16px;
+  background: #fff;
+}
+.u-tile h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+.u-tile p { font-size: .9rem; color: var(--u-muted); margin: 0; }
+
+/* ---------- 5. Details + location ---------- */
+.u-two {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 32px;
+}
+.u-spec { width: 100%; border-collapse: collapse; font-size: .95rem; }
+.u-spec th,
+.u-spec td { padding: 9px 0; border-bottom: 1px solid #efece6; text-align: left; }
+.u-spec th { color: var(--u-muted); font-weight: 500; width: 42%; }
+
+.u-map {
+  width: 100%;
+  height: 230px;
+  border: 0;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.u-address { color: var(--u-muted); font-size: .9rem; margin: 0; }
+
+.u-near {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 32px;
+  font-size: .95rem;
+}
+.u-near li { padding: 9px 0; border-bottom: 1px solid #efece6; }
+
+/* ---------- 6. Price and rules ---------- */
+.u-pol {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.u-card {
+  border: 1px solid var(--u-line);
+  border-radius: var(--u-radius);
+  padding: 16px;
+  background: #fff;
+}
+.u-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
+.u-card p { font-size: .9rem; color: var(--u-muted); margin: 0; }
+.u-card-big { background: var(--u-ink); border-color: var(--u-ink); }
+.u-card-big h3 { color: var(--u-gold); font-size: 1.9rem; }
+.u-card-big p { color: #d9dde0; }
+
+/* ---------- 7. Reviews ---------- */
+.u-reviews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.u-review {
+  border: 1px solid var(--u-line);
+  border-radius: var(--u-radius);
+  padding: 16px;
+  margin: 0;
+  background: #fff;
+}
+.u-review blockquote { margin: 0 0 12px; font-size: .95rem; }
+.u-review figcaption { font-size: .82rem; color: var(--u-muted); }
+
+/* ---------- 8. Hosts ---------- */
+.u-hosts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.u-host {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  border: 1px solid var(--u-line);
+  border-radius: var(--u-radius);
+  padding: 14px;
+  background: #fff;
+}
+.u-host img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: none;
+}
+.u-host h3 { font-size: 1rem; font-weight: 700; margin-bottom: 3px; }
+.u-host p { font-size: .88rem; color: var(--u-muted); margin: 0; }
+
+/* ---------- 10. Closing action ---------- */
+.u-cta {
+  background: var(--u-ink);
+  color: #fff;
+  text-align: center;
+  padding: 46px 0;
+}
+.u-cta h2 { font-weight: 800; margin-bottom: 8px; }
+.u-cta p { color: #c9cdd1; margin-bottom: 16px; }
+.u-cta .u-todo { background: #3a3320; color: #ffd878; }
+.u-sib { margin: 18px 0 0 !important; display: flex; justify-content: center; gap: 26px; flex-wrap: wrap; }
+.u-sib a { color: #c9cdd1; text-decoration: none; font-size: .92rem; }
+.u-sib a:hover { color: #fff; text-decoration: underline; }
+
+/* ---------- Footer ---------- */
+.u-foot {
+  background: #16181a;
+  color: #9aa0a6;
+  font-size: .82rem;
+  padding: 16px 0 84px;          /* extra bottom space so the floating button never covers text */
+}
+.u-foot .container { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.u-foot a { color: #c9cdd1; text-decoration: none; }
+.u-foot a:hover { text-decoration: underline; }
+
+/* ---------- Floating WhatsApp button ---------- */
+.u-float-wa {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1030;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25d366;
+  color: #08331b;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+}
+.u-float-wa i { font-size: 1.2rem; }
+.u-float-wa:hover { color: #08331b; transform: translateY(-1px); }
+
+/* =====================================================================
+   RESPONSIVE: tablets and phones (most of your visitors are on phones)
+   ===================================================================== */
+@media (max-width: 991.98px) {
+  .u-top { grid-template-columns: 1fr; }
+  .u-top-photo img { min-height: 240px; max-height: 380px; }
+  .u-tiles { grid-template-columns: repeat(2, 1fr); }
+  .u-pol { grid-template-columns: repeat(2, 1fr); }
+  .u-two { grid-template-columns: 1fr; }
+  .u-reviews { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 767.98px) {
+  .u-section { padding: 30px 0; }
+  .u-h1 { font-size: 1.55rem; }
+  .u-gallery { grid-template-columns: 1fr 1fr; grid-auto-rows: 130px; }
+  .u-gal-big { grid-column: 1 / -1; grid-row: auto; height: 220px; }
+  .u-hosts { grid-template-columns: 1fr; }
+  .u-near { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 575.98px) {
+  .u-tiles { grid-template-columns: 1fr; }
+  .u-pol { grid-template-columns: 1fr; }
+  .u-float-wa span { display: none; }    /* icon-only on small phones */
+  .u-float-wa { padding: 14px; }
+}
